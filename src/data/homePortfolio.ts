@@ -121,7 +121,7 @@ export const HOME_PROJECTS: HomeProject[] = [
       'https://www.figma.com/api/mcp/asset/c2adaa05-b47d-4fb9-ac50-c35370d03d3f',
     imageClassName: 'absolute inset-0 max-w-none object-cover rounded-[32px] size-full',
     lShapeWebVideoSrc: '/videos/info-2300-web.mp4',
-    developmentFilterVideoSrc: '/videos/info-2300-project-fin.mp4',
+    developmentFilterVideoSrc: '/videos/info-2300-web.mp4',
     lShapeWebVideoPosterSrc: false,
     pillBg: 'bg-[rgba(155,126,107,0.35)]',
     pillText: 'text-[#816451]',

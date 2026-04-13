@@ -22,3 +22,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+public/videos/info-2300-web.mp4
+.vite/

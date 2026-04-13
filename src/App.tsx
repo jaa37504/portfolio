@@ -1,7 +1,6 @@
 import { useLayoutEffect, useRef } from 'react';
 import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { DesignFrame } from './DesignFrame';
-import DesignIndex from './DesignIndex';
 import Design16955 from './designs/Design16955';
 import Design17537 from './designs/Design17537';
 import Design18841 from './designs/Design18841';
@@ -9,8 +8,6 @@ import Design19366 from './designs/Design19366';
 import Design19815 from './designs/Design19815';
 import Design20272 from './designs/Design20272';
 import Design20659 from './designs/Design20659';
-import Design21153 from './designs/Design21153';
-import Design21154 from './designs/Design21154';
 import Design18405 from './designs/Design18405';
 
 /**
@@ -49,14 +46,7 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTopOnRouteChange />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <DesignFrame>
-              <DesignIndex />
-            </DesignFrame>
-          }
-        />
+        <Route path="/" element={<Navigate to="/home" replace />} />
         <Route
           path="/home"
           element={
@@ -82,7 +72,7 @@ export default function App() {
         <Route
           path="/case-studies/cmsx"
           element={
-            <DesignFrame flushFooter>
+            <DesignFrame flushFooter paperShell>
               <Design18841 />
             </DesignFrame>
           }
@@ -90,7 +80,7 @@ export default function App() {
         <Route
           path="/case-studies/rethink-food"
           element={
-            <DesignFrame flushFooter>
+            <DesignFrame flushFooter paperShell>
               <Design19815 />
             </DesignFrame>
           }
@@ -98,7 +88,7 @@ export default function App() {
         <Route
           path="/case-studies/capital-one"
           element={
-            <DesignFrame flushFooter>
+            <DesignFrame flushFooter paperShell>
               <Design18405 />
             </DesignFrame>
           }
@@ -106,7 +96,7 @@ export default function App() {
         <Route
           path="/case-studies/act"
           element={
-            <DesignFrame flushFooter>
+            <DesignFrame flushFooter paperShell>
               <Design20659 />
             </DesignFrame>
           }
@@ -114,7 +104,7 @@ export default function App() {
         <Route
           path="/case-studies/kenvue"
           element={
-            <DesignFrame flushFooter>
+            <DesignFrame flushFooter paperShell>
               <Design20272 />
             </DesignFrame>
           }
@@ -122,28 +112,12 @@ export default function App() {
         <Route
           path="/case-studies/info-2300"
           element={
-            <DesignFrame flushFooter>
+            <DesignFrame flushFooter paperShell>
               <Design19366 />
             </DesignFrame>
           }
         />
-        <Route
-          path="/design/21153"
-          element={
-            <DesignFrame>
-              <Design21153 />
-            </DesignFrame>
-          }
-        />
-        <Route
-          path="/design/21154"
-          element={
-            <DesignFrame>
-              <Design21154 />
-            </DesignFrame>
-          }
-        />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>
     </BrowserRouter>
   );

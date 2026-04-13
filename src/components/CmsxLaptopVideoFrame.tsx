@@ -1,19 +1,33 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 
-export type CmsxLaptopVariant = 'default' | 'productBentoWide' | 'dataScienceHero';
+export type CmsxLaptopVariant =
+  | 'default'
+  | 'productBentoWide'
+  | 'dataScienceHero'
+  /** INFO 2300 case study — Live Site / Deployed locally (Figma 522:21904) */
+  | 'caseStudyLiveSite';
+
+type VariantStyle = {
+  lid: string;
+  videoWrap: string;
+  videoBox: string;
+  base: string;
+  nodeLid: string;
+  /** Tailwind classes for `<video>` / poster `<img>` object fit */
+  videoObjectClass?: string;
+};
 
 type Props = {
   posterSrc?: string;
   videoSrc?: string;
   className?: string;
-  /** Figma: default home tile; `productBentoWide` 522:21603; `dataScienceHero` 522:21708 */
+  /** Figma: default home tile; `productBentoWide` 522:21603; `dataScienceHero` 522:21708; `caseStudyLiveSite` 522:21904 */
   variant?: CmsxLaptopVariant;
+  /** Layered inside the screen above the video (e.g. Figma 627:22126 logo cover on Capital One prototype). */
+  screenOverlay?: ReactNode;
 };
 
-const VARIANT_STYLES: Record<
-  CmsxLaptopVariant,
-  { lid: string; videoWrap: string; videoBox: string; base: string; nodeLid: string }
-> = {
+const VARIANT_STYLES: Record<CmsxLaptopVariant, VariantStyle> = {
   default: {
     lid: 'h-[256px] w-[416px] max-w-[min(100vw-4rem,416px)]',
     videoWrap: 'absolute top-2 left-2',
@@ -35,6 +49,15 @@ const VARIANT_STYLES: Record<
     base: 'h-[12px] w-[600px] max-w-[min(100vw-2rem,600px)]',
     nodeLid: '522:21708',
   },
+  caseStudyLiveSite: {
+    lid: 'h-[297px] w-[516px] max-w-[min(100vw-4rem,516px)]',
+    videoWrap: 'absolute top-2 left-2',
+    videoBox:
+      'aspect-[1280/720] w-[500px] max-w-[min(calc(100vw-8rem),500px)] shrink-0',
+    base: 'h-[12px] w-[600px] max-w-[min(100vw-2rem,600px)]',
+    nodeLid: '522:21906',
+    videoObjectClass: 'object-cover object-center',
+  },
 };
 
 /**
@@ -45,6 +68,7 @@ export function CmsxLaptopVideoFrame({
   videoSrc = '/videos/cmsx-laptop.mp4',
   className = '',
   variant = 'default',
+  screenOverlay,
 }: Props) {
   const [usePosterOnly, setUsePosterOnly] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -62,10 +86,12 @@ export function CmsxLaptopVideoFrame({
     return () => el.removeEventListener('loadeddata', run);
   }, [usePosterOnly, videoSrc]);
 
+  const videoFit = vs.videoObjectClass ?? 'object-cover object-top';
+
   return (
     <div
       className={`flex flex-col items-center justify-center ${className}`}
-      data-node-id="522:21474"
+      data-node-id={variant === 'caseStudyLiveSite' ? '522:21904' : '522:21474'}
       data-name="Embed video in laptop frame"
     >
       <div className="relative flex shrink-0 flex-col items-center" data-node-id="522:21475">
@@ -75,11 +101,11 @@ export function CmsxLaptopVideoFrame({
         >
           <div className={`flex flex-col items-start overflow-clip rounded-[4px] bg-black ${vs.videoWrap}`}>
             <div className="relative flex shrink-0 flex-col items-start overflow-clip">
-              <div className={`shrink-0 ${vs.videoBox}`}>
+              <div className={`relative shrink-0 ${vs.videoBox}`}>
                 {!usePosterOnly ? (
                   <video
                     ref={videoRef}
-                    className="block size-full bg-black object-cover object-top"
+                    className={`block size-full bg-black ${videoFit}`}
                     poster={posterSrc || undefined}
                     src={videoSrc}
                     muted
@@ -92,10 +118,11 @@ export function CmsxLaptopVideoFrame({
                     }}
                   />
                 ) : posterSrc ? (
-                  <img alt="" src={posterSrc} className="block size-full object-cover object-top" />
+                  <img alt="" src={posterSrc} className={`block size-full ${videoFit}`} />
                 ) : (
                   <div className="size-full bg-[#1a1a1a]" aria-hidden />
                 )}
+                {screenOverlay}
               </div>
             </div>
           </div>

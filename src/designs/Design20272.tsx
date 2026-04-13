@@ -1,7 +1,20 @@
 import { Link } from 'react-router-dom';
 import { CaseStudyMainNav } from '../components/CaseStudyMainNav';
 import { CASE_STUDY_DOC_URL, nextCaseStudyAfter } from '../data/caseStudyNav';
-import { caseStudyArticlePaddingXClass, caseStudyColumnClass } from '../caseStudyLayout';
+import {
+  caseStudyArticlePaddingXClass,
+  caseStudyColumnClass,
+  caseStudyHeroStackGapClass,
+  caseStudyHeroTopPaddingClass,
+  caseStudySectionPaddingYClass,
+} from '../caseStudyLayout';
+import {
+  CASE_STUDY_CARD_STAGGER_ITEM_XL,
+  CASE_STUDY_VERTICAL_STAGGER_ITEM,
+  CaseStudySection,
+  CaseStudyStagger,
+  SoftAppearOnce,
+} from '../components/SoftAppear';
 
 /** Figma 450:17975 — Kenvue case study hero (dashboard collage) */
 const imgImage49 = "https://www.figma.com/api/mcp/asset/122c8c7e-cc0d-43f1-96c9-97ec1704963c";
@@ -27,7 +40,10 @@ export default function Frame() {
           <div
             className={`relative flex size-full flex-col items-start gap-8 border-0 border-transparent bg-clip-padding ${caseStudyArticlePaddingXClass}`}
           >
-            <div className="content-stretch flex flex-col gap-[48px] items-start pt-[48px] relative shrink-0 w-full" data-node-id="450:20291">
+            <SoftAppearOnce
+              className={`content-stretch flex flex-col items-start relative shrink-0 w-full ${caseStudyHeroStackGapClass} ${caseStudyHeroTopPaddingClass}`}
+              data-node-id="450:20291"
+            >
               <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="450:20292" data-name="Section - HERO">
                 <div className="content-stretch flex flex-col gap-[48px] items-start relative shrink-0 w-full" data-node-id="450:20293">
                   <div className="content-stretch flex gap-[12px] items-center relative shrink-0 w-full" data-node-id="450:20294" data-name="Container">
@@ -57,39 +73,39 @@ export default function Frame() {
                     </div>
                   </div>
                   <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="450:20301" data-name="Heading 2">
-                    <p className="flex-[1_0_0] font-['Libre_Baskerville:Italic',sans-serif] italic leading-[60px] min-h-px min-w-px relative text-[#432060] text-[60px]" data-node-id="450:20302">{`Kenvue (J&J)`}</p>
+                    <p className="flex-[1_0_0] font-['Libre_Baskerville:Italic',sans-serif] italic leading-[1.12] min-h-px min-w-px relative text-[#432060] text-[clamp(2rem,7vw,3.75rem)] whitespace-normal break-words" data-node-id="450:20302">{`Kenvue (J&J)`}</p>
                   </div>
                 </div>
-                <div className="border-[#e2dbd3] border-b border-solid content-stretch flex gap-[39px] items-center py-[25px] relative shrink-0 w-full" data-node-id="450:20303" data-name="Border">
-                  <div className="content-stretch flex flex-col gap-[2.99px] h-[53.08px] items-start relative shrink-0 w-[155px]" data-node-id="450:20304" data-name="Container">
+                <div className="border-[#e2dbd3] border-b border-solid content-stretch flex flex-col gap-5 items-start py-[25px] relative shrink-0 w-full xl:flex-row xl:gap-[39px] xl:items-center" data-node-id="450:20303" data-name="Border">
+                  <div className="content-stretch flex flex-col gap-[2.99px] items-start relative shrink-0 w-full lg:w-[155px]" data-node-id="450:20304" data-name="Container">
                     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:20305" data-name="Container">
                       <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#9a9a9a] text-[12px] tracking-[1.1px] uppercase whitespace-nowrap" data-node-id="450:20306" style={{ fontVariationSettings: "'opsz' 14" }}>
                         <p className="leading-[18.7px]">Role</p>
                       </div>
                     </div>
                     <div className="content-stretch flex flex-col items-start pb-[0.8px] relative shrink-0 w-full" data-node-id="450:20307" data-name="Container">
-                      <div className="flex flex-col font-['DM_Sans:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[14px] whitespace-nowrap" data-node-id="450:20308" style={{ fontVariationSettings: "'opsz' 14" }}>
+                      <div className="flex flex-col font-['DM_Sans:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[14px] whitespace-normal" data-node-id="450:20308" style={{ fontVariationSettings: "'opsz' 14" }}>
                         <p className="leading-[23.8px]">Quantitative UXR Intern</p>
                       </div>
                     </div>
                   </div>
-                  <div className="content-stretch flex flex-col gap-[2.99px] h-[53.08px] items-start relative shrink-0 w-[192px]" data-node-id="450:20309" data-name="Container">
+                  <div className="content-stretch flex flex-col gap-[2.99px] items-start relative shrink-0 w-full lg:w-[192px]" data-node-id="450:20309" data-name="Container">
                     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:20310" data-name="Container">
                       <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#9a9a9a] text-[12px] tracking-[1.1px] uppercase whitespace-nowrap" data-node-id="450:20311" style={{ fontVariationSettings: "'opsz' 14" }}>
                         <p className="leading-[18.7px]">Company</p>
                       </div>
                     </div>
                     <div className="content-stretch flex flex-col items-start pb-[0.8px] relative shrink-0 w-full" data-node-id="450:20312" data-name="Container">
-                      <div className="flex flex-col font-['DM_Sans:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[14px] whitespace-nowrap" data-node-id="450:20313" style={{ fontVariationSettings: "'opsz' 14" }}>
+                      <div className="flex flex-col font-['DM_Sans:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[14px] whitespace-normal" data-node-id="450:20313" style={{ fontVariationSettings: "'opsz' 14" }}>
                         <p className="leading-[23.8px]">{`Kenvue (Johnson & Johnson)`}</p>
                       </div>
                     </div>
                   </div>
-                  <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-[414px]" data-node-id="450:20314" data-name="Container">
+                  <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full lg:w-[414px]" data-node-id="450:20314" data-name="Container">
                     <div className="flex flex-col font-['DM_Sans:Medium',sans-serif] font-medium h-[19px] justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[12px] tracking-[0.88px] uppercase w-full" data-node-id="450:20315" style={{ fontVariationSettings: "'opsz' 14" }}>
                       <p className="leading-[18.7px]">Type</p>
                     </div>
-                    <div className="content-stretch flex gap-[8px] h-[24px] items-start relative shrink-0 w-full" data-node-id="450:20316" data-name="ProjectDetail">
+                    <div className="content-stretch flex flex-wrap gap-[8px] h-auto items-start relative shrink-0 w-full" data-node-id="450:20316" data-name="ProjectDetail">
                       <div className="bg-[#d3e3e9] h-[24px] relative rounded-[16777200px] shrink-0" data-node-id="450:20317" data-name="Text">
                         <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-start px-[16px] py-[4px] relative size-full">
                           <p className="font-['DM_Sans:Medium',sans-serif] font-medium leading-[16px] relative shrink-0 text-[#3a7992] text-[12px] whitespace-nowrap" data-node-id="450:20318" style={{ fontVariationSettings: "'opsz' 14" }}>
@@ -122,10 +138,14 @@ export default function Frame() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="content-stretch flex flex-col gap-[24px] items-start py-[24px] relative shrink-0 w-full" data-node-id="450:20329" data-name="Section - OVERVIEW">
+            </SoftAppearOnce>
+            <CaseStudySection
+              className="content-stretch flex flex-col gap-[24px] items-start py-5 sm:py-6 lg:py-8 relative shrink-0 w-full"
+              data-node-id="450:20329"
+              data-name="Section - OVERVIEW"
+            >
               <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="450:20330">
-                <div className="content-stretch flex flex-col items-start max-w-[680px] relative shrink-0 w-[680px]" data-node-id="450:20331" data-name="Container">
+                <div className="content-stretch flex flex-col items-start w-full max-w-[680px] min-w-0 relative shrink-0" data-node-id="450:20331" data-name="Container">
                   <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[1.8px] uppercase whitespace-nowrap" data-node-id="450:20332" style={{ fontVariationSettings: "'opsz' 14" }}>
                     <p className="leading-[25.5px]">Overview</p>
                   </div>
@@ -141,7 +161,7 @@ export default function Frame() {
                 </div>
               </div>
               <div className="content-stretch flex flex-col items-start pt-[3.01px] relative shrink-0 w-full" data-node-id="450:20336" data-name="Container">
-                <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[16px] w-[864px]" data-node-id="450:20337" style={{ fontVariationSettings: "'opsz' 14" }}>
+                <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative w-full max-w-[864px] min-w-0 shrink-0 text-[#6b6b6b] text-[16px]" data-node-id="450:20337" style={{ fontVariationSettings: "'opsz' 14" }}>
                   <p className="leading-[25.5px]">My task as a Quantitative UXR intern was to analyze DSAT (dissatisfaction) survey data across thousands of internal IT service interactions to identifying root causes of dissatisfaction in enterprise IT systems.</p>
                 </div>
               </div>
@@ -154,11 +174,15 @@ export default function Frame() {
                   </div>
                 </div>
               </div>
-            </div>
+            </CaseStudySection>
             <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:20341" data-name="Separator" />
-            <div className="content-stretch flex flex-col gap-[32px] items-start py-[24px] relative shrink-0 w-full" data-node-id="450:20342" data-name="Section - MY SCOPE">
+            <CaseStudySection
+              className="content-stretch flex flex-col gap-[32px] items-start py-5 sm:py-6 lg:py-8 relative shrink-0 w-full"
+              data-node-id="450:20342"
+              data-name="Section - MY SCOPE"
+            >
               <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="450:20343">
-                <div className="content-stretch flex flex-col items-start max-w-[680px] relative shrink-0 w-[680px]" data-node-id="450:20344" data-name="Container">
+                <div className="content-stretch flex flex-col items-start w-full max-w-[680px] min-w-0 relative shrink-0" data-node-id="450:20344" data-name="Container">
                   <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[1.8px] uppercase whitespace-nowrap" data-node-id="450:20345" style={{ fontVariationSettings: "'opsz' 14" }}>
                     <p className="leading-[25.5px]">Projected Impact</p>
                   </div>
@@ -167,51 +191,56 @@ export default function Frame() {
                   Why this matters
                 </p>
               </div>
-              <div className="content-stretch flex gap-[16px] h-[287px] items-start relative shrink-0 w-full" data-node-id="450:20347">
-                <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px pb-[41px] pt-[49px] px-[41px] relative rounded-[18px] self-stretch" data-node-id="450:20348" data-name="Background+Border">
-                  <div className="relative rounded-[18px] shrink-0 w-full" data-node-id="450:20349" data-name="Background+Border">
-                    <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold gap-[12px] items-start pb-[24px] relative size-full">
+              {/* Figma 450:20347 — equal-height row; no fixed h-[287px] or stagger wrappers */}
+              <CaseStudyStagger
+                className="content-stretch relative flex w-full min-h-0 shrink-0 flex-row gap-[16px] items-stretch"
+                data-node-id="450:20347"
+                itemClassName={CASE_STUDY_CARD_STAGGER_ITEM_XL}
+                staggerMs={65}
+              >
+                <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex min-h-0 min-w-0 flex-[1_0_0] flex-col items-start pb-[41px] pt-[49px] px-[41px] relative rounded-[18px] md:self-stretch" data-node-id="450:20348" data-name="Background+Border">
+                  <div className="relative w-full shrink-0 rounded-[18px]" data-node-id="450:20349" data-name="Background+Border">
+                    <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[12px] font-['DM_Sans:SemiBold',sans-serif] font-semibold items-start pb-5 sm:pb-6 relative size-full">
                       <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:20350" style={{ fontVariationSettings: "'opsz' 14" }}>
                         <p className="leading-[21px]">01</p>
                       </div>
-                      <p className="leading-[28px] min-w-full relative shrink-0 text-[#b5923c] text-[18px] w-[min-content]" data-node-id="450:20351" style={{ fontVariationSettings: "'opsz' 14" }}>
+                      <p className="w-full min-w-full leading-[28px] text-[#b5923c] text-[18px]" data-node-id="450:20351" style={{ fontVariationSettings: "'opsz' 14" }}>
                         Backlogged and open tickets block users from completing work
                       </p>
                     </div>
                   </div>
                 </div>
-                <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px pb-[41px] pt-[49px] px-[41px] relative rounded-[18px] self-stretch" data-node-id="450:20352" data-name="Background+Border">
-                  <div className="relative rounded-[18px] shrink-0 w-full" data-node-id="450:20353" data-name="Background+Border">
-                    <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold gap-[12px] items-start relative size-full">
+                <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex min-h-0 min-w-0 flex-[1_0_0] flex-col items-start pb-[41px] pt-[49px] px-[41px] relative rounded-[18px] md:self-stretch" data-node-id="450:20352" data-name="Background+Border">
+                  <div className="relative w-full shrink-0 rounded-[18px]" data-node-id="450:20353" data-name="Background+Border">
+                    <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[12px] font-['DM_Sans:SemiBold',sans-serif] font-semibold items-start relative size-full">
                       <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:20354" style={{ fontVariationSettings: "'opsz' 14" }}>
                         <p className="leading-[21px]">02</p>
                       </div>
-                      <p className="leading-[28px] min-w-full relative shrink-0 text-[#b5923c] text-[18px] w-[min-content]" data-node-id="450:20355" style={{ fontVariationSettings: "'opsz' 14" }}>
+                      <p className="w-full min-w-full leading-[28px] text-[#b5923c] text-[18px]" data-node-id="450:20355" style={{ fontVariationSettings: "'opsz' 14" }}>
                         High ticket volume increases IT service costs through reopens and resubmissions
                       </p>
                     </div>
                   </div>
                 </div>
-                <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px pb-[41px] pt-[49px] px-[41px] relative rounded-[18px] self-stretch" data-node-id="450:20356" data-name="Background+Border">
-                  <div className="relative rounded-[18px] shrink-0 w-full" data-node-id="450:20357" data-name="Background+Border">
-                    <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold gap-[12px] items-start leading-[0] pb-[24px] relative size-full">
+                <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex min-h-0 min-w-0 flex-[1_0_0] flex-col items-start pb-[41px] pt-[49px] px-[41px] relative rounded-[18px] md:self-stretch" data-node-id="450:20356" data-name="Background+Border">
+                  <div className="relative w-full shrink-0 rounded-[18px]" data-node-id="450:20357" data-name="Background+Border">
+                    <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[12px] font-['DM_Sans:SemiBold',sans-serif] font-semibold items-start pb-5 sm:pb-6 relative leading-[0] size-full">
                       <div className="flex flex-col justify-center relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:20358" style={{ fontVariationSettings: "'opsz' 14" }}>
                         <p className="leading-[21px]">03</p>
                       </div>
-                      <div className="min-w-full relative shrink-0 text-[#b5923c] text-[18px] w-[min-content]" data-node-id="450:20359" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        <p className="leading-[28px] mb-0">Poor IT experiences frustrate employees and reduce satisfaction</p>
-                        <p className="leading-[28px]">&nbsp;</p>
-                      </div>
+                      <p className="w-full min-w-full leading-[28px] text-[#b5923c] text-[18px]" data-node-id="450:20359" style={{ fontVariationSettings: "'opsz' 14" }}>
+                        Poor IT experiences frustrate employees and reduce satisfaction
+                      </p>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </CaseStudyStagger>
+            </CaseStudySection>
             <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:20360" data-name="Separator" />
-            <div className="content-stretch flex flex-col gap-[32px] items-start py-[24px] relative shrink-0 w-full" data-node-id="450:20361" data-name="Section - MY SCOPE">
+            <CaseStudySection className="content-stretch flex flex-col gap-[32px] items-start py-5 sm:py-6 lg:py-8 relative shrink-0 w-full" data-node-id="450:20361" data-name="Section - MY SCOPE">
               <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="450:20362">
                 <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="450:20363">
-                  <div className="content-stretch flex flex-col items-start max-w-[680px] relative shrink-0 w-[680px]" data-node-id="450:20364" data-name="Container">
+                  <div className="content-stretch flex flex-col items-start w-full max-w-[680px] min-w-0 relative shrink-0" data-node-id="450:20364" data-name="Container">
                     <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[1.8px] uppercase whitespace-nowrap" data-node-id="450:20365" style={{ fontVariationSettings: "'opsz' 14" }}>
                       <p className="leading-[25.5px]">Analysis Approach</p>
                     </div>
@@ -231,7 +260,12 @@ export default function Frame() {
                   What will success look like?
                 </p>
               </div>
-              <div className="content-stretch flex gap-[24px] h-[176px] items-start relative shrink-0 w-full" data-node-id="450:20371">
+              <CaseStudyStagger
+                className="content-stretch flex min-h-0 flex-row gap-[24px] items-stretch relative shrink-0 w-full"
+                data-node-id="450:20371"
+                itemClassName={CASE_STUDY_CARD_STAGGER_ITEM_XL}
+                staggerMs={65}
+              >
                 <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-h-px min-w-px pb-[41px] pt-[49px] px-[41px] relative rounded-[18px] self-stretch" data-node-id="450:20372" data-name="Background+Border">
                   <div className="relative shrink-0 w-full" data-node-id="450:20373" data-name="Heading 5">
                     <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
@@ -290,13 +324,13 @@ export default function Frame() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </CaseStudyStagger>
+            </CaseStudySection>
             <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:20396" data-name="Separator" />
-            <div className="content-stretch flex flex-col gap-[32px] items-start py-[24px] relative shrink-0 w-full" data-node-id="450:20397" data-name="Section - MY SCOPE">
+            <CaseStudySection className="content-stretch flex flex-col gap-[32px] items-start py-5 sm:py-6 lg:py-8 relative shrink-0 w-full" data-node-id="450:20397" data-name="Section - MY SCOPE">
               <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:20398">
                 <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="450:20399">
-                  <div className="content-stretch flex flex-col items-start max-w-[680px] relative shrink-0 w-[680px]" data-node-id="450:20400" data-name="Container">
+                  <div className="content-stretch flex flex-col items-start w-full max-w-[680px] min-w-0 relative shrink-0" data-node-id="450:20400" data-name="Container">
                     <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[1.8px] uppercase whitespace-nowrap" data-node-id="450:20401" style={{ fontVariationSettings: "'opsz' 14" }}>
                       <p className="leading-[25.5px]">Choosing a problem space</p>
                     </div>
@@ -306,18 +340,24 @@ export default function Frame() {
                   </p>
                 </div>
               </div>
-              <div className="content-stretch flex flex-col gap-[24px] items-start pb-[24px] relative shrink-0 w-full" data-node-id="450:20403" data-name="Section - PROBLEM">
+              <div className="content-stretch flex flex-col gap-[24px] items-start pb-5 sm:pb-6 relative shrink-0 w-full" data-node-id="450:20403" data-name="Section - PROBLEM">
                 <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="450:20404">
                   <p className="font-['Libre_Baskerville:Italic',sans-serif] italic leading-[28px] min-w-full relative shrink-0 text-[#b5923c] text-[20px] w-[min-content]" data-node-id="450:20405">
                     Is there a particular service experience that performs poorly?
                   </p>
-                  <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal h-[77px] justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[16px] w-[864px]" data-node-id="450:20406" style={{ fontVariationSettings: "'opsz' 14" }}>
+                  <div className="flex min-h-0 flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative w-full max-w-[864px] min-w-0 shrink-0 text-[#6b6b6b] text-[16px]" data-node-id="450:20406" style={{ fontVariationSettings: "'opsz' 14" }}>
                     <p className="leading-[25.5px]">I first combed through the data with SQL queries and tableau visualizations to see if there was a particular IT service that could be improved.</p>
                   </div>
                   <div className="content-stretch flex items-start relative shrink-0 w-full" data-node-id="450:20407" data-name="Decision 1: Filter Bar">
-                    <div className="content-stretch flex flex-[1_0_0] gap-[16px] items-start min-h-px min-w-px overflow-clip relative" data-node-id="450:20408" data-name="Background+Border">
-                      <div className="bg-white border border-[#ddd8d0] border-solid flex-[1_0_0] min-h-px min-w-px relative rounded-[18px] self-stretch" data-node-id="450:20409">
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[16px] items-start pb-[24px] pt-[48px] px-[24px] relative size-full">
+                    <CaseStudyStagger
+                      className="content-stretch flex min-h-0 flex-row gap-[16px] items-stretch overflow-clip relative flex-[1_0_0]"
+                      data-node-id="450:20408"
+                      data-name="Background+Border"
+                      itemClassName={CASE_STUDY_CARD_STAGGER_ITEM_XL}
+                      staggerMs={65}
+                    >
+                      <div className="bg-white border border-[#ddd8d0] border-solid flex-[1_0_0] min-h-px min-w-px relative rounded-[16px] self-stretch" data-node-id="450:20409">
+                        <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[16px] items-start px-4 pb-5 pt-8 sm:px-6 sm:pb-6 sm:pt-10 relative size-full">
                           <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:20410" data-name="Container">
                             <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:20411" data-name="Heading 5">
                               <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#432060] text-[16px] w-full" data-node-id="450:20412" style={{ fontVariationSettings: "'opsz' 14" }}>
@@ -330,8 +370,8 @@ export default function Frame() {
                           </div>
                         </div>
                       </div>
-                      <div className="bg-white border border-[#ddd8d0] border-solid flex-[1_0_0] min-h-px min-w-px relative rounded-[18px]" data-node-id="450:20414">
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[16px] items-center pb-[24px] pt-[48px] px-[24px] relative size-full">
+                      <div className="bg-white border border-[#ddd8d0] border-solid flex-[1_0_0] min-h-px min-w-px relative rounded-[16px]" data-node-id="450:20414">
+                        <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[16px] items-center px-4 pb-5 pt-8 sm:px-6 sm:pb-6 sm:pt-10 relative size-full">
                           <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:20415" data-name="Container">
                             <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:20416" data-name="Heading 5">
                               <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#432060] text-[16px] w-full" data-node-id="450:20417" style={{ fontVariationSettings: "'opsz' 14" }}>
@@ -344,9 +384,9 @@ export default function Frame() {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </CaseStudyStagger>
                   </div>
-                  <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal h-[77px] justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[0px] w-[864px]" data-node-id="450:20419" style={{ fontVariationSettings: "'opsz' 14" }}>
+                  <div className="flex min-h-0 flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative w-full max-w-[864px] min-w-0 shrink-0 text-[#6b6b6b] text-[0px]" data-node-id="450:20419" style={{ fontVariationSettings: "'opsz' 14" }}>
                     <p className="text-[16px]">
                       <span className="leading-[25.5px]">{`Password reset is a highly technical issue that would be challenging to improve in the amount of time I had on the project so I pivoted to analysis of `}</span>
                       <span className="font-['DM_Sans:Italic',sans-serif] font-normal italic leading-[25.5px]" style={{ fontVariationSettings: "'opsz' 14" }}>{`reasons `}</span>
@@ -359,18 +399,23 @@ export default function Frame() {
                 <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:20420" data-name="Separator" />
                 <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:20421" data-name="Decision 1: Filter Bar">
                   <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="450:20422">
-                    <div className="content-stretch flex flex-col gap-[32px] items-start py-[24px] relative shrink-0 w-full" data-node-id="450:20423">
+                    <div className="content-stretch flex flex-col gap-[32px] items-start py-5 sm:py-6 lg:py-8 relative shrink-0 w-full" data-node-id="450:20423">
                       <p className="font-['Libre_Baskerville:Italic',sans-serif] italic leading-[28px] relative shrink-0 text-[#b5923c] text-[20px] w-full" data-node-id="450:20424">
                         Is there a particular reason that tickets are closed dissatisfacorily?
                       </p>
-                      <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-col gap-[24px] items-start pb-[32px] pt-[40px] px-[32px] relative rounded-[18px] shrink-0 w-full" data-node-id="450:20425" data-name="Container">
+                      <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-col gap-[24px] items-start pb-[32px] pt-[40px] px-[32px] relative rounded-[16px] shrink-0 w-full" data-node-id="450:20425" data-name="Container">
                         <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:20426" data-name="Heading 5">
                           <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#432060] text-[16px] w-full" data-node-id="450:20427" style={{ fontVariationSettings: "'opsz' 14" }}>
                             <p className="leading-[25.5px]">Tickets closed without resolution is the primary reason tickets are reported as dissatisfactory</p>
                           </div>
                         </div>
-                        <div className="content-stretch flex gap-[16px] items-start relative shrink-0 w-full" data-node-id="450:20428">
-                          <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-[1_0_0] flex-col gap-[8px] h-[311px] items-start min-h-px min-w-px pb-[24px] pt-[48px] px-[24px] relative rounded-[10px]" data-node-id="450:20429" data-name="Background+Border">
+                        <CaseStudyStagger
+                          className="content-stretch flex min-h-0 flex-row gap-[16px] items-stretch relative shrink-0 w-full"
+                          data-node-id="450:20428"
+                          itemClassName={CASE_STUDY_CARD_STAGGER_ITEM_XL}
+                          staggerMs={65}
+                        >
+                          <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-[1_0_0] flex-col gap-[8px] h-[311px] items-start min-h-px min-w-px px-4 pb-5 pt-8 sm:px-6 sm:pb-6 sm:pt-10 relative rounded-[16px]" data-node-id="450:20429" data-name="Background+Border">
                             <div className="flex flex-col font-['Libre_Baskerville:Italic',sans-serif] h-[40px] italic justify-center leading-[0] relative shrink-0 text-[#7a7060] text-[40px] w-full" data-node-id="450:20430">
                               <p className="leading-[40px]">54.5%</p>
                             </div>
@@ -383,7 +428,7 @@ export default function Frame() {
                               <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage45} />
                             </div>
                           </div>
-                          <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-[1_0_0] flex-col gap-[8px] h-[311px] items-center min-h-px min-w-px pb-[24px] pt-[48px] px-[24px] relative rounded-[10px]" data-node-id="450:20434" data-name="Background+Border">
+                          <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-[1_0_0] flex-col gap-[8px] h-[311px] items-center min-h-px min-w-px px-4 pb-5 pt-8 sm:px-6 sm:pb-6 sm:pt-10 relative rounded-[16px]" data-node-id="450:20434" data-name="Background+Border">
                             <div className="flex flex-col font-['Libre_Baskerville:Italic',sans-serif] italic justify-center leading-[0] min-w-full relative shrink-0 text-[#816451] text-[40px] w-[min-content]" data-node-id="450:20435">
                               <p className="leading-[40px]">56%</p>
                             </div>
@@ -396,9 +441,9 @@ export default function Frame() {
                               <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage46} />
                             </div>
                           </div>
-                        </div>
+                        </CaseStudyStagger>
                       </div>
-                      <div className="bg-[#ede7f8] border-[#6b46a0] border-l-3 border-solid content-stretch flex flex-col items-start pl-[27px] pr-[24px] py-[24px] relative rounded-br-[16px] rounded-tr-[16px] shrink-0 w-full" data-node-id="450:20439" data-name="Background+VerticalBorder">
+                      <div className="bg-[#ede7f8] border-[#6b46a0] border-l-3 border-solid content-stretch flex flex-col items-start pl-[27px] pr-[24px] py-5 sm:py-6 lg:py-8 relative rounded-br-[16px] rounded-tr-[16px] shrink-0 w-full" data-node-id="450:20439" data-name="Background+VerticalBorder">
                         <div className="relative shrink-0 w-full" data-node-id="450:20440" data-name="Container">
                           <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
                             <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#3d1f6e] text-[14px] w-full" data-node-id="450:20441" style={{ fontVariationSettings: "'opsz' 14" }}>
@@ -419,9 +464,9 @@ export default function Frame() {
                       </div>
                     </div>
                     <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:20442" data-name="Separator" />
-                    <div className="content-stretch flex flex-col gap-[24px] items-center py-[24px] relative shrink-0 w-full" data-node-id="450:20443">
+                    <div className="content-stretch flex flex-col gap-[24px] items-center py-5 sm:py-6 lg:py-8 relative shrink-0 w-full" data-node-id="450:20443">
                       <p className="font-['Libre_Baskerville:Italic','Noto_Sans:Italic',sans-serif] italic leading-[28px] min-w-full relative shrink-0 text-[#b5923c] text-[20px] w-[min-content]" data-node-id="450:20444" style={{ fontVariationSettings: "'CTGR' 0, 'wdth' 100, 'wght' 400" }}>{`Why are tickets closed without resolution? `}</p>
-                      <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-col items-start pb-[32px] pt-[40px] px-[32px] relative rounded-[18px] shrink-0 w-[419px]" data-node-id="450:20445" data-name="Container">
+                      <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-col items-start pb-[32px] pt-[40px] px-[32px] relative rounded-[16px] shrink-0 w-[419px]" data-node-id="450:20445" data-name="Container">
                         <div className="content-stretch flex flex-col gap-[32px] items-start relative shrink-0 w-full" data-node-id="450:20446">
                           <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="450:20447">
                             <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:20448" data-name="Container">
@@ -429,7 +474,7 @@ export default function Frame() {
                                 <p className="leading-[26.25px]">KA articles are ineffective for self service</p>
                               </div>
                             </div>
-                            <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-col gap-[8px] items-center justify-center p-[24px] relative rounded-[10px] shrink-0 w-full" data-node-id="450:20450" data-name="Background+Border">
+                            <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-col gap-[8px] items-center justify-center p-[24px] relative rounded-[16px] shrink-0 w-full" data-node-id="450:20450" data-name="Background+Border">
                               <div className="flex flex-col font-['Libre_Baskerville:Italic',sans-serif] italic justify-center leading-[0] min-w-full relative shrink-0 text-[#816451] text-[40px] w-[min-content]" data-node-id="450:20451">
                                 <p className="leading-[40px]">65%</p>
                               </div>
@@ -460,7 +505,7 @@ export default function Frame() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-[#ede7f8] border-[#6b46a0] border-l-3 border-solid content-stretch flex flex-col items-start pl-[27px] pr-[24px] py-[24px] relative rounded-br-[16px] rounded-tr-[16px] shrink-0 w-full" data-node-id="450:20456" data-name="Background+VerticalBorder">
+                <div className="bg-[#ede7f8] border-[#6b46a0] border-l-3 border-solid content-stretch flex flex-col items-start pl-[27px] pr-[24px] py-5 sm:py-6 lg:py-8 relative rounded-br-[16px] rounded-tr-[16px] shrink-0 w-full" data-node-id="450:20456" data-name="Background+VerticalBorder">
                   <div className="relative shrink-0 w-full" data-node-id="450:20457" data-name="Container">
                     <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
                       <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#3d1f6e] text-[14px] w-full" data-node-id="450:20458" style={{ fontVariationSettings: "'opsz' 14" }}>
@@ -470,11 +515,11 @@ export default function Frame() {
                   </div>
                 </div>
               </div>
-            </div>
+            </CaseStudySection>
             <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:20459" data-name="Separator" />
-            <div className="content-stretch flex flex-col gap-[24px] items-start py-[24px] relative shrink-0 w-full" data-node-id="450:20460" data-name="Section - THE DUAL USER PROBLEM">
+            <CaseStudySection className="content-stretch flex flex-col gap-[24px] items-start py-5 sm:py-6 lg:py-8 relative shrink-0 w-full" data-node-id="450:20460" data-name="Section - THE DUAL USER PROBLEM">
               <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="450:20461">
-                <div className="content-stretch flex flex-col items-start max-w-[680px] relative shrink-0 w-[680px]" data-node-id="450:20462" data-name="Container">
+                <div className="content-stretch flex flex-col items-start w-full max-w-[680px] min-w-0 relative shrink-0" data-node-id="450:20462" data-name="Container">
                   <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[1.8px] uppercase whitespace-nowrap" data-node-id="450:20463" style={{ fontVariationSettings: "'opsz' 14" }}>
                     <p className="leading-[25.5px]">PowerBI Dashboard</p>
                   </div>
@@ -497,7 +542,7 @@ export default function Frame() {
               <div className="aspect-[1524/858] relative rounded-[12px] shrink-0 w-full" data-node-id="450:20469" data-name="image 48">
                 <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[12px] size-full" src={imgImage48} />
               </div>
-              <div className="bg-[#ede7f8] border-[#6b46a0] border-l-3 border-solid content-stretch flex flex-col items-start pl-[27px] pr-[24px] py-[24px] relative rounded-br-[16px] rounded-tr-[16px] shrink-0 w-full" data-node-id="450:20470" data-name="Background+VerticalBorder">
+              <div className="bg-[#ede7f8] border-[#6b46a0] border-l-3 border-solid content-stretch flex flex-col items-start pl-[27px] pr-[24px] py-5 sm:py-6 lg:py-8 relative rounded-br-[16px] rounded-tr-[16px] shrink-0 w-full" data-node-id="450:20470" data-name="Background+VerticalBorder">
                 <div className="relative shrink-0 w-full" data-node-id="450:20471" data-name="Container">
                   <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
                     <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#3d1f6e] text-[14px] w-full" data-node-id="450:20472" style={{ fontVariationSettings: "'opsz' 14" }}>
@@ -523,10 +568,10 @@ export default function Frame() {
                   </div>
                 </div>
               </div>
-            </div>
+            </CaseStudySection>
             <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:20473" data-name="Separator" />
-            <div className="content-stretch flex flex-col gap-[14px] items-start py-[24px] relative shrink-0 w-full" data-node-id="450:20474" data-name="Section - THE DUAL USER PROBLEM">
-              <div className="content-stretch flex flex-col items-start max-w-[680px] relative shrink-0 w-[680px]" data-node-id="450:20475" data-name="Container">
+            <CaseStudySection className="content-stretch flex flex-col gap-[14px] items-start py-5 sm:py-6 lg:py-8 relative shrink-0 w-full" data-node-id="450:20474" data-name="Section - THE DUAL USER PROBLEM">
+              <div className="content-stretch flex flex-col items-start w-full max-w-[680px] min-w-0 relative shrink-0" data-node-id="450:20475" data-name="Container">
                 <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[1.8px] uppercase whitespace-nowrap" data-node-id="450:20476" style={{ fontVariationSettings: "'opsz' 14" }}>
                   <p className="leading-[25.5px]">Recap</p>
                 </div>
@@ -545,7 +590,14 @@ export default function Frame() {
                   <p className="leading-[26.25px]">The analysis was structured around a core question: where are the highest-leverage opportunities to reduce DSAT ticket volume? I worked through three layers — assignment groups, DSAT reasons, and knowledge article effectiveness.</p>
                 </div>
               </div>
-              <div className="content-stretch flex flex-col gap-[20px] items-start pt-[24px] relative shrink-0 w-full" data-node-id="450:20482" data-name="Container">
+              <CaseStudyStagger
+                className="content-stretch flex flex-col gap-[20px] items-start pt-5 sm:pt-6 lg:pt-8 relative shrink-0 w-full"
+                data-node-id="450:20482"
+                data-name="Container"
+                itemClassName={CASE_STUDY_VERTICAL_STAGGER_ITEM}
+                initialDelayMs={120}
+                staggerMs={180}
+              >
                 <div className="bg-white border border-[#e2dbd3] border-solid content-stretch flex gap-[16px] items-start p-[24px] relative rounded-[14px] shrink-0 w-full" data-node-id="450:20483" data-name="Background+Border">
                   <div className="bg-[#fbedca] content-stretch flex items-center justify-center pb-[6.9px] pt-[5.1px] relative rounded-[18px] shrink-0 size-[36px]" data-node-id="450:20484" data-name="Background">
                     <div className="flex flex-col font-['DM_Sans:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#b5923c] text-[14px] text-center whitespace-nowrap" data-node-id="450:20485" style={{ fontVariationSettings: "'opsz' 14" }}>
@@ -554,7 +606,7 @@ export default function Frame() {
                   </div>
                   <div className="content-stretch flex flex-[1_0_0] flex-col gap-[3.4px] items-start min-h-px min-w-px relative" data-node-id="450:20486" data-name="Container">
                     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:20487" data-name="Heading 4">
-                      <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[15px] whitespace-nowrap" data-node-id="450:20488" style={{ fontVariationSettings: "'opsz' 14" }}>
+                      <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[15px] whitespace-normal break-words w-full" data-node-id="450:20488" style={{ fontVariationSettings: "'opsz' 14" }}>
                         <p className="leading-[25.5px]">Queried DSAT ticket data by assignment group in Snowflake</p>
                       </div>
                     </div>
@@ -585,7 +637,7 @@ export default function Frame() {
                   </div>
                   <div className="content-stretch flex flex-[1_0_0] flex-col gap-[3.4px] items-start min-h-px min-w-px relative" data-node-id="450:20499" data-name="Container">
                     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:20500" data-name="Heading 4">
-                      <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[15px] whitespace-nowrap" data-node-id="450:20501" style={{ fontVariationSettings: "'opsz' 14" }}>
+                      <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[15px] whitespace-normal break-words w-full" data-node-id="450:20501" style={{ fontVariationSettings: "'opsz' 14" }}>
                         <p className="leading-[25.5px]">Analyzed DSAT reasons and reopen patterns</p>
                       </div>
                     </div>
@@ -616,7 +668,7 @@ export default function Frame() {
                   </div>
                   <div className="content-stretch flex flex-[1_0_0] flex-col gap-[3.4px] items-start min-h-px min-w-px relative" data-node-id="450:20512" data-name="Container">
                     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:20513" data-name="Heading 4">
-                      <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[15px] whitespace-nowrap" data-node-id="450:20514" style={{ fontVariationSettings: "'opsz' 14" }}>
+                      <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[15px] whitespace-normal break-words w-full" data-node-id="450:20514" style={{ fontVariationSettings: "'opsz' 14" }}>
                         <p className="leading-[25.5px]">Built KA effectiveness analysis using two independent methods</p>
                       </div>
                     </div>
@@ -707,12 +759,16 @@ export default function Frame() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </CaseStudyStagger>
+            </CaseStudySection>
             <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:20550" data-name="Separator" />
-            <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="450:20551" data-name="Section - THE DUAL USER PROBLEM">
+            <CaseStudySection
+              className={`content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full ${caseStudySectionPaddingYClass}`}
+              data-node-id="450:20551"
+              data-name="Section - THE DUAL USER PROBLEM"
+            >
               <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="450:20552">
-                <div className="content-stretch flex flex-col items-start max-w-[680px] relative shrink-0 w-[680px]" data-node-id="450:20553" data-name="Container">
+                <div className="content-stretch flex flex-col items-start w-full max-w-[680px] min-w-0 relative shrink-0" data-node-id="450:20553" data-name="Container">
                   <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[1.8px] uppercase whitespace-nowrap" data-node-id="450:20554" style={{ fontVariationSettings: "'opsz' 14" }}>
                     <p className="leading-[25.5px]">Outcomes</p>
                   </div>
@@ -732,35 +788,41 @@ export default function Frame() {
                   <p className="leading-[26.25px]">{`The measure of research quality isn't the analysis itself, it's whether it changes what people do. These findings did.`}</p>
                 </div>
               </div>
-              <div className="content-stretch flex flex-col gap-[18px] items-start pt-[24px] relative shrink-0 w-full" data-node-id="450:20560" data-name="Container">
-                <div className="bg-[#ede7f8] border-2 border-[#6b46a0] border-solid content-stretch flex gap-[16px] items-start p-[24px] relative rounded-[14px] shrink-0 w-full" data-node-id="450:20561" data-name="Background+Border">
+              <CaseStudyStagger
+                className="grid w-full grid-cols-2 gap-4 pt-5 sm:pt-6 lg:pt-8"
+                data-node-id="450:20560"
+                data-name="Container"
+                itemClassName="min-h-0 min-w-0 [&>*]:h-full"
+                staggerMs={70}
+              >
+                <div className="bg-[#ede7f8] border-2 border-[#6b46a0] border-solid content-stretch flex flex-col gap-[12px] items-start p-[24px] relative rounded-[16px] shrink-0 w-full" data-node-id="450:20561" data-name="Background+Border">
                   <div className="bg-[#d4f0eb] content-stretch flex items-center justify-center pb-[4.8px] pt-[4.2px] relative rounded-[10px] shrink-0 size-[40px]" data-node-id="450:20562" data-name="Background">
                     <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[18px] text-center whitespace-nowrap" data-node-id="450:20563" style={{ fontVariationSettings: "'opsz' 14" }}>
                       <p className="leading-[30.6px]">📈</p>
                     </div>
                   </div>
-                  <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-h-px min-w-px relative" data-node-id="450:20564" data-name="Container">
+                  <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full" data-node-id="450:20564" data-name="Container">
                     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:20565" data-name="Heading 4">
-                      <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[14px] whitespace-nowrap" data-node-id="450:20566" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        <p className="leading-[25.5px]">Projected ~15% improvement in service satisfaction</p>
+                      <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[14px] w-full" data-node-id="450:20566" style={{ fontVariationSettings: "'opsz' 14" }}>
+                        <p className="leading-[25.5px]">Projected ~15% improvement in service satisfaction by number of tickets</p>
                       </div>
                     </div>
                     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:20567" data-name="Container">
                       <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] w-full" data-node-id="450:20568" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        <p className="leading-[22.4px]">The recommendations; targeting high-reopen KA articles, surfacing SLA pressure as a structural issue, and prioritizing the GSD password reset flow, were projected to reduce ticket reopen rates and improve end-user satisfaction scores by approximately 15%.</p>
+                        <p className="leading-[22.4px]">By improving the KA database and articles to better support self service, this would decrease number of reopened DSAT tickets by about 15%.</p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="bg-white border border-[#e2dbd3] border-solid content-stretch flex gap-[16px] items-start p-[24px] relative rounded-[14px] shrink-0 w-full" data-node-id="450:20569" data-name="Background+Border">
+                <div className="bg-white border border-[#e2dbd3] border-solid content-stretch flex flex-col gap-[12px] items-start p-[24px] relative rounded-[16px] shrink-0 w-full" data-node-id="450:20569" data-name="Background+Border">
                   <div className="bg-[#d4f0eb] content-stretch flex items-center justify-center pb-[4.79px] pt-[4.21px] relative rounded-[10px] shrink-0 size-[40px]" data-node-id="450:20570" data-name="Background">
                     <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[18px] text-center whitespace-nowrap" data-node-id="450:20571" style={{ fontVariationSettings: "'opsz' 14" }}>
                       <p className="leading-[30.6px]">🎯</p>
                     </div>
                   </div>
-                  <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-h-px min-w-px relative" data-node-id="450:20572" data-name="Container">
+                  <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full" data-node-id="450:20572" data-name="Container">
                     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:20573" data-name="Heading 4">
-                      <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[14px] whitespace-nowrap" data-node-id="450:20574" style={{ fontVariationSettings: "'opsz' 14" }}>
+                      <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[14px] w-full" data-node-id="450:20574" style={{ fontVariationSettings: "'opsz' 14" }}>
                         <p className="leading-[25.5px]">KA Service Owner assigned follow-up investigation to his team</p>
                       </div>
                     </div>
@@ -771,15 +833,15 @@ export default function Frame() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-white border border-[#e2dbd3] border-solid content-stretch flex gap-[16px] h-[146px] items-start p-[24px] relative rounded-[14px] shrink-0 w-full" data-node-id="450:20577" data-name="Background+Border">
+                <div className="bg-white border border-[#e2dbd3] border-solid content-stretch flex flex-col gap-[12px] items-start p-[24px] relative rounded-[16px] shrink-0 w-full" data-node-id="450:20577" data-name="Background+Border">
                   <div className="bg-[#d4f0eb] content-stretch flex items-center justify-center pb-[4.79px] pt-[4.21px] relative rounded-[10px] shrink-0 size-[40px]" data-node-id="450:20578" data-name="Background">
                     <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[18px] text-center whitespace-nowrap" data-node-id="450:20579" style={{ fontVariationSettings: "'opsz' 14" }}>
                       <p className="leading-[30.6px]">📊</p>
                     </div>
                   </div>
-                  <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-h-px min-w-px relative" data-node-id="450:20580" data-name="Container">
+                  <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full" data-node-id="450:20580" data-name="Container">
                     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:20581" data-name="Heading 4">
-                      <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[14px] whitespace-nowrap" data-node-id="450:20582" style={{ fontVariationSettings: "'opsz' 14" }}>
+                      <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[14px] w-full" data-node-id="450:20582" style={{ fontVariationSettings: "'opsz' 14" }}>
                         <p className="leading-[25.5px]">Global Service Desk dashboard picked up for further password reset analysis</p>
                       </div>
                     </div>
@@ -790,15 +852,15 @@ export default function Frame() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-white border border-[#e2dbd3] border-solid content-stretch flex gap-[16px] h-[146px] items-start p-[24px] relative rounded-[14px] shrink-0 w-full" data-node-id="450:20585" data-name="Background+Border">
+                <div className="bg-white border border-[#e2dbd3] border-solid content-stretch flex flex-col gap-[12px] items-start p-[24px] relative rounded-[16px] shrink-0 w-full" data-node-id="450:20585" data-name="Background+Border">
                   <div className="bg-[#d4f0eb] content-stretch flex items-center justify-center pb-[4.8px] pt-[4.2px] relative rounded-[10px] shrink-0 size-[40px]" data-node-id="450:20586" data-name="Background">
                     <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[18px] text-center whitespace-nowrap" data-node-id="450:20587" style={{ fontVariationSettings: "'opsz' 14" }}>
                       <p className="leading-[30.6px]">➕</p>
                     </div>
                   </div>
-                  <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-h-px min-w-px relative" data-node-id="450:20588" data-name="Container">
+                  <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full" data-node-id="450:20588" data-name="Container">
                     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:20589" data-name="Heading 4">
-                      <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[14px] whitespace-nowrap" data-node-id="450:20590" style={{ fontVariationSettings: "'opsz' 14" }}>
+                      <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[14px] w-full" data-node-id="450:20590" style={{ fontVariationSettings: "'opsz' 14" }}>
                         <p className="leading-[25.5px]">Additional service owner requested a custom DSAT report</p>
                       </div>
                     </div>
@@ -809,8 +871,8 @@ export default function Frame() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </CaseStudyStagger>
+            </CaseStudySection>
             <div className="content-stretch flex flex-col items-center pt-[40px] relative shrink-0 w-full" data-node-id="450:20593">
               <a
                 href={docUrl}

@@ -3,7 +3,11 @@ import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import { isHomeNavActive, isWorkNavActive, mainNavInlineClass } from '../mainNav';
 import { ActPhoneVideoFrame } from '../components/ActPhoneVideoFrame';
 import { CompactLaptopVideoFrame } from '../components/CompactLaptopVideoFrame';
-import { SoftAppearOnce, SoftAppearStagger } from '../components/SoftAppear';
+import {
+  CASE_STUDY_VERTICAL_STAGGER_ITEM,
+  SoftAppearOnce,
+  SoftAppearStagger,
+} from '../components/SoftAppear';
 import { CmsxLaptopVideoFrame, type CmsxLaptopVariant } from '../components/CmsxLaptopVideoFrame';
 import { HOME_PROJECTS, WORK_FILTER_CHIPS, type HomeProject, type WorkFilterId } from '../data/homePortfolio';
 
@@ -350,9 +354,9 @@ function DevelopmentUnifiedCard({ project }: { project: HomeProject }) {
           to={project.to}
           className={`absolute inset-0 z-10 block overflow-hidden rounded-[24px] ${portfolioTileChrome}`}
         >
-          <div className="absolute inset-0 flex min-h-0 min-w-0 bg-[#ffffff]">
+          <div className="absolute inset-0 flex min-h-0 min-w-0 flex-col bg-[#ffffff] sm:flex-row">
             <div
-              className="relative z-[2] flex h-full w-[304px] shrink-0 items-center justify-center overflow-clip bg-[#ffffff] pb-8 pt-[54px]"
+              className="relative z-[2] flex h-[min(240px,40vh)] w-full shrink-0 items-center justify-center overflow-clip bg-[#ffffff] pt-8 pb-4 sm:h-full sm:w-[304px] sm:pb-8 sm:pt-[54px]"
               data-node-id="450:18303-phone"
             >
               <div className="relative aspect-[698/1390] h-full max-h-full shrink-0 rounded-[32px]">
@@ -446,34 +450,80 @@ function BentoProductDesign() {
   const rethink = projectById('rethink-food');
   const cmsx = projectById('cmsx');
 
+  const productDesktopSlots = [
+    'absolute left-0 top-0 h-[608px] w-[304px]',
+    'absolute left-[328px] top-0 size-[304px]',
+    'absolute left-[656px] top-0 size-[304px]',
+    'absolute left-[328px] top-[328px] h-[280px] w-[614px]',
+  ] as const;
+
   return (
-    <div className="relative mx-auto h-[608px] w-full max-w-[960px] shrink-0">
-      <PortfolioCardLink
-        project={act}
-        className="left-0 top-0 h-[608px] w-[304px]"
-        arrowClassName="left-[242px] top-[547px]"
-        footerArrowClassName="left-[242px] bottom-[21px]"
-      />
-      <PortfolioCardLink
-        project={capitalOne}
-        className="left-[328px] top-0 size-[304px]"
-        arrowClassName="left-[245px] top-[245px]"
-        footerArrowClassName="left-[245px] bottom-[19px]"
-      />
-      <PortfolioCardLink
-        project={rethink}
-        className="left-[656px] top-0 size-[304px]"
-        arrowClassName="left-[245px] top-[245px]"
-        footerArrowClassName="left-[245px] bottom-[19px]"
-      />
-      <PortfolioCardLink
-        project={cmsx}
-        className="left-[328px] top-[328px] h-[280px] w-[614px]"
-        arrowClassName="right-6 top-[223px]"
-        footerArrowClassName="right-6 bottom-[17px]"
-        cmsxVariant="productBentoWide"
-      />
-    </div>
+    <>
+      <SoftAppearStagger
+        className="mx-auto flex w-full max-w-[960px] flex-col gap-4 lg:hidden"
+        itemClassName={CASE_STUDY_VERTICAL_STAGGER_ITEM}
+        staggerMs={85}
+        variant="subtle"
+      >
+        <PortfolioCardLink
+          project={act}
+          className="!relative left-0 top-0 h-[min(608px,85vh)] w-full"
+          arrowClassName="bottom-6 right-6"
+          footerArrowClassName="bottom-6 right-6"
+        />
+        <PortfolioCardLink
+          project={capitalOne}
+          className="!relative left-0 top-0 aspect-square w-full"
+          arrowClassName="bottom-6 right-6"
+          footerArrowClassName="bottom-6 right-6"
+        />
+        <PortfolioCardLink
+          project={rethink}
+          className="!relative left-0 top-0 aspect-square w-full"
+          arrowClassName="bottom-6 right-6"
+          footerArrowClassName="bottom-6 right-6"
+        />
+        <PortfolioCardLink
+          project={cmsx}
+          className="!relative left-0 top-0 h-[280px] w-full"
+          arrowClassName="right-6 top-6"
+          footerArrowClassName="right-6 bottom-6"
+          cmsxVariant="productBentoWide"
+        />
+      </SoftAppearStagger>
+      <SoftAppearStagger
+        className="relative mx-auto hidden h-[608px] w-full max-w-[960px] shrink-0 lg:block"
+        itemClassName={(i) => productDesktopSlots[i] ?? ''}
+        staggerMs={75}
+        variant="subtle"
+      >
+        <PortfolioCardLink
+          project={act}
+          className="!relative left-0 top-0 h-full w-full"
+          arrowClassName="left-[242px] top-[547px]"
+          footerArrowClassName="left-[242px] bottom-[21px]"
+        />
+        <PortfolioCardLink
+          project={capitalOne}
+          className="!relative left-0 top-0 h-full w-full"
+          arrowClassName="left-[245px] top-[245px]"
+          footerArrowClassName="left-[245px] bottom-[19px]"
+        />
+        <PortfolioCardLink
+          project={rethink}
+          className="!relative left-0 top-0 h-full w-full"
+          arrowClassName="left-[245px] top-[245px]"
+          footerArrowClassName="left-[245px] bottom-[19px]"
+        />
+        <PortfolioCardLink
+          project={cmsx}
+          className="!relative left-0 top-0 h-full w-full"
+          arrowClassName="right-6 top-[223px]"
+          footerArrowClassName="right-6 bottom-[17px]"
+          cmsxVariant="productBentoWide"
+        />
+      </SoftAppearStagger>
+    </>
   );
 }
 
@@ -483,32 +533,75 @@ function BentoDataScience() {
   const rethink = projectById('rethink-food');
   const cmsx = projectById('cmsx');
 
+  const dataScienceDesktopSlots = [
+    'absolute left-0 top-0 h-[318px] w-[469px]',
+    'absolute left-[491px] top-0 h-[318px] w-[469px]',
+    'absolute left-0 top-[343px] h-[493px] w-full max-w-[960px]',
+  ] as const;
+
   return (
-    <div className="relative mx-auto h-[836px] w-full max-w-[960px] shrink-0">
-      <PortfolioCardLink
-        project={kenvueData}
-        className="left-0 top-0 h-[318px] w-[469px]"
-        paddedAspectImage
-        arrowClassName="left-[397px] top-[253px]"
-        footerArrowClassName="left-[397px] bottom-[25px]"
-      />
-      <PortfolioCardLink
-        project={rethink}
-        className="left-[491px] top-0 h-[318px] w-[469px]"
-        pillOuterClassName="absolute left-[23px] top-[23px] flex h-[24px] items-start rounded-full bg-[#ffefca] px-3 py-1"
-        arrowCircleOuterClassName="absolute flex size-[40px] shrink-0 items-center justify-center rounded-full bg-[#ffefca]"
-        arrowClassName="left-[401px] top-[249px]"
-        footerArrowClassName="left-[401px] bottom-[29px]"
-        heroCompactClassName="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-        compactSizePreset="dataScienceTile"
-      />
-      <PortfolioCardLink
-        project={cmsx}
-        className="left-0 top-[343px] h-[493px] w-full max-w-[960px]"
-        arrowClassName="right-6 top-[429px]"
-        cmsxVariant="dataScienceHero"
-      />
-    </div>
+    <>
+      <SoftAppearStagger
+        className="mx-auto flex w-full max-w-[960px] flex-col gap-4 lg:hidden"
+        itemClassName={CASE_STUDY_VERTICAL_STAGGER_ITEM}
+        staggerMs={85}
+        variant="subtle"
+      >
+        <PortfolioCardLink
+          project={kenvueData}
+          className="!relative left-0 top-0 h-[318px] w-full"
+          paddedAspectImage
+          arrowClassName="bottom-6 right-6"
+          footerArrowClassName="bottom-6 right-6"
+        />
+        <PortfolioCardLink
+          project={rethink}
+          className="!relative left-0 top-0 h-[318px] w-full"
+          pillOuterClassName="absolute left-[23px] top-[23px] flex h-[24px] items-start rounded-full bg-[#ffefca] px-3 py-1"
+          arrowCircleOuterClassName="absolute flex size-[40px] shrink-0 items-center justify-center rounded-full bg-[#ffefca]"
+          arrowClassName="bottom-6 right-6"
+          footerArrowClassName="bottom-6 right-6"
+          heroCompactClassName="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          compactSizePreset="dataScienceTile"
+        />
+        <PortfolioCardLink
+          project={cmsx}
+          className="!relative left-0 top-0 h-[min(493px,80vh)] w-full"
+          arrowClassName="right-6 bottom-24"
+          cmsxVariant="dataScienceHero"
+        />
+      </SoftAppearStagger>
+      <SoftAppearStagger
+        className="relative mx-auto hidden h-[836px] w-full max-w-[960px] shrink-0 lg:block"
+        itemClassName={(i) => dataScienceDesktopSlots[i] ?? ''}
+        staggerMs={75}
+        variant="subtle"
+      >
+        <PortfolioCardLink
+          project={kenvueData}
+          className="!relative left-0 top-0 h-full w-full"
+          paddedAspectImage
+          arrowClassName="left-[397px] top-[253px]"
+          footerArrowClassName="left-[397px] bottom-[25px]"
+        />
+        <PortfolioCardLink
+          project={rethink}
+          className="!relative left-0 top-0 h-full w-full"
+          pillOuterClassName="absolute left-[23px] top-[23px] flex h-[24px] items-start rounded-full bg-[#ffefca] px-3 py-1"
+          arrowCircleOuterClassName="absolute flex size-[40px] shrink-0 items-center justify-center rounded-full bg-[#ffefca]"
+          arrowClassName="left-[401px] top-[249px]"
+          footerArrowClassName="left-[401px] bottom-[29px]"
+          heroCompactClassName="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          compactSizePreset="dataScienceTile"
+        />
+        <PortfolioCardLink
+          project={cmsx}
+          className="!relative left-0 top-0 h-full w-full"
+          arrowClassName="right-6 top-[429px]"
+          cmsxVariant="dataScienceHero"
+        />
+      </SoftAppearStagger>
+    </>
   );
 }
 
@@ -517,9 +610,9 @@ function BentoDevelopment() {
   const info = projectById('info-2300');
 
   return (
-    <div className="relative mx-auto h-[505px] w-full max-w-[960px] shrink-0">
+    <SoftAppearOnce className="relative mx-auto h-[505px] w-full max-w-[960px] shrink-0">
       <DevelopmentUnifiedCard project={info} />
-    </div>
+    </SoftAppearOnce>
   );
 }
 
@@ -531,42 +624,97 @@ function BentoAll() {
   const info = projectById('info-2300');
   const kenvueData = projectById('kenvue-data');
 
+  const allDesktopSlots = [
+    'absolute left-0 top-0 h-[608px] w-[304px]',
+    'absolute left-[328px] top-0 size-[304px]',
+    'absolute left-[656px] top-0 size-[304px]',
+    'absolute left-[328px] top-[328px] h-[472px] w-[632px]',
+    'absolute left-0 top-[632px] h-[505px] w-[632px]',
+    'absolute left-[656px] top-[833px] size-[304px]',
+  ] as const;
+
   return (
-    <div className="relative h-[1137px] w-full shrink-0">
-      <PortfolioCardLink
-        project={act}
-        className="left-0 top-0 h-[608px] w-[304px]"
-        arrowClassName="left-[242px] top-[547px]"
-      />
-      <PortfolioCardLink
-        project={capitalOne}
-        className="left-[328px] top-0 size-[304px]"
-        arrowClassName="left-[245px] top-[245px]"
-      />
-      <PortfolioCardLink
-        project={rethink}
-        className="left-[656px] top-0 size-[304px]"
-        arrowClassName="left-[245px] top-[245px]"
-      />
-      <PortfolioCardLink
-        project={cmsx}
-        className="left-[328px] top-[328px] h-[472px] w-[632px]"
-        arrowClassName="right-6 bottom-6"
-        cmsxVariant="productBentoWide"
-      />
+    <>
+      <SoftAppearStagger
+        className="flex w-full flex-col gap-4 lg:hidden"
+        itemClassName={CASE_STUDY_VERTICAL_STAGGER_ITEM}
+        staggerMs={85}
+        variant="subtle"
+      >
+        <PortfolioCardLink
+          project={act}
+          className="!relative left-0 top-0 h-[min(608px,85vh)] w-full"
+          arrowClassName="bottom-6 right-6"
+        />
+        <PortfolioCardLink
+          project={capitalOne}
+          className="!relative left-0 top-0 aspect-square w-full"
+          arrowClassName="bottom-6 right-6"
+        />
+        <PortfolioCardLink
+          project={rethink}
+          className="!relative left-0 top-0 aspect-square w-full"
+          arrowClassName="bottom-6 right-6"
+        />
+        <PortfolioCardLink
+          project={cmsx}
+          className="!relative left-0 top-0 h-[min(472px,70vh)] w-full"
+          arrowClassName="right-6 bottom-6"
+          cmsxVariant="productBentoWide"
+        />
+        <div className="h-[505px] w-full min-w-0 max-w-full shrink-0">
+          <DevelopmentUnifiedCard project={info} />
+        </div>
+        <PortfolioCardLink
+          project={kenvueData}
+          className="!relative left-0 top-0 aspect-square w-full"
+          paddedAspectImage
+          roundedClassName="rounded-[24px]"
+          arrowClassName="bottom-6 right-6"
+        />
+      </SoftAppearStagger>
 
-      <div className="absolute left-0 top-[632px] h-[505px] w-[632px]">
-        <PortfolioLShapeInfoAllCard project={info} />
-      </div>
+      <SoftAppearStagger
+        className="relative hidden h-[1137px] w-full shrink-0 lg:block"
+        itemClassName={(i) => allDesktopSlots[i] ?? ''}
+        staggerMs={70}
+        variant="subtle"
+      >
+        <PortfolioCardLink
+          project={act}
+          className="!relative left-0 top-0 h-full w-full"
+          arrowClassName="left-[242px] top-[547px]"
+        />
+        <PortfolioCardLink
+          project={capitalOne}
+          className="!relative left-0 top-0 h-full w-full"
+          arrowClassName="left-[245px] top-[245px]"
+        />
+        <PortfolioCardLink
+          project={rethink}
+          className="!relative left-0 top-0 h-full w-full"
+          arrowClassName="left-[245px] top-[245px]"
+        />
+        <PortfolioCardLink
+          project={cmsx}
+          className="!relative left-0 top-0 h-full w-full"
+          arrowClassName="right-6 bottom-6"
+          cmsxVariant="productBentoWide"
+        />
 
-      <PortfolioCardLink
-        project={kenvueData}
-        className="left-[656px] top-[833px] size-[304px]"
-        paddedAspectImage
-        roundedClassName="rounded-[24px]"
-        arrowClassName="left-[245px] top-[245px]"
-      />
-    </div>
+        <div className="h-full w-full min-h-0 min-w-0">
+          <PortfolioLShapeInfoAllCard project={info} />
+        </div>
+
+        <PortfolioCardLink
+          project={kenvueData}
+          className="!relative left-0 top-0 h-full w-full"
+          paddedAspectImage
+          roundedClassName="rounded-[24px]"
+          arrowClassName="left-[245px] top-[245px]"
+        />
+      </SoftAppearStagger>
+    </>
   );
 }
 
@@ -599,51 +747,51 @@ export default function PersonalWebsiteDesignPortfolio() {
 
   return (
     <div
-      className="content-stretch relative flex flex-col items-start justify-center"
+      className="content-stretch relative flex w-full min-w-0 flex-col items-center justify-center"
       data-node-id="450:16955"
       data-name="Personal Website Design Portfolio"
     >
       <div
-        className="bg-[#f5f2eb] content-stretch relative flex w-[1056px] shrink-0 flex-col items-start"
+        className="bg-[#f5f2eb] content-stretch relative flex w-full max-w-[1056px] shrink-0 flex-col items-start"
         data-node-id="450:16956"
         data-name="RootLayout"
       >
-        <div className="relative shrink-0 bg-[#f5f2eb]" data-node-id="450:16957" data-name="Home">
-          <div className="relative flex flex-col gap-[96px] border-0 border-transparent bg-clip-padding pb-[96px] pl-[48px] pr-[48px] pt-[128px]">
-            <div
-              className="relative w-[960px] shrink-0 overflow-clip rounded-[24px] bg-[#e3dfd6] p-[48px] shadow-[0_1px_3px_rgba(44,37,32,0.05),0_6px_28px_rgba(44,37,32,0.06)]"
+        <div className="relative w-full min-w-0 shrink-0 bg-[#f5f2eb]" data-node-id="450:16957" data-name="Home">
+          <div className="relative flex flex-col gap-12 border-0 border-transparent bg-clip-padding pb-12 pt-[128px] sm:gap-[96px] sm:pb-[96px] px-4 sm:px-8 md:px-12 lg:px-[48px]">
+            <SoftAppearOnce
+              className="relative w-full max-w-[960px] shrink-0 overflow-clip rounded-[24px] bg-[#e3dfd6] p-6 shadow-[0_1px_3px_rgba(44,37,32,0.05),0_6px_28px_rgba(44,37,32,0.06)] sm:p-8 md:p-12"
               data-node-id="450:16958"
               data-name="Section"
             >
               <div
-                className="relative flex w-full shrink-0 items-center gap-[32px]"
+                className="relative flex w-full min-w-0 shrink-0 flex-col items-stretch gap-6 md:flex-row md:gap-8 lg:items-center lg:gap-[32px]"
                 data-node-id="450:16959"
                 data-name="Container"
               >
                 <div
-                  className="relative flex min-h-px min-w-px flex-[1_0_0] flex-col items-start gap-[60px]"
+                  className="relative flex min-h-px w-full min-w-0 flex-col items-start gap-8 md:flex-[1_1_0] sm:gap-[60px]"
                   data-node-id="450:16960"
                   data-name="Container"
                 >
                   <div
-                    className="relative flex w-full shrink-0 flex-col items-start gap-[24px]"
+                    className="relative flex w-full min-w-0 shrink-0 flex-col items-start gap-[24px]"
                     data-node-id="450:16961"
                   >
                     <div
-                      className="relative flex w-full shrink-0 items-center justify-center"
+                      className="relative flex w-full min-w-0 shrink-0 items-center justify-center"
                       data-node-id="450:16962"
                       data-name="Home"
                     >
                       <p
-                        className="font-['Libre_Baskerville:Italic',sans-serif] relative min-h-px min-w-px flex-[1_0_0] text-[72px] italic leading-[72px] text-[#432060]"
+                        className="font-['Libre_Baskerville:Italic',sans-serif] relative min-h-px min-w-0 w-full text-center text-[clamp(2rem,7.5vw,4.25rem)] italic leading-[1.08] text-[#432060] md:text-left"
                         data-node-id="450:16963"
                       >
                         Jessica Andrews
                       </p>
                     </div>
-                    <div className="relative h-[87.75px] w-full shrink-0" data-node-id="450:16964" data-name="Home">
+                    <div className="relative min-h-0 w-full min-w-0 shrink-0" data-node-id="450:16964" data-name="Home">
                       <p
-                        className="font-['DM_Sans:9pt_Regular',sans-serif] absolute left-0 top-[-0.5px] w-[396px] text-[18px] font-normal leading-[29.25px] text-[#2d2d2d]"
+                        className="font-['DM_Sans:9pt_Regular',sans-serif] relative left-0 top-[-0.5px] w-full max-w-[36rem] text-[17px] font-normal leading-[1.6] text-[#2d2d2d] md:text-[18px] md:leading-[29.25px]"
                         data-node-id="450:16965"
                         style={{ fontVariationSettings: "'opsz' 9" }}
                       >
@@ -656,12 +804,12 @@ export default function PersonalWebsiteDesignPortfolio() {
                     href={RESUME_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="relative shrink-0 rounded-[16777200px] bg-[#432060] px-[40px] py-[10px]"
+                    className="relative shrink-0 self-center rounded-[16777200px] bg-[#432060] px-[40px] py-[10px] md:self-start"
                     data-node-id="450:16966"
                     data-name="Home"
                   >
                     <p
-                      className="font-['DM_Sans:Medium',sans-serif] relative shrink-0 text-center text-[16px] font-medium leading-[24px] text-[#fdfcfb] whitespace-nowrap"
+                      className="font-['DM_Sans:Medium',sans-serif] relative shrink-0 text-center text-[16px] font-medium leading-[24px] text-[#fdfcfb] sm:whitespace-nowrap"
                       data-node-id="450:16967"
                       style={{ fontVariationSettings: "'opsz' 14" }}
                     >
@@ -670,7 +818,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                   </a>
                 </div>
                 <div
-                  className="relative h-[408px] min-h-px min-w-px flex-[1_0_0] rounded-[16px]"
+                  className="relative aspect-[16/10] min-h-[220px] w-full min-w-0 max-h-[340px] overflow-hidden rounded-[16px] md:max-h-[420px] md:flex-[1_1_0] md:aspect-[4/3] md:min-h-[280px] lg:h-[408px] lg:max-h-[408px] lg:aspect-auto"
                   data-node-id="450:16968"
                   data-name="Container"
                 >
@@ -681,21 +829,21 @@ export default function PersonalWebsiteDesignPortfolio() {
                   />
                 </div>
               </div>
-            </div>
+            </SoftAppearOnce>
             <div
-              className="relative flex w-[960px] shrink-0 flex-col gap-[48px] overflow-clip py-[24px]"
+              className="relative flex w-full max-w-[960px] shrink-0 flex-col gap-[48px] overflow-clip py-5 sm:py-6 lg:py-8"
               data-node-id="450:16969"
               data-name="Section"
             >
               <div
-                className="relative flex h-[40px] w-full shrink-0 items-center justify-center"
+                className="relative flex min-h-[40px] w-full shrink-0 items-center justify-center px-1"
                 data-node-id="450:16970"
                 data-name="Container"
               >
-                <div className="relative h-[40px] w-[285.844px] shrink-0" data-node-id="450:16971" data-name="Heading 2">
-                  <div className="relative size-full border-0 border-transparent bg-clip-padding">
+                <div className="relative min-h-[40px] w-full max-w-[286px] shrink-0 text-center sm:max-w-none" data-node-id="450:16971" data-name="Heading 2">
+                  <div className="relative w-full border-0 border-transparent bg-clip-padding">
                     <p
-                      className="font-['Libre_Baskerville:Italic',sans-serif] absolute left-0 top-[-0.5px] whitespace-nowrap text-[36px] italic leading-[40px] text-[#845482]"
+                      className="font-['Libre_Baskerville:Italic',sans-serif] relative left-0 top-[-0.5px] text-[clamp(1.5rem,5vw,2.25rem)] italic leading-tight text-[#845482] sm:whitespace-nowrap"
                       data-node-id="450:16972"
                     >
                       Where I’ve Been
@@ -705,6 +853,8 @@ export default function PersonalWebsiteDesignPortfolio() {
               </div>
               <SoftAppearStagger
                 className="relative flex min-h-[100px] w-full shrink-0 flex-col items-center justify-center gap-8 rounded-[100px] px-6 py-4 sm:flex-row sm:gap-[128px] sm:px-[54px] sm:py-0"
+                staggerMs={170}
+                initialDelayMs={220}
                 itemClassName={(i) =>
                   i < 2
                     ? 'flex min-h-px min-w-0 flex-[1_0_0] justify-center'
@@ -741,25 +891,29 @@ export default function PersonalWebsiteDesignPortfolio() {
       </div>
 
       <div
-        className="bg-[#f5f2eb] content-stretch relative flex w-[1056px] shrink-0 flex-col items-start gap-[48px] px-[48px] pb-[128px]"
+        className="bg-[#f5f2eb] content-stretch relative flex w-full max-w-[1056px] shrink-0 flex-col items-start gap-[48px] px-4 pb-24 sm:px-8 md:px-12 lg:px-[48px] lg:pb-[128px]"
         data-node-id="450:17004"
         data-name="Portfolio"
       >
-        <div className="relative flex w-full shrink-0 flex-col items-start gap-[96px]" data-node-id="450:17005">
-          <div className="relative h-[60px] w-[960px] shrink-0" data-node-id="450:17006">
+        <div className="relative flex w-full min-w-0 shrink-0 flex-col items-start gap-12 sm:gap-[96px]" data-node-id="450:17005">
+          <SoftAppearOnce className="relative min-h-[60px] w-full max-w-[960px] shrink-0 px-2" data-node-id="450:17006">
             <p
-              className="font-['Libre_Baskerville:Italic',sans-serif] absolute left-1/2 top-0 -translate-x-1/2 whitespace-nowrap text-center text-[60px] italic leading-[60px] text-[#432060]"
+              className="font-['Libre_Baskerville:Italic',sans-serif] relative left-1/2 top-0 w-full -translate-x-1/2 text-center text-[clamp(2rem,6vw,3.75rem)] italic leading-[1.15] text-[#432060] sm:whitespace-nowrap"
               data-node-id="450:17007"
             >
               My Work
             </p>
-          </div>
-          <div className="relative flex w-full shrink-0 items-start justify-center gap-[24px]" data-node-id="450:17008">
-            <div
-              className="relative flex h-[36px] shrink-0 flex-wrap items-start justify-center gap-[12px]"
+          </SoftAppearOnce>
+          <div className="relative flex w-full min-w-0 shrink-0 flex-col items-stretch gap-4 sm:flex-row sm:items-start sm:justify-center sm:gap-[24px]" data-node-id="450:17008">
+            <SoftAppearStagger
+              className="relative flex min-h-[36px] shrink-0 flex-wrap items-center justify-center gap-[12px] sm:min-w-0 sm:flex-1"
               data-node-id="450:17009"
               role="tablist"
               aria-label="Filter projects"
+              itemClassName="shrink-0"
+              staggerMs={90}
+              initialDelayMs={80}
+              variant="subtle"
             >
               {WORK_FILTER_CHIPS.map(({ id, label }) => {
                 const active = filter === id;
@@ -775,7 +929,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                     }`}
                   >
                     <span
-                      className={`font-['DM_Sans:Medium',sans-serif] text-[14px] font-medium leading-[20px] whitespace-nowrap ${
+                      className={`font-['DM_Sans:Medium',sans-serif] text-center text-[14px] font-medium leading-[20px] sm:whitespace-nowrap ${
                         active ? 'text-[#ffffff]' : 'text-[#2d2d2d]'
                       }`}
                       style={{ fontVariationSettings: "'opsz' 14" }}
@@ -785,8 +939,8 @@ export default function PersonalWebsiteDesignPortfolio() {
                   </button>
                 );
               })}
-            </div>
-            <div className="absolute right-0 top-1/2 flex h-[40px] -translate-y-1/2 items-center justify-end">
+            </SoftAppearStagger>
+            <div className="relative flex h-[40px] shrink-0 items-center justify-center sm:absolute sm:right-0 sm:top-1/2 sm:justify-end sm:-translate-y-1/2">
               <Link
                 to="/work"
                 className="font-['DM_Sans:Medium',sans-serif] text-[16px] font-medium leading-[24px] text-[#2c5f7f] underline decoration-solid"
@@ -812,11 +966,11 @@ export default function PersonalWebsiteDesignPortfolio() {
       </div>
 
       <div
-        className="absolute top-0 left-1/2 z-10 flex h-[81px] w-full max-w-[1056px] -translate-x-1/2 flex-col items-start border-b border-solid border-[#e8dfd0] bg-[#f5f2eb] px-[64px] pb-px"
+        className="absolute top-0 left-1/2 z-10 flex h-[81px] w-screen max-w-none -translate-x-1/2 flex-col items-stretch border-b border-solid border-[#e8dfd0] bg-[#f5f2eb] pb-px"
         data-node-id="450:17064"
         data-name="Navigation"
       >
-        <div className="relative flex h-[80px] w-full shrink-0 items-center justify-between">
+        <div className="relative mx-auto flex h-[80px] w-full max-w-[1056px] shrink-0 items-center justify-between px-4 sm:px-8 md:px-12 lg:px-[64px]">
           <Link to="/home" className="relative h-[40px] shrink-0">
             <div className="flex size-full items-center gap-3 border-0 border-transparent bg-clip-padding">
               <div className="relative size-[40px] shrink-0 rounded-full bg-[#432060]">

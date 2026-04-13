@@ -23,8 +23,6 @@ export type WorkPageProject = {
   /** Backdrop behind the thumbnail in compact + expanded left column */
   imageBgClass: string;
   compactImageMode: 'fill' | 'act-crop' | 'centered-info' | 'centered-kenvue';
-  /** When mode is `fill`, use full column height (Capital One) vs fixed thumb height (others). */
-  compactImageFullHeight?: boolean;
   /** Optional img class for compact (e.g. ACT positioning) */
   compactImgClassName?: string;
   expandedImgClassName?: string;
@@ -60,7 +58,6 @@ export const WORK_PAGE_PROJECTS: WorkPageProject[] = [
       'https://www.figma.com/api/mcp/asset/f84181c4-f1c6-4f65-8c99-c94e8ec11f2b',
     imageBgClass: 'bg-[#7a9fb0]',
     compactImageMode: 'fill',
-    compactImageFullHeight: true,
     tags: [
       pill('Enterprise', 'bg-[#e5dcd7]', 'text-[#816451]'),
       pill('Web', 'bg-[#efede8]', 'text-[#999181]'),
@@ -171,7 +168,7 @@ export const WORK_PAGE_PROJECTS: WorkPageProject[] = [
     ],
     expandedVideo: {
       kind: 'compact',
-      src: '/videos/info-2300-project-fin.mp4',
+      src: '/videos/info-2300-web.mp4',
       posterSrc: false,
     },
   },

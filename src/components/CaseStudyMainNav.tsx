@@ -4,7 +4,7 @@ import { isHomeNavActive, isWorkNavActive, mainNavInlineClass } from '../mainNav
 
 /**
  * In-flow case study header: same shell and link styles as Home / Work (`Design17537`, `Design16955`),
- * with the case study page background (`#fdfcfb`).
+ * background aligned with case-study article + `SiteFooter` paper tone (`#fdfcfb`).
  */
 export function CaseStudyMainNav() {
   const { pathname } = useLocation();
@@ -12,7 +12,10 @@ export function CaseStudyMainNav() {
   const workNav = isWorkNavActive(pathname);
 
   return (
-    <div className="relative flex w-full shrink-0 flex-col items-start border-b border-solid border-[#e8dfd0] bg-[#fdfcfb] pb-px" data-name="Navigation">
+    <div
+      className="relative box-border flex w-screen shrink-0 flex-col items-stretch border-b border-solid border-[#e8dfd0] bg-[#fdfcfb] pb-px ml-[calc(50%-50vw)]"
+      data-name="Navigation"
+    >
       <div
         className={`${caseStudyColumnClass} ${caseStudyNavPaddingXClass} relative flex h-[80px] w-full shrink-0 items-center justify-between`}
         data-name="Container"

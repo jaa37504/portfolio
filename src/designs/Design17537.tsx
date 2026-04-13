@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
+import { CASE_STUDY_VERTICAL_STAGGER_ITEM, CaseStudyStagger } from '../components/SoftAppear';
 import { WorkProjectCard } from '../components/WorkProjectCard';
 import { WORK_PAGE_PROJECTS } from '../data/workPagePortfolio';
 import { isHomeNavActive, isWorkNavActive, mainNavInlineClass } from '../mainNav';
@@ -22,27 +23,38 @@ export default function PersonalWebsiteDesignPortfolio() {
       >
         <div className="relative w-full min-w-0 shrink-0 bg-[#f5f2eb]" data-node-id="450:17539" data-name="ProjectDetail">
           <div className="relative flex w-full min-w-0 flex-col items-start bg-clip-padding px-4 pt-[128px] sm:px-8 md:px-12 lg:px-[48px]">
-            <div className="content-stretch relative flex w-full min-w-0 flex-col gap-12 items-start pt-8 sm:gap-[96px] sm:pt-[48px]" data-node-id="450:17540">
+            <div className="content-stretch relative flex w-full min-w-0 flex-col gap-12 items-start pt-8 sm:gap-[96px] sm:pt-10 lg:pt-12" data-node-id="450:17540">
               <div className="relative flex w-full min-w-0 shrink-0 items-center justify-center px-2" data-node-id="450:17541" data-name="Heading 1">
                 <h1 className="text-center font-['Libre_Baskerville:Italic',sans-serif] text-[clamp(2.25rem,7vw,3.75rem)] font-normal italic leading-[1.15] text-[#432060]" data-node-id="450:17542">
                   My Work
                 </h1>
               </div>
-              <div className="content-stretch flex w-full min-w-0 flex-col gap-8 items-start sm:gap-[32px]" data-node-id="450:17543">
+              <CaseStudyStagger
+                className="content-stretch flex w-full min-w-0 flex-col gap-8 items-start sm:gap-[32px]"
+                data-node-id="450:17543"
+                itemClassName={CASE_STUDY_VERTICAL_STAGGER_ITEM}
+                initialDelayMs={120}
+                staggerMs={220}
+                variant="subtle"
+              >
                 {WORK_PAGE_PROJECTS.map((project) => (
                   <WorkProjectCard key={project.id} project={project} />
                 ))}
-              </div>
+              </CaseStudyStagger>
             </div>
           </div>
         </div>
       </div>
       <div
-        className="absolute top-0 left-1/2 z-10 flex h-[81px] w-full max-w-[1056px] -translate-x-1/2 flex-col items-start border-b border-solid border-[#e8dfd0] bg-[#f5f2eb] px-[64px] pb-px"
+        className="absolute top-0 left-1/2 z-10 flex h-[81px] w-screen max-w-none -translate-x-1/2 flex-col items-stretch border-b border-solid border-[#e8dfd0] bg-[#f5f2eb] pb-px"
         data-node-id="450:17711"
         data-name="Navigation"
       >
-        <div className="relative flex h-[80px] w-full shrink-0 items-center justify-between" data-node-id="450:17712" data-name="Container">
+        <div
+          className="relative mx-auto flex h-[80px] w-full max-w-[1056px] shrink-0 items-center justify-between px-4 sm:px-8 md:px-12 lg:px-[64px]"
+          data-node-id="450:17712"
+          data-name="Container"
+        >
           <Link to="/home" className="relative h-[40px] shrink-0" data-node-id="450:17713" data-name="Link">
             <div className="flex size-full items-center gap-3 border-0 border-transparent bg-clip-padding">
               <div className="relative size-[40px] shrink-0 rounded-full bg-[#432060]" data-node-id="450:17714" data-name="Navigation">

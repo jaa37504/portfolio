@@ -9,8 +9,8 @@ export default function PersonalWebsiteDesignPortfolio() {
     <div className="relative size-full" data-node-id="450:17726" data-name="Personal Website Design Portfolio">
       <div className="absolute bg-[#f5f2eb] content-stretch flex flex-col gap-[80px] items-start left-0 top-0 w-[1056px]" data-node-id="450:17727" data-name="RootLayout">
         <div className="bg-[#f5f2eb] relative shrink-0 w-[1056px]" data-node-id="450:17728" data-name="ProjectDetail">
-          <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start pt-[128px] px-[48px] relative size-full">
-            <div className="content-stretch flex flex-col gap-[96px] items-start pt-[48px] relative shrink-0 w-full" data-node-id="450:17729">
+          <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start px-4 pt-[128px] sm:px-8 md:px-12 lg:px-[48px] relative size-full">
+            <div className="content-stretch flex flex-col gap-12 items-start pt-8 sm:gap-[96px] sm:pt-10 lg:pt-12 relative shrink-0 w-full" data-node-id="450:17729">
               <div className="h-[60px] relative shrink-0 w-[960px]" data-node-id="450:17730" data-name="Heading 1">
                 <p className="-translate-x-1/2 absolute font-['Libre_Baskerville:Italic',sans-serif] italic leading-[60px] left-[480.25px] text-[#432060] text-[60px] text-center top-0 whitespace-nowrap" data-node-id="450:17731">
                   My Work
@@ -43,7 +43,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                         </div>
                       </div>
                     </div>
-                    <div className="content-stretch flex flex-[1_0_0] flex-col h-full items-start justify-between min-h-px min-w-px pt-[24px] relative" data-node-id="450:17745" data-name="Container">
+                    <div className="content-stretch flex flex-[1_0_0] flex-col h-full items-start justify-between min-h-px min-w-px pt-4 sm:pt-6 relative" data-node-id="450:17745" data-name="Container">
                       <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="450:17746">
                         <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full" data-node-id="450:17747">
                           <div className="content-stretch flex h-[40px] items-start justify-between relative shrink-0 w-full" data-node-id="450:17748" data-name="Container">
@@ -171,7 +171,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                         </div>
                       </div>
                     </div>
-                    <div className="content-stretch flex flex-[1_0_0] flex-col h-full items-start justify-between min-h-px min-w-px pt-[24px] relative" data-node-id="450:17793" data-name="Container">
+                    <div className="content-stretch flex flex-[1_0_0] flex-col h-full items-start justify-between min-h-px min-w-px pt-4 sm:pt-6 relative" data-node-id="450:17793" data-name="Container">
                       <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="450:17794">
                         <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full" data-node-id="450:17795">
                           <div className="content-stretch flex h-[40px] items-start justify-between relative shrink-0 w-full" data-node-id="450:17796" data-name="Container">
@@ -298,7 +298,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                       </div>
                     </div>
                     <div className="flex flex-[1_0_0] flex-row items-center self-stretch">
-                      <div className="content-stretch flex flex-[1_0_0] flex-col h-full items-start justify-between min-h-px min-w-px pt-[24px] relative" data-node-id="450:17841" data-name="Container">
+                      <div className="content-stretch flex flex-[1_0_0] flex-col h-full items-start justify-between min-h-px min-w-px pt-4 sm:pt-6 relative" data-node-id="450:17841" data-name="Container">
                         <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="450:17842">
                           <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full" data-node-id="450:17843">
                             <div className="content-stretch flex h-[40px] items-start justify-between relative shrink-0 w-full" data-node-id="450:17844" data-name="Container">
@@ -427,7 +427,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                         </div>
                       </div>
                     </div>
-                    <div className="content-stretch flex flex-[1_0_0] flex-col h-full items-start justify-between min-h-px min-w-px pt-[24px] relative" data-node-id="450:17889" data-name="Container">
+                    <div className="content-stretch flex flex-[1_0_0] flex-col h-full items-start justify-between min-h-px min-w-px pt-4 sm:pt-6 relative" data-node-id="450:17889" data-name="Container">
                       <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="450:17890">
                         <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full" data-node-id="450:17891">
                           <div className="content-stretch flex h-[40px] items-start justify-between relative shrink-0 w-full" data-node-id="450:17892" data-name="Container">
@@ -560,7 +560,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                         </div>
                       </div>
                     </div>
-                    <div className="content-stretch flex flex-[1_0_0] flex-col h-full items-start justify-between min-h-px min-w-px pt-[24px] relative" data-node-id="450:17939" data-name="Container">
+                    <div className="content-stretch flex flex-[1_0_0] flex-col h-full items-start justify-between min-h-px min-w-px pt-4 sm:pt-6 relative" data-node-id="450:17939" data-name="Container">
                       <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="450:17940">
                         <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full" data-node-id="450:17941">
                           <div className="content-stretch flex h-[40px] items-start justify-between relative shrink-0 w-full" data-node-id="450:17942" data-name="Container">
@@ -689,7 +689,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                         </div>
                       </div>
                     </div>
-                    <div className="content-stretch flex flex-[1_0_0] flex-col h-full items-start justify-between min-h-px min-w-px pt-[24px] relative" data-node-id="450:17987" data-name="Container">
+                    <div className="content-stretch flex flex-[1_0_0] flex-col h-full items-start justify-between min-h-px min-w-px pt-4 sm:pt-6 relative" data-node-id="450:17987" data-name="Container">
                       <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="450:17988">
                         <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full" data-node-id="450:17989">
                           <div className="content-stretch flex h-[40px] items-start justify-between relative shrink-0 w-full" data-node-id="450:17990" data-name="Container">

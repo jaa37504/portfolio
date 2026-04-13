@@ -1,13 +1,19 @@
-/** Figma 538:22006 — LinkedIn mark on #6b6b6b tile + #fdfcfb border */
+/** Figma 516:21354 footer; 516:21356 — DM Sans body 16px (upper block). LinkedIn asset 538:22006. */
 const imgLinkedIn =
   'https://www.figma.com/api/mcp/asset/59b3a57f-c71f-4233-ac33-83a6dd74d4dc';
 
 const LINKEDIN_URL = 'https://www.linkedin.com/in/jessica-andrews-a34842228/';
 
-export function SiteFooter() {
+type SiteFooterProps = {
+  /** Align footer background with case-study article cream (`#fdfcfb`) instead of default shell. */
+  tone?: 'default' | 'paper';
+};
+
+export function SiteFooter({ tone = 'default' }: SiteFooterProps) {
+  const footerBg = tone === 'paper' ? 'bg-[#fdfcfb]' : 'bg-[#f5f2eb]';
   return (
     <footer
-      className="w-full shrink-0 border-t-2 border-solid border-[#e8dfd0] bg-[#f5f2eb] pt-0.5 px-4"
+      className={`w-full shrink-0 border-t border-solid border-[#e8dfd0] ${footerBg} pt-0.5 px-4`}
       data-node-id="516:21354"
       data-name="Footer"
     >
@@ -21,8 +27,9 @@ export function SiteFooter() {
               <p className="font-['Libre_Baskerville',serif] text-[30px] italic leading-9 text-[#432060]">Jess</p>
             </div>
             <p
-              className="font-['DM_Sans',sans-serif] text-[14px] font-normal leading-5 text-[#6b6b6b]"
-              style={{ fontVariationSettings: "'opsz' 9" }}
+              className="font-['DM_Sans',sans-serif] text-[16px] font-normal leading-6 text-[#6b6b6b]"
+              style={{ fontVariationSettings: "'opsz' 14" }}
+              data-node-id="516:21356"
             >
               Designing thoughtful, scalable products that simplify complex systems and create intuitive,
               human-centered experiences
@@ -33,8 +40,8 @@ export function SiteFooter() {
               Get In Touch
             </p>
             <p
-              className="font-['DM_Sans',sans-serif] text-[14px] font-normal leading-5 text-[#6b6b6b]"
-              style={{ fontVariationSettings: "'opsz' 9" }}
+              className="font-['DM_Sans',sans-serif] text-[16px] font-normal leading-6 text-[#6b6b6b]"
+              style={{ fontVariationSettings: "'opsz' 14" }}
             >
               jessachsah@gmail.com
             </p>
@@ -51,7 +58,7 @@ export function SiteFooter() {
             </a>
           </div>
         </div>
-        <div className="flex w-full flex-col gap-2 border-t-2 border-solid border-[#e8dfd0] pt-0.5 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex w-full flex-col gap-2 border-t border-solid border-[#e8dfd0] pt-0.5 sm:flex-row sm:items-center sm:justify-between">
           <p
             className="font-['DM_Sans',sans-serif] text-[14px] font-normal leading-5 text-[#6b6b6b]"
             style={{ fontVariationSettings: "'opsz' 9" }}

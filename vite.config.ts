@@ -4,5 +4,9 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  // Tailwind must run before React so utilities are applied to scanned modules in dev.
+  plugins: [tailwindcss(), react()],
+  server: {
+    open: '/home',
+  },
 })
