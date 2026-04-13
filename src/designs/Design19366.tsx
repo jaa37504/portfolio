@@ -10,7 +10,6 @@ import {
   caseStudySectionPaddingYClass,
 } from '../caseStudyLayout';
 import {
-  CASE_STUDY_CARD_STAGGER_ITEM,
   CASE_STUDY_VERTICAL_STAGGER_ITEM,
   CaseStudySection,
   CaseStudyStagger,
