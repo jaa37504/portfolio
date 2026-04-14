@@ -852,24 +852,20 @@ export default function PersonalWebsiteDesignPortfolio() {
                 </div>
               </div>
               <SoftAppearStagger
-                className="relative flex min-h-[100px] w-full shrink-0 flex-col items-center justify-center gap-8 rounded-[100px] px-6 py-4 sm:flex-row sm:gap-[128px] sm:px-[54px] sm:py-0"
+                className="relative flex min-h-[100px] w-full shrink-0 flex-col items-center justify-center gap-6 rounded-[100px] px-4 py-4 sm:flex-row sm:gap-8 sm:px-6 sm:py-0 md:gap-12 md:px-10 lg:gap-[128px] lg:px-[54px]"
                 staggerMs={170}
                 initialDelayMs={220}
-                itemClassName={(i) =>
-                  i < 2
-                    ? 'flex min-h-px min-w-0 flex-[1_0_0] justify-center'
-                    : 'flex w-full max-w-[234px] shrink-0 justify-center sm:w-[234px]'
-                }
+                itemClassName="flex min-h-px w-full min-w-0 shrink-0 justify-center sm:flex-1 sm:shrink sm:basis-0"
                 data-node-id="450:16973"
               >
-                <div className="relative aspect-[3840/2160] w-full max-w-[320px] min-w-0 sm:max-w-none" data-node-id="450:16974">
+                <div className="relative aspect-[3840/2160] w-full max-w-[180px] min-w-0 sm:max-w-[190px] md:max-w-[220px] lg:max-w-[320px]" data-node-id="450:16974">
                   <img
                     alt=""
                     className="pointer-events-none absolute inset-0 size-full max-w-none object-cover"
                     src={imgC1Logo1}
                   />
                 </div>
-                <div className="relative aspect-[174/118] w-full max-w-[240px] min-w-0 sm:max-w-none" data-node-id="450:16975">
+                <div className="relative aspect-[174/118] w-full max-w-[124px] min-w-0 sm:max-w-[132px] md:max-w-[160px] lg:max-w-[240px]" data-node-id="450:16975">
                   <div className="pointer-events-none absolute inset-0 overflow-hidden">
                     <img
                       alt=""
@@ -878,8 +874,8 @@ export default function PersonalWebsiteDesignPortfolio() {
                     />
                   </div>
                 </div>
-                <div className="relative w-full max-w-[234px] shrink-0 flex-col items-start overflow-clip" data-node-id="450:16976">
-                  <div className="relative mx-auto h-[40.304px] w-[min(233.997px,100%)] shrink-0" data-node-id="450:16977">
+                <div className="relative flex w-full min-w-0 flex-col items-center overflow-clip" data-node-id="450:16976">
+                  <div className="relative mx-auto aspect-[234/40.304] w-full max-w-[180px] shrink-0 sm:max-w-[190px] md:max-w-[210px] lg:max-w-[233.997px]" data-node-id="450:16977">
                     <img alt="" className="absolute inset-0 block size-full max-w-none" src={imgGroup2226} />
                   </div>
                 </div>
