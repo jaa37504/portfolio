@@ -955,7 +955,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                           <div className="bg-[#6b46a0] rounded-[3px] shrink-0 size-[6px]" data-node-id="450:20127" data-name="Background" />
                         </div>
                         <div className="flex flex-[1_0_0] flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] min-h-px min-w-px relative text-[#555] text-[14px]" data-node-id="450:20128" style={{ fontVariationSettings: "'opsz' 14" }}>
-                          <p className="leading-[19.5px]">Provides control to select specific regions or organizations to recieve funding</p>
+                          <p className="leading-[19.5px]">Provides control to select specific regions or organizations to receive funding</p>
                         </div>
                       </div>
                     </div>

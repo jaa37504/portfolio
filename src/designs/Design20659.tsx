@@ -461,7 +461,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                           <div className="bg-[#6b46a0] rounded-[3px] shrink-0 size-[6px]" data-node-id="450:20818" data-name="Background" />
                         </div>
                         <div className="flex flex-[1_0_0] flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] min-h-px min-w-px relative text-[#1e1a2e] text-[16px]" data-node-id="450:20819" style={{ fontVariationSettings: "'opsz' 14" }}>
-                          <p className="leading-[19.5px]">Display style features rather then overly interactive/gamified features</p>
+                          <p className="leading-[19.5px]">Display style features rather than overly interactive/gamified features</p>
                         </div>
                       </div>
                       <div className="content-stretch flex gap-[10px] items-start relative shrink-0 w-full" data-node-id="450:20820" data-name="Container">

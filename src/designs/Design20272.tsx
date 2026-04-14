@@ -251,7 +251,7 @@ export default function Frame() {
                 </div>
                 <div className="content-stretch flex flex-col items-start pt-[8px] relative shrink-0 w-full" data-node-id="450:20367" data-name="Container">
                   <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#7a7060] text-[16px] w-full" data-node-id="450:20368" style={{ fontVariationSettings: "'opsz' 14" }}>
-                    <p className="leading-[26.25px]">An effective analysis starts with asking good questions. the fist question I asked was:</p>
+                    <p className="leading-[26.25px]">An effective analysis starts with asking good questions. The first question I asked was:</p>
                   </div>
                 </div>
               </div>
@@ -401,7 +401,7 @@ export default function Frame() {
                   <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="450:20422">
                     <div className="content-stretch flex flex-col gap-[32px] items-start py-5 sm:py-6 lg:py-8 relative shrink-0 w-full" data-node-id="450:20423">
                       <p className="font-['Libre_Baskerville:Italic',sans-serif] italic leading-[28px] relative shrink-0 text-[#b5923c] text-[20px] w-full" data-node-id="450:20424">
-                        Is there a particular reason that tickets are closed dissatisfacorily?
+                        Is there a particular reason that tickets are closed dissatisfactorily?
                       </p>
                       <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-col gap-[24px] items-start pb-[32px] pt-[40px] px-[32px] relative rounded-[16px] shrink-0 w-full" data-node-id="450:20425" data-name="Container">
                         <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:20426" data-name="Heading 5">
