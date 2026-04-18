@@ -92,46 +92,46 @@ export default function PersonalWebsiteDesignPortfolio() {
                     </p>
                   </div>
                 </div>
-                <div className="border-[#ddd8d0] border-b border-solid content-stretch flex flex-col gap-5 items-start pb-[30px] pt-[29px] relative shrink-0 w-full md:flex-row md:items-start md:justify-between" data-node-id="450:18435" data-name="Border">
-                  <div className="relative shrink-0 w-full md:w-[109px]" data-node-id="450:18436" data-name="Container">
+                <div className="border-[#ddd8d0] border-b border-solid content-stretch flex flex-col gap-5 items-start pb-[30px] pt-[29px] relative shrink-0 w-full xl:flex-row xl:items-start xl:justify-between" data-node-id="450:18435" data-name="Border">
+                  <div className="relative shrink-0 w-full lg:w-auto" data-node-id="450:18436" data-name="Container">
                     <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[3px] items-start relative size-full">
                       <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:18437" data-name="Label">
-                        <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[0.88px] uppercase whitespace-nowrap" data-node-id="450:18438" style={{ fontVariationSettings: "'opsz' 14" }}>
+                        <div className="flex flex-col font-['DM_Sans:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[12px] tracking-[0.88px] uppercase whitespace-nowrap" data-node-id="450:18438" style={{ fontVariationSettings: "'opsz' 14" }}>
                           <p className="leading-[18.7px]">Role</p>
                         </div>
                       </div>
-                      <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#2a2a2a] text-[16px] whitespace-normal" data-node-id="450:18439" style={{ fontVariationSettings: "'opsz' 14" }}>
+                      <div className="flex flex-col font-['DM_Sans:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#2a2a2a] text-[14px] whitespace-normal" data-node-id="450:18439" style={{ fontVariationSettings: "'opsz' 14" }}>
                         <p className="leading-[23.8px]">UX Design Intern</p>
                       </div>
                     </div>
                   </div>
-                  <div className="relative shrink-0 w-full md:w-[141px]" data-node-id="450:18440" data-name="Container">
+                  <div className="relative shrink-0 w-full lg:w-auto" data-node-id="450:18440" data-name="Container">
                     <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[3px] items-start relative size-full">
                       <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:18441" data-name="Label">
-                        <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[0.88px] uppercase whitespace-nowrap" data-node-id="450:18442" style={{ fontVariationSettings: "'opsz' 14" }}>
+                        <div className="flex flex-col font-['DM_Sans:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[12px] tracking-[0.88px] uppercase whitespace-nowrap" data-node-id="450:18442" style={{ fontVariationSettings: "'opsz' 14" }}>
                           <p className="leading-[18.7px]">Company</p>
                         </div>
                       </div>
-                      <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#2a2a2a] text-[16px] whitespace-normal" data-node-id="450:18443" style={{ fontVariationSettings: "'opsz' 14" }}>
+                      <div className="flex flex-col font-['DM_Sans:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#2a2a2a] text-[14px] whitespace-normal" data-node-id="450:18443" style={{ fontVariationSettings: "'opsz' 14" }}>
                         <p className="leading-[23.8px]">Capital One Software</p>
                       </div>
                     </div>
                   </div>
-                  <div className="relative shrink-0 w-full md:w-[165px]" data-node-id="450:18444" data-name="Container">
+                  <div className="relative shrink-0 w-full lg:w-auto" data-node-id="450:18444" data-name="Container">
                     <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[3px] items-start relative size-full">
                       <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:18445" data-name="Label">
-                        <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[0.88px] uppercase whitespace-nowrap" data-node-id="450:18446" style={{ fontVariationSettings: "'opsz' 14" }}>
+                        <div className="flex flex-col font-['DM_Sans:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[12px] tracking-[0.88px] uppercase whitespace-nowrap" data-node-id="450:18446" style={{ fontVariationSettings: "'opsz' 14" }}>
                           <p className="leading-[18.7px]">Timeline</p>
                         </div>
                       </div>
-                      <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#2a2a2a] text-[16px] whitespace-normal" data-node-id="450:18447" style={{ fontVariationSettings: "'opsz' 14" }}>
+                      <div className="flex flex-col font-['DM_Sans:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#2a2a2a] text-[14px] whitespace-normal" data-node-id="450:18447" style={{ fontVariationSettings: "'opsz' 14" }}>
                         <p className="leading-[23.8px]">10 Weeks · Summer 2025</p>
                       </div>
                     </div>
                   </div>
-                  <div className="relative shrink-0 w-full md:w-[265px]" data-node-id="450:18448" data-name="Container">
+                  <div className="relative shrink-0 w-full lg:w-auto xl:max-w-[360px]" data-node-id="450:18448" data-name="Container">
                     <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[4px] items-start relative size-full">
-                      <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold h-[19px] justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[0.88px] uppercase w-full" data-node-id="450:18449" style={{ fontVariationSettings: "'opsz' 14" }}>
+                      <div className="flex flex-col font-['DM_Sans:Medium',sans-serif] font-medium h-[19px] justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[12px] tracking-[0.88px] uppercase w-full" data-node-id="450:18449" style={{ fontVariationSettings: "'opsz' 14" }}>
                         <p className="leading-[18.7px]">Type</p>
                       </div>
                       <div className="content-stretch flex flex-wrap gap-[8px] h-auto items-start relative shrink-0 w-full" data-node-id="450:18450" data-name="ProjectDetail">

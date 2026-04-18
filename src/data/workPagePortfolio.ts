@@ -93,7 +93,7 @@ export const WORK_PAGE_PROJECTS: WorkPageProject[] = [
     id: 'rethink-food',
     to: '/case-studies/rethink-food',
     title: 'ReThink Food · H4I',
-    role: 'Product Designer',
+    role: 'Product Designer · Product Manager',
     summary:
       'Designed a 0→1 interactive data visualization experience that transformed complex operational data into a clear, intuitive map, enabling users to understand impact across NYC and make more informed donation decisions.',
     descriptionExpanded:

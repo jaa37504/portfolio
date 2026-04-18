@@ -87,7 +87,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                     </p>
                   </div>
                 </div>
-                <div className="border-[#ddd8d0] border-b border-solid content-stretch flex flex-col gap-5 items-start pb-[30px] pt-[29px] relative shrink-0 w-full xl:flex-row xl:items-center xl:justify-between" data-node-id="450:18871" data-name="Border">
+                <div className="border-[#ddd8d0] border-b border-solid content-stretch flex flex-col gap-5 items-start pb-[30px] pt-[29px] relative shrink-0 w-full xl:flex-row xl:items-start xl:justify-between" data-node-id="450:18871" data-name="Border">
                   <div className="relative shrink-0 w-full lg:w-auto" data-node-id="450:18872" data-name="Container">
                     <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[3px] items-start relative size-full">
                       <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:18873" data-name="Label">
@@ -96,7 +96,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                         </div>
                       </div>
                       <div className="flex flex-col font-['DM_Sans:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#2a2a2a] text-[14px] whitespace-normal" data-node-id="450:18875" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        <p className="leading-[23.8px]">Product Designer</p>
+                        <p className="leading-[23.8px]">Product Designer · Product Manager</p>
                       </div>
                     </div>
                   </div>
@@ -124,7 +124,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                       </div>
                     </div>
                   </div>
-                  <div className="relative shrink-0 w-full lg:w-[380px]" data-node-id="450:18884" data-name="Container">
+                  <div className="relative shrink-0 w-full lg:w-auto xl:max-w-[360px]" data-node-id="450:18884" data-name="Container">
                     <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[4px] items-start relative size-full">
                       <div className="flex flex-col font-['DM_Sans:Medium',sans-serif] font-medium h-[19px] justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[12px] tracking-[0.88px] uppercase w-full" data-node-id="450:18885" style={{ fontVariationSettings: "'opsz' 14" }}>
                         <p className="leading-[18.7px]">Type</p>

@@ -100,7 +100,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                     </div>
                   </div>
                 </div>
-                <div className="border-[#ddd8d0] border-b border-solid content-stretch flex flex-col gap-5 items-start pb-[30px] pt-[29px] relative shrink-0 w-full xl:flex-row xl:items-center xl:justify-between" data-node-id="450:19397" data-name="Border">
+                <div className="border-[#ddd8d0] border-b border-solid content-stretch flex flex-col gap-5 items-start pb-[30px] pt-[29px] relative shrink-0 w-full xl:flex-row xl:items-start xl:justify-between" data-node-id="450:19397" data-name="Border">
                   <div className="relative shrink-0 w-full lg:w-auto" data-node-id="450:19398" data-name="Container">
                     <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[3px] items-start relative size-full">
                       <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:19399" data-name="Label">
@@ -125,7 +125,19 @@ export default function PersonalWebsiteDesignPortfolio() {
                       </div>
                     </div>
                   </div>
-                  <div className="relative shrink-0 w-full lg:w-[325px]" data-node-id="450:19406" data-name="Container">
+                  <div className="relative shrink-0 w-full lg:w-auto" data-name="Container">
+                    <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[3px] items-start relative size-full">
+                      <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Label">
+                        <div className="flex flex-col font-['DM_Sans:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[12px] tracking-[0.88px] uppercase whitespace-nowrap" style={{ fontVariationSettings: "'opsz' 14" }}>
+                          <p className="leading-[18.7px]">Timeline</p>
+                        </div>
+                      </div>
+                      <div className="flex flex-col font-['DM_Sans:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#1c1c1c] text-[14px] whitespace-normal" style={{ fontVariationSettings: "'opsz' 14" }}>
+                        <p className="leading-[23.8px]">Fall 2025</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="relative shrink-0 w-full lg:w-auto xl:max-w-[360px]" data-node-id="450:19406" data-name="Container">
                     <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[4px] items-start relative size-full">
                       <div className="flex flex-col font-['DM_Sans:Medium',sans-serif] font-medium h-[19px] justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[12px] tracking-[0.88px] uppercase w-full" data-node-id="450:19407" style={{ fontVariationSettings: "'opsz' 14" }}>
                         <p className="leading-[18.7px]">Type</p>

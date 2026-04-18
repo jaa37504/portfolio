@@ -15,7 +15,7 @@ const imgHero = 'https://www.figma.com/api/mcp/asset/ab639713-069b-486f-b958-e44
 const imgC1Logo1 = 'https://www.figma.com/api/mcp/asset/458b6e1f-5830-4f07-aee5-1b738be400e7';
 const imgKenvueLogoBlackRgbSvg1 =
   'https://www.figma.com/api/mcp/asset/a3ec4aaa-3f4b-41ab-a2e2-2e2aeb39237f';
-const imgGroup2226 = 'https://www.figma.com/api/mcp/asset/cb6a8960-82f5-4271-8db2-7e547cbed0ef';
+const imgAmericanNationalLogo = '/AN-Awareness-Logo-Stacked-2-Color-CMYK-01.webp';
 const RESUME_URL =
   'https://docs.google.com/document/d/1SLLJ9tK3dty8gCpP_CIbc9i40GogWsIow8KUDYBeG1k/edit?usp=sharing';
 
@@ -23,6 +23,32 @@ function projectById(id: string): HomeProject {
   const p = HOME_PROJECTS.find((x) => x.id === id);
   if (!p) throw new Error(`Unknown project ${id}`);
   return p;
+}
+
+function RemoteLogo({
+  src,
+  alt,
+  fallbackLabel,
+  imgClassName,
+  fallbackClassName,
+}: {
+  src: string;
+  alt: string;
+  fallbackLabel: string;
+  imgClassName: string;
+  fallbackClassName: string;
+}) {
+  const [hasError, setHasError] = useState(false);
+
+  if (hasError) {
+    return (
+      <div aria-label={alt} className={fallbackClassName} role="img">
+        {fallbackLabel}
+      </div>
+    );
+  }
+
+  return <img alt={alt} className={imgClassName} onError={() => setHasError(true)} src={src} />;
 }
 
 /** Figma Development filter (450:18303) — phone still; laptop arm uses video (522:21734). */
@@ -795,7 +821,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                         data-node-id="450:16965"
                         style={{ fontVariationSettings: "'opsz' 9" }}
                       >
-                        Designing thoughtful, scalable products that simplify complex systems and create intuitive,
+                        Building thoughtful, scalable products that simplify complex systems and create intuitive,
                         human-centered experiences
                       </p>
                     </div>
@@ -859,24 +885,32 @@ export default function PersonalWebsiteDesignPortfolio() {
                 data-node-id="450:16973"
               >
                 <div className="relative aspect-[3840/2160] w-full max-w-[180px] min-w-0 sm:max-w-[190px] md:max-w-[220px] lg:max-w-[320px]" data-node-id="450:16974">
-                  <img
-                    alt=""
-                    className="pointer-events-none absolute inset-0 size-full max-w-none object-cover"
+                  <RemoteLogo
+                    alt="Capital One logo"
+                    fallbackClassName="absolute inset-0 flex items-center justify-center text-center font-['DM_Sans:SemiBold',sans-serif] text-[clamp(1rem,2.4vw,2rem)] font-semibold tracking-[0.06em] text-[#6b2133]"
+                    fallbackLabel="Capital One"
+                    imgClassName="pointer-events-none absolute inset-0 size-full max-w-none object-cover"
                     src={imgC1Logo1}
                   />
                 </div>
                 <div className="relative aspect-[174/118] w-full max-w-[124px] min-w-0 sm:max-w-[132px] md:max-w-[160px] lg:max-w-[240px]" data-node-id="450:16975">
                   <div className="pointer-events-none absolute inset-0 overflow-hidden">
-                    <img
-                      alt=""
-                      className="absolute top-[0.16%] left-[-22.41%] h-[99.68%] max-w-none w-[144.86%]"
+                    <RemoteLogo
+                      alt="Kenvue logo"
+                      fallbackClassName="absolute inset-0 flex items-center justify-center text-center font-['DM_Sans:SemiBold',sans-serif] text-[clamp(0.9rem,2vw,1.5rem)] font-semibold tracking-[0.08em] text-[#2d2d2d]"
+                      fallbackLabel="KENVUE"
+                      imgClassName="absolute top-[0.16%] left-[-22.41%] h-[99.68%] max-w-none w-[144.86%]"
                       src={imgKenvueLogoBlackRgbSvg1}
                     />
                   </div>
                 </div>
                 <div className="relative flex w-full min-w-0 flex-col items-center overflow-clip" data-node-id="450:16976">
-                  <div className="relative mx-auto aspect-[234/40.304] w-full max-w-[180px] shrink-0 sm:max-w-[190px] md:max-w-[210px] lg:max-w-[233.997px]" data-node-id="450:16977">
-                    <img alt="" className="absolute inset-0 block size-full max-w-none" src={imgGroup2226} />
+                  <div className="relative mx-auto aspect-[234/40.304] w-full max-w-[335px] shrink-0 sm:max-w-[250px] md:max-w-[280px] lg:max-w-[315px]" data-node-id="450:16977">
+                    <img
+                      alt="American National logo"
+                      className="absolute inset-0 block size-full max-w-none object-contain"
+                      src={imgAmericanNationalLogo}
+                    />
                   </div>
                 </div>
               </SoftAppearStagger>

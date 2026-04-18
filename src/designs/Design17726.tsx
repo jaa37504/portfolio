@@ -310,7 +310,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                             </div>
                             <div className="h-[20px] relative shrink-0 w-full" data-node-id="450:17847" data-name="Paragraph">
                               <p className="absolute font-['DM_Sans:Medium',sans-serif] font-medium leading-[20px] left-0 text-[#432060] text-[14px] top-[-0.5px] whitespace-nowrap" data-node-id="450:17848" style={{ fontVariationSettings: "'opsz' 14" }}>
-                                Product Designer
+                                Product Designer · Product Manager
                               </p>
                             </div>
                           </div>
