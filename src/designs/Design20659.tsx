@@ -21,28 +21,28 @@ import {
 const actBrainstormStaggerCol =
   'flex min-h-0 min-w-0 flex-1 basis-0 flex-col self-stretch w-full [&>*]:h-full [&>*]:min-h-0 [&>*]:flex [&>*]:flex-col';
 
-const imgImage631 = "https://www.figma.com/api/mcp/asset/b5c8f95c-89cd-43e4-a0a7-3a28caa95fcf";
+const imgImage631 = '/images/image (63) 1.png';
 /** Figma 450:20713 — case study hero (dual phone mockup), replaces mistaken static asset */
-const imgHeroBannerAct20713 = "https://www.figma.com/api/mcp/asset/e3cdfef2-d335-4281-bab0-c0d57cade2f1";
-const imgImage641 = "https://www.figma.com/api/mcp/asset/a4dcdf76-5318-404a-bb46-e8bd7ccb1573";
-const imgQuestionCardTap111 = "https://www.figma.com/api/mcp/asset/0b87a0c5-3a70-4639-9bb2-34b999c051b1";
-const imgExplanationModal111 = "https://www.figma.com/api/mcp/asset/1e8f9198-a29d-4fc7-a41b-c755e0eb3866";
-const imgQuestionCardTap311 = "https://www.figma.com/api/mcp/asset/396b0c5d-8c3b-43d8-a76e-76b8dca83eff";
-const imgQuestionCardTap211 = "https://www.figma.com/api/mcp/asset/d42fa79a-d0aa-4873-a44f-0c6f6fe94a6e";
-const imgQuestionCardTap511 = "https://www.figma.com/api/mcp/asset/70a3d64c-aabd-472c-bac0-a86e499018cb";
-const imgQuestionCardTap411 = "https://www.figma.com/api/mcp/asset/3c0fbfb7-3fe5-445a-9ff3-1043415cffbb";
-const imgDeckPreviewShowCards11 = "https://www.figma.com/api/mcp/asset/888f1bd1-f652-4a8b-94e5-b250a59962f1";
-const imgDeckPreviewDescribeCards61 = "https://www.figma.com/api/mcp/asset/87126ae1-728f-40dd-ace2-f1ed8b08ba74";
-const imgDeckPreviewDescribeCards111 = "https://www.figma.com/api/mcp/asset/860cd9d3-9c3a-4374-8932-327d070271e0";
-const imgDeckPreviewDescriptionShowCards21 = "https://www.figma.com/api/mcp/asset/4604aceb-708c-4b6b-860d-921f9856cd02";
-const imgSituationalQuestion211 = "https://www.figma.com/api/mcp/asset/7b9b3649-7d13-4d75-b753-9ed121deccb8";
-const imgSituationalQuestion111 = "https://www.figma.com/api/mcp/asset/d8de37ee-2f70-4d35-8fac-2fc2c8feec0a";
-const imgSituationalQuestion511 = "https://www.figma.com/api/mcp/asset/0e58a498-b5c3-43db-92ab-60bbb43c9c4f";
-const imgDeckPreviewDescribeCards1 = "https://www.figma.com/api/mcp/asset/f43333dd-dad5-4cc5-bf76-b834aa05aae1";
-const imgCardFront71 = "https://www.figma.com/api/mcp/asset/1662ca8f-f7fd-4f2c-93cf-1f1c723fe0ac";
-const imgParentTip1 = "https://www.figma.com/api/mcp/asset/f3f4e3c8-dcf1-4205-8962-5b32bc1fbe93";
-const imgExplanation1 = "https://www.figma.com/api/mcp/asset/73394954-f7aa-408d-a031-d91b06464af0";
-const imgTransitionToSituationQuestions1 = "https://www.figma.com/api/mcp/asset/54e3bc9d-92a5-4197-87f5-34a0475e72c5";
+const imgHeroBannerAct20713 = '/images/ACTBanner.png';
+const imgImage641 = '/images/image (64) 1.png';
+const imgQuestionCardTap111 = '/images/Question Card- Tap (1) (1) 1.png';
+const imgExplanationModal111 = '/images/Explanation - Modal (1) (1) 1.png';
+const imgQuestionCardTap311 = '/images/Question Card- Tap (3) (1) 1.png';
+const imgQuestionCardTap211 = '/images/Question Card- Tap (2) (1) 1.png';
+const imgQuestionCardTap511 = '/images/Question Card- Tap (5) (1) 1.png';
+const imgQuestionCardTap411 = '/images/Question Card- Tap (4) (1) 1.png';
+const imgDeckPreviewShowCards11 = '/images/Deck Preview - Show cards (1) 1.png';
+const imgDeckPreviewDescribeCards61 = '/images/Deck Preview - Describe cards (6) 1.png';
+const imgDeckPreviewDescribeCards111 = '/images/Deck Preview - Describe cards (1) (1).png';
+const imgDeckPreviewDescriptionShowCards21 = '/images/Deck Preview - Description + Show cards (2).png';
+const imgSituationalQuestion211 = '/images/Situational Question (2) (1).png';
+const imgSituationalQuestion111 = '/images/Situational Question (1) (1).png';
+const imgSituationalQuestion511 = '/images/Situational Question (5) (1).png';
+const imgDeckPreviewDescribeCards1 = '/images/Deck Preview - Describe cards.png';
+const imgCardFront71 = '/images/Card Front 7.png';
+const imgParentTip1 = '/images/Parent Tip.png';
+const imgExplanation1 = '/images/Explanation.png';
+const imgTransitionToSituationQuestions1 = '/images/Transition to Situation Questions.png';
 export default function PersonalWebsiteDesignPortfolio() {
   const docUrl = CASE_STUDY_DOC_URL['act'];
   const nextProject = nextCaseStudyAfter('act');
@@ -184,7 +184,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                   <div className="absolute inset-0 overflow-hidden rounded-[24px]">
                     <img
                       alt=""
-                      className="pointer-events-none absolute h-[126.98%] max-w-none left-[13.38%] top-[-13.47%] w-[73.31%]"
+                      className="pointer-events-none absolute inset-0 size-full max-w-none object-contain object-center"
                       src={imgHeroBannerAct20713}
                     />
                   </div>

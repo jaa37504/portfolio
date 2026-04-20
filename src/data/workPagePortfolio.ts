@@ -54,8 +54,7 @@ export const WORK_PAGE_PROJECTS: WorkPageProject[] = [
     tools: 'Figma',
     skills: 'Enterprise UX, B2B research, workflow design',
     timeline: '10 Weeks',
-    imageSrc:
-      'https://www.figma.com/api/mcp/asset/f84181c4-f1c6-4f65-8c99-c94e8ec11f2b',
+    imageSrc: '/images/capitaloneimage.png',
     imageBgClass: 'bg-[#7a9fb0]',
     compactImageMode: 'fill',
     tags: [
@@ -75,8 +74,7 @@ export const WORK_PAGE_PROJECTS: WorkPageProject[] = [
     tools: 'Figma',
     skills: 'Information architecture, internal tools, research',
     timeline: '4 Months',
-    imageSrc:
-      'https://www.figma.com/api/mcp/asset/91f9ba78-c5b8-4379-950c-d22eb3e1f397',
+    imageSrc: '/images/CMSXimage.png',
     imageBgClass: 'bg-[#e3dfd6]',
     compactImageMode: 'fill',
     tags: [
@@ -101,8 +99,7 @@ export const WORK_PAGE_PROJECTS: WorkPageProject[] = [
     tools: 'Figma',
     skills: 'Data visualization, prototyping, nonprofit',
     timeline: '8 Weeks',
-    imageSrc:
-      'https://www.figma.com/api/mcp/asset/6d2fc213-c8f6-4ff5-b1f9-b11260402bf4',
+    imageSrc: '/images/ReThinkBanner.png',
     imageBgClass: 'bg-[#c9ac75]',
     compactImageMode: 'fill',
     tags: [
@@ -127,8 +124,7 @@ export const WORK_PAGE_PROJECTS: WorkPageProject[] = [
     tools: 'Figma',
     skills: 'Mobile UX, social impact, accessibility',
     timeline: '10 Weeks',
-    imageSrc:
-      'https://www.figma.com/api/mcp/asset/779ecf70-5858-448d-bd19-edb19e4d2e3b',
+    imageSrc: '/images/ACTBanner.png',
     imageBgClass: 'bg-[#7a9fb0]',
     compactImageMode: 'act-crop',
     compactImgClassName:
@@ -157,8 +153,7 @@ export const WORK_PAGE_PROJECTS: WorkPageProject[] = [
     tools: 'HTML, CSS, PHP, SQL',
     skills: 'Full-stack development, data modeling, CMS design',
     timeline: '12 Weeks',
-    imageSrc:
-      'https://www.figma.com/api/mcp/asset/1b5dfe7c-5cc5-49ba-a9d0-172ccc96feaf',
+    imageSrc: '/images/info2300mobile.png',
     imageBgClass: 'bg-[#e3dfd6]',
     compactImageMode: 'centered-info',
     tags: [
@@ -184,8 +179,7 @@ export const WORK_PAGE_PROJECTS: WorkPageProject[] = [
     tools: 'SQL, Snowflake, Tableau, PowerBI',
     skills: 'Survey design, mixed methods, IT service research',
     timeline: '10 Weeks',
-    imageSrc:
-      'https://www.figma.com/api/mcp/asset/ad1f9573-39a0-4e31-ad8a-29225ad8f1ec',
+    imageSrc: '/images/kenvueimage.png',
     imageBgClass: 'bg-[#c9ac75]',
     compactImageMode: 'centered-kenvue',
     tags: [pill('Internal Tool', 'bg-[#e6deda]', 'text-[#816451]')],

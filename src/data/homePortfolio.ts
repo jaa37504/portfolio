@@ -47,8 +47,7 @@ export const HOME_PROJECTS: HomeProject[] = [
     tag: 'Social Good',
     to: '/case-studies/act',
     categories: ['product-design'],
-    image:
-      'https://www.figma.com/api/mcp/asset/f7a9ea8a-bd05-4520-a44b-0d254ffb7a80',
+    image: '/images/ACTBanner.png',
     imageClassName: 'absolute h-[82.85%] left-[8.17%] max-w-none top-[8.54%] w-[83.9%]',
     homeHeroMedia: 'phone-video',
     homeHeroVideoSrc: '/videos/act-prototype.mp4',
@@ -65,8 +64,7 @@ export const HOME_PROJECTS: HomeProject[] = [
     tag: 'Enterprise',
     to: '/case-studies/capital-one',
     categories: ['product-design'],
-    image:
-      'https://www.figma.com/api/mcp/asset/4f6c323b-7f07-49f4-8b61-65b69bdbd07f',
+    image: '/images/capitaloneimage.png',
     imageClassName: 'absolute max-w-none object-contain rounded-[24px] size-full',
     pillBg: 'bg-[rgba(155,126,107,0.35)]',
     pillText: 'text-[#816451]',
@@ -81,8 +79,7 @@ export const HOME_PROJECTS: HomeProject[] = [
     tag: 'Data Visualization',
     to: '/case-studies/rethink-food',
     categories: ['product-design', 'data-science'],
-    image:
-      'https://www.figma.com/api/mcp/asset/0599b92b-cc62-4d58-a9f1-3278595eda47',
+    image: '/images/ReThinkBanner.png',
     imageClassName: 'absolute max-w-none object-contain rounded-[24px] size-full',
     homeHeroMedia: 'compact-laptop-video',
     homeHeroVideoSrc: '/videos/filter-bar-flow.mp4',
@@ -100,8 +97,7 @@ export const HOME_PROJECTS: HomeProject[] = [
     tag: 'Internal Tool',
     to: '/case-studies/cmsx',
     categories: ['product-design', 'data-science'],
-    image:
-      'https://www.figma.com/api/mcp/asset/90940e04-63eb-42d1-968c-34ba85861d7e',
+    image: '/images/CMSXimage.png',
     imageClassName: 'absolute max-w-none object-contain rounded-[24px] size-full',
     homeHeroMedia: 'laptop-video',
     pillBg: 'bg-[#e3dfd6]',
@@ -117,8 +113,7 @@ export const HOME_PROJECTS: HomeProject[] = [
     tag: 'Full Stack',
     to: '/case-studies/info-2300',
     categories: ['development'],
-    image:
-      'https://www.figma.com/api/mcp/asset/c2adaa05-b47d-4fb9-ac50-c35370d03d3f',
+    image: '/images/info2300mobile.png',
     imageClassName: 'absolute inset-0 max-w-none object-cover rounded-[32px] size-full',
     lShapeWebVideoSrc: '/videos/info-2300-web.mp4',
     developmentFilterVideoSrc: '/videos/info-2300-web.mp4',
@@ -137,8 +132,7 @@ export const HOME_PROJECTS: HomeProject[] = [
     to: '/case-studies/kenvue',
     /** Only shown on the “All” bento, not in filter chips. */
     categories: [],
-    image:
-      'https://www.figma.com/api/mcp/asset/3d699fad-f63a-4a11-b429-58f1ae5d4464',
+    image: '/images/kenvueimage.png',
     imageClassName: 'absolute inset-0 max-w-none object-contain rounded-br-[24px] rounded-tr-[24px] size-full',
     pillBg: 'bg-[rgba(155,126,107,0.35)]',
     pillText: 'text-[#816451]',
@@ -153,8 +147,7 @@ export const HOME_PROJECTS: HomeProject[] = [
     tag: 'Data Analysis',
     to: '/case-studies/kenvue',
     categories: ['data-science'],
-    image:
-      'https://www.figma.com/api/mcp/asset/806cb177-a913-4429-ac04-ed6ae7cbe788',
+    image: '/images/kenvueimage.png',
     /** Default; home layout uses paddedAspectImage (Figma 450:17057). */
     imageClassName: 'absolute inset-0 max-w-none object-cover object-center rounded-[1px] size-full',
     pillBg: 'bg-[#d3e3e9]',

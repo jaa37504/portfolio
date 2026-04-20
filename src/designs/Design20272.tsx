@@ -17,13 +17,13 @@ import {
 } from '../components/SoftAppear';
 
 /** Figma 450:17975 — Kenvue case study hero (dashboard collage) */
-const imgImage49 = "https://www.figma.com/api/mcp/asset/122c8c7e-cc0d-43f1-96c9-97ec1704963c";
-const imgImage44 = "https://www.figma.com/api/mcp/asset/0a760c01-0432-4ce8-a26b-9bf16266e727";
-const imgImage43 = "https://www.figma.com/api/mcp/asset/7e804162-c45c-4276-8fc4-5872b376fdb8";
-const imgImage45 = "https://www.figma.com/api/mcp/asset/b23d8f31-a08f-4a88-97dd-bb00b1f1ce78";
-const imgImage46 = "https://www.figma.com/api/mcp/asset/85671cff-8acc-44df-8395-b32e87e5b395";
-const imgImage47 = "https://www.figma.com/api/mcp/asset/b6e42571-f4b4-475a-98db-1e09f3b8a5ec";
-const imgImage48 = "https://www.figma.com/api/mcp/asset/769cba95-d2ef-4962-9131-c45e3518956a";
+const imgImage49 = '/images/kenvueimage.png';
+const imgImage44 = '/images/KenvueServiceDesksTable.png';
+const imgImage43 = '/images/KenvueServiceDesks.png';
+const imgImage45 = '/images/kenvueDsatReasonsClosedwoutRes.png';
+const imgImage46 = '/images/kenvuetixclosedwoutres.png';
+const imgImage47 = '/images/kenvueka.png';
+const imgImage48 = '/images/kenvuebigger.png';
 export default function Frame() {
   const docUrl = CASE_STUDY_DOC_URL['kenvue'];
   const nextProject = nextCaseStudyAfter('kenvue');
@@ -144,9 +144,9 @@ export default function Frame() {
                 </div>
               </div>
               <div className="bg-[#c9ac75] h-[417px] overflow-clip relative rounded-[24px] shrink-0 w-full" data-node-id="450:20323" data-name="Container">
-                <div className="-translate-x-1/2 -translate-y-1/2 absolute content-stretch flex flex-col items-start left-1/2 p-[10px] top-[calc(50%+0.33px)] w-[640px]" data-node-id="450:20327">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute content-stretch flex flex-col items-start left-1/2 p-[10px] top-[calc(50%+0.33px)] w-[min(640px,100%)]" data-node-id="450:20327">
                   <div className="aspect-[1518/832] relative rounded-[12px] shrink-0 w-full" data-node-id="450:20328" data-name="image 49">
-                    <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[12px] size-full" src={imgImage49} />
+                    <img alt="" className="absolute inset-0 max-w-none object-contain object-center pointer-events-none rounded-[12px] size-full" src={imgImage49} />
                   </div>
                 </div>
               </div>

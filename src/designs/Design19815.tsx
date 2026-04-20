@@ -18,24 +18,24 @@ import {
   SoftAppearOnce,
 } from '../components/SoftAppear';
 
-const imgImage581 = "https://www.figma.com/api/mcp/asset/68c1a212-4cca-4d7e-ac62-17273637281b";
-const imgImage21111 = "https://www.figma.com/api/mcp/asset/1c258669-4764-448c-b6f0-2da86912bd61";
-const imgImage2441 = "https://www.figma.com/api/mcp/asset/c10465bb-0338-4ea8-9ef3-985277ae8d54";
-const imgDropdownFiltersAndTags21 = "https://www.figma.com/api/mcp/asset/f77855a4-9c39-4b9d-85b1-3464336f03f5";
-const imgFilterSidebar11 = "https://www.figma.com/api/mcp/asset/b87eb938-6db1-4f9d-9aed-b4bb246c4912";
-const imgFilterModalPopup21 = "https://www.figma.com/api/mcp/asset/49640671-4d09-4bd5-a46f-837336a3211f";
-const imgFilterBar121 = "https://www.figma.com/api/mcp/asset/77f111f5-30f0-45be-9f6b-2cd82773d9c9";
+const imgImage581 = '/images/ReThinkUserResearch.png';
+const imgImage21111 = '/images/ReThinkSharingExcessTop.png';
+const imgImage2441 = '/images/ReThinkSharingExcessbottom.png';
+const imgDropdownFiltersAndTags21 = '/images/Dropdown Filters and Tags (2) 1.png';
+const imgFilterSidebar11 = '/images/Filter Sidebar (1) 1.png';
+const imgFilterModalPopup21 = '/images/Filter Modal Popup (2) 1.png';
+const imgFilterBar121 = '/images/Filter Bar (1) (2) 1.png';
 /** Figma 450:19869 — case study hero banner (map + filter bar) */
-const imgHeroBanner19869 = "https://www.figma.com/api/mcp/asset/6d2fc213-c8f6-4ff5-b1f9-b11260402bf4";
-const imgProperty1Variant211 = "https://www.figma.com/api/mcp/asset/5990ecac-bc8e-450f-90cb-bfd7c0ebfeb4";
-const imgFrame239211 = "https://www.figma.com/api/mcp/asset/32597a0c-0402-4dc1-98b4-a3cf01f1ae99";
-const imgFrame5411 = "https://www.figma.com/api/mcp/asset/fdedf740-0e98-4b7c-9f7e-74c485284101";
-const imgProperty1Variant311 = "https://www.figma.com/api/mcp/asset/3942db35-94b3-4a11-b2fa-11844b9925eb";
-const imgProperty1Default111 = "https://www.figma.com/api/mcp/asset/45bf6ed7-fb46-45c1-9819-bb01f9973227";
-const imgFrame50211 = "https://www.figma.com/api/mcp/asset/3c2e01aa-b05e-4fa1-9976-9de84aa4b5bc";
-const imgFrame42731967111 = "https://www.figma.com/api/mcp/asset/7641e2c6-4d57-4981-8257-6c840cbcc361";
-const imgProperty1Variant4111 = "https://www.figma.com/api/mcp/asset/546626ec-f5a8-4880-91d1-390c0b8f9393";
-const imgOpenFilterModal41 = "https://www.figma.com/api/mcp/asset/72151463-33cb-4d44-8d19-4fec5d34ed65";
+const imgHeroBanner19869 = '/images/ReThinkBanner.png';
+const imgProperty1Variant211 = '/images/Property 1=Variant2 (1) 1.png';
+const imgFrame239211 = '/images/Frame 239 (2) (1) 1.png';
+const imgFrame5411 = '/images/Frame 54 (1) 1.png';
+const imgProperty1Variant311 = '/images/Property 1=Variant3 (1) 1.png';
+const imgProperty1Default111 = '/images/Property 1=Default (1) (1) 1.png';
+const imgFrame50211 = '/images/Frame 50 (2) (1) 1.png';
+const imgFrame42731967111 = '/images/Frame 427319671 (1) 1.png';
+const imgProperty1Variant4111 = '/images/Property 1=Variant4 (1) (1) 1.png';
+const imgOpenFilterModal41 = '/images/Open Filter Modal (4) 1.png';
 export default function PersonalWebsiteDesignPortfolio() {
   const docUrl = CASE_STUDY_DOC_URL['rethink-food'];
   const nextProject = nextCaseStudyAfter('rethink-food');
@@ -176,7 +176,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                   <div className="absolute inset-0 rounded-[24px] bg-[#c9ac75]" />
                   <img
                     alt=""
-                    className="absolute size-full max-w-none rounded-[24px] object-contain"
+                    className="absolute inset-0 size-full max-w-none rounded-[24px] object-contain object-center"
                     src={imgHeroBanner19869}
                   />
                 </div>

@@ -1,6 +1,4 @@
-/** Figma 516:21354 footer; 516:21356 — DM Sans body 16px (upper block). LinkedIn asset 538:22006. */
-const imgLinkedIn =
-  'https://www.figma.com/api/mcp/asset/59b3a57f-c71f-4233-ac33-83a6dd74d4dc';
+/** Figma 516:21354 footer; 516:21356 — DM Sans body 16px (upper block). */
 
 const LINKEDIN_URL = 'https://www.linkedin.com/in/jessica-andrews-a34842228/';
 
@@ -52,9 +50,11 @@ export function SiteFooter({ tone = 'default' }: SiteFooterProps) {
               className="flex size-10 shrink-0 items-center justify-center rounded-[12px] border border-solid border-[#fdfcfb] bg-[#6b6b6b] px-[11px] py-px transition-opacity hover:opacity-90"
               aria-label="LinkedIn profile"
             >
-              <span className="relative size-5 shrink-0">
-                <img alt="" className="pointer-events-none absolute inset-0 block size-full max-w-none" src={imgLinkedIn} />
-              </span>
+              <svg aria-hidden="true" className="size-5" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M6.94 8.5a1.56 1.56 0 1 1 0-3.12 1.56 1.56 0 0 1 0 3.12Zm1.3 2.1v8H5.64v-8h2.6Zm4.15 0h-2.57v8h2.57v-4.2c0-2.34 3.03-2.55 3.03 0v4.2H18v-5.1c0-3.97-4.48-3.82-5.6-1.87v-1.03Z"
+                />
+              </svg>
             </a>
           </div>
         </div>

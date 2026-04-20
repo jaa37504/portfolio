@@ -16,23 +16,23 @@ import {
   SoftAppearOnce,
 } from '../components/SoftAppear';
 
-const imgImage25 = "https://www.figma.com/api/mcp/asset/d5c62bd6-471e-4931-afbc-8e110ab99bfb";
+const imgImage25 = '/images/CMSXCurrentState.png';
 /** Figma 450:18972 / 450:18991 — persona illustrations */
-const imgImage26 = "https://www.figma.com/api/mcp/asset/64e10189-749a-4992-9735-d43652949858";
-const imgImage11 = "https://www.figma.com/api/mcp/asset/de2b0f4a-2e8f-4400-b1db-4b789ded5ad7";
-const imgImage27 = "https://www.figma.com/api/mcp/asset/f4e430bb-90bc-4507-9eee-6ba5714ac580";
-const imgImage28 = "https://www.figma.com/api/mcp/asset/0a19d7a2-7153-4530-a559-1c95f388e213";
-const imgImage29 = "https://www.figma.com/api/mcp/asset/abde72c3-16cc-4fca-84cc-b649d420db40";
+const imgImage26 = '/images/CMSXProffIcon.png';
+const imgImage11 = '/images/CMSXTAIcon.png';
+const imgImage27 = '/images/CMSXLoFi1.png';
+const imgImage28 = '/images/CMSXLoFi2.png';
+const imgImage29 = '/images/CMSXLoFi.png';
 /** Figma 450:19112 — mid-fi iteration pair + cyan callouts */
-const imgDone811 = "https://www.figma.com/api/mcp/asset/52fc30cf-1e6c-402e-af03-2ac4c9c7eb1d";
-const imgDone612 = "https://www.figma.com/api/mcp/asset/bd5e2932-842f-4d3e-8cce-1010709553b0";
+const imgDone811 = '/images/CMSXMidFiLeft.png';
+const imgDone612 = '/images/CMSXMidFiRight.png';
 /** Figma 450:18895 — CMSX case study hero banner (laptop mockup) */
 const imgCmsxHeroBanner =
-  'https://www.figma.com/api/mcp/asset/e0a548ea-9e3f-479b-8d02-89426379032a';
+  '/images/CMSXbigger.png';
 /** Figma 450:19132 — High fidelity MacBook callouts */
-const imgMacBookPro162131 = "https://www.figma.com/api/mcp/asset/1d1aa2b5-b345-405d-83ee-643324b0f154";
-const imgMacBookPro162531 = "https://www.figma.com/api/mcp/asset/f11070f9-739f-441b-b3db-c530489b3d85";
-const imgMacBookPro162611 = "https://www.figma.com/api/mcp/asset/3416575a-6cd6-4e85-b02a-a4df03fe4e0a";
+const imgMacBookPro162131 = '/images/CMSXHiFi1.png';
+const imgMacBookPro162531 = '/images/CMSXHiFi2.png';
+const imgMacBookPro162611 = '/images/CMSXHiFi3.png';
 export default function PersonalWebsiteDesignPortfolio() {
   const docUrl = CASE_STUDY_DOC_URL['cmsx'];
   const nextProject = nextCaseStudyAfter('cmsx');
@@ -173,7 +173,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                   <div className="absolute inset-0 rounded-[24px] bg-[#e3dfd6]" />
                   <img
                     alt=""
-                    className="absolute size-full max-w-none rounded-[24px] object-contain"
+                    className="absolute inset-0 size-full max-w-none rounded-[24px] object-contain object-center"
                     src={imgCmsxHeroBanner}
                   />
                 </div>
@@ -639,10 +639,13 @@ export default function PersonalWebsiteDesignPortfolio() {
                       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center p-[12px] relative size-full">
                         <div className="aspect-[255/245] flex-[1_0_0] min-h-px min-w-px relative rounded-[18px]" data-node-id="450:19063" data-name="image 27">
                           <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[18px]">
-                            <img alt="" className="absolute h-[99.66%] left-[-111.76%] max-w-none top-[0.16%] w-[211.76%]" src={imgImage27} />
+                            <img
+                              alt=""
+                              className="absolute inset-0 size-full max-w-none object-contain object-center"
+                              src={imgImage27}
+                            />
                           </div>
                         </div>
-                        <div className="absolute border-2 border-[#4dbaec] border-solid h-[44px] left-[80px] rounded-[4px] top-[93.38px] w-[164px]" data-node-id="450:19064" />
                       </div>
                     </div>
                     <div className="bg-white border border-[#ddd8d0] border-solid relative rounded-[18px] shrink-0 w-full" data-node-id="450:19065" data-name="Background">
@@ -663,10 +666,14 @@ export default function PersonalWebsiteDesignPortfolio() {
                   </div>
                   <div className="content-stretch relative flex min-h-0 min-w-0 flex-[1_0_0] flex-col gap-[16px] items-stretch rounded-[18px] md:self-stretch" data-node-id="450:19069" data-name="Border">
                     <div className="h-[275px] relative shrink-0 w-full" data-node-id="450:19070" data-name="Background">
-                      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-start p-[12px] relative size-full">
+                      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center p-[12px] relative size-full">
                         <div className="aspect-[252/257] flex-[1_0_0] min-h-px min-w-px relative rounded-[18px]" data-node-id="450:19071" data-name="image 28">
                           <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[18px]">
-                            <img alt="" className="absolute h-[100.03%] left-[-114.29%] max-w-none top-[0.06%] w-[214.29%]" src={imgImage28} />
+                            <img
+                              alt=""
+                              className="absolute inset-0 size-full max-w-none object-contain object-center"
+                              src={imgImage28}
+                            />
                           </div>
                         </div>
                       </div>
@@ -688,18 +695,19 @@ export default function PersonalWebsiteDesignPortfolio() {
                         </div>
                       </div>
                     </div>
-                    <div className="absolute border-2 border-[#4dbaec] border-solid h-[68px] left-[78px] rounded-[4px] top-[45.38px] w-[173px]" data-node-id="450:19076" />
                   </div>
                   <div className="content-stretch relative flex min-h-0 min-w-0 flex-[1_0_0] flex-col gap-[16px] items-stretch rounded-[18px] md:self-stretch" data-node-id="450:19077" data-name="Border">
                     <div className="h-[275px] relative shrink-0 w-full" data-node-id="450:19078" data-name="Background">
                       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center p-[12px] relative size-full">
                         <div className="aspect-[250/159] flex-[1_0_0] min-h-px min-w-px relative rounded-[18px]" data-node-id="450:19079" data-name="image 29">
                           <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[18px]">
-                            <img alt="" className="absolute h-full left-[-116%] max-w-none top-[0.12%] w-[216%]" src={imgImage29} />
+                            <img
+                              alt=""
+                              className="absolute inset-0 size-full max-w-none object-contain object-center"
+                              src={imgImage29}
+                            />
                           </div>
                         </div>
-                        <div className="absolute border-2 border-[#4dbaec] border-solid h-[85px] left-[57px] rounded-[4px] top-[80.38px] w-[59px]" data-node-id="450:19080" />
-                        <div className="absolute border-2 border-[#4dbaec] border-solid h-[17px] left-[118px] rounded-[4px] top-[123.38px] w-[134px]" data-node-id="450:19081" />
                       </div>
                     </div>
                     <div className="bg-white border-2 border-[#2d6a4f] border-solid relative rounded-[18px] shrink-0 w-full" data-node-id="450:19082" data-name="Background">
@@ -790,10 +798,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                   </div>
                 </div>
                 <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:19111">
-                  {/*
-                    Figma 450:19112 (864×296): columns 414px + gap 12 + 414px; cyan rects positioned per-column
-                    so they scale with each screenshot (was absolute px on the row → drifted on resize).
-                  */}
+                  {/* Images already include annotation boxes; no extra overlay rectangles needed. */}
                   <div
                     className="relative flex w-full shrink-0 items-stretch gap-[12px] rounded-[4px] p-[12px]"
                     data-node-id="450:19112"
@@ -806,20 +811,10 @@ export default function PersonalWebsiteDesignPortfolio() {
                       <div className="pointer-events-none absolute inset-0 overflow-hidden">
                         <img
                           alt=""
-                          className="absolute top-0 left-[-14.91%] h-full w-[114.97%] max-w-none"
+                          className="absolute inset-0 size-full max-w-none object-contain object-center"
                           src={imgDone811}
                         />
                         </div>
-                      <div
-                        className="pointer-events-none absolute left-[6.522%] top-[21.85%] h-[51.51%] w-[16.425%] rounded-[4px] border-2 border-solid border-[#4dbaec]"
-                        data-node-id="450:19115"
-                        aria-hidden
-                      />
-                      <div
-                        className="pointer-events-none absolute left-[33.58%] top-[40.25%] h-[5.52%] w-[4.11%] rounded-[4px] border-2 border-solid border-[#4dbaec]"
-                        data-node-id="450:19116"
-                        aria-hidden
-                      />
                       </div>
                     <div
                       className="relative aspect-[3135/2058] min-h-px min-w-px flex-[1_0_0]"
@@ -828,13 +823,8 @@ export default function PersonalWebsiteDesignPortfolio() {
                     >
                       <img
                         alt=""
-                        className="pointer-events-none absolute inset-0 size-full max-w-none object-cover"
+                        className="pointer-events-none absolute inset-0 size-full max-w-none object-contain object-center"
                         src={imgDone612}
-                      />
-                      <div
-                        className="pointer-events-none absolute left-[20.29%] top-[86.24%] h-[9.57%] w-[13.29%] rounded-[4px] border-2 border-solid border-[#4dbaec]"
-                        data-node-id="450:19117"
-                        aria-hidden
                       />
                     </div>
                   </div>
@@ -961,16 +951,6 @@ export default function PersonalWebsiteDesignPortfolio() {
                       className="pointer-events-none absolute inset-0 size-full max-w-none object-cover"
                       src={imgMacBookPro162131}
                     />
-                    <div
-                      className="pointer-events-none absolute left-[6.94%] top-[17.84%] h-[63.94%] w-[19.44%] rounded-[12px] border border-solid border-[#35a3bf]"
-                      data-node-id="450:19167"
-                      aria-hidden
-                    />
-                    <div
-                      className="pointer-events-none absolute left-[68.83%] top-[3.29%] h-[8.55%] w-[29.17%] rounded-[12px] border border-solid border-[#35a3bf]"
-                      data-node-id="450:19168"
-                      aria-hidden
-                    />
                   </div>
                 </div>
               </div>
@@ -987,16 +967,6 @@ export default function PersonalWebsiteDesignPortfolio() {
                     alt=""
                     className="pointer-events-none absolute inset-0 size-full max-w-none object-cover"
                     src={imgMacBookPro162531}
-                  />
-                  <div
-                    className="pointer-events-none absolute left-[8.64%] top-[22.62%] h-[12.4%] w-[12.81%] rounded-[12px] border border-solid border-[#35a3bf]"
-                    data-node-id="450:19194"
-                    aria-hidden
-                  />
-                  <div
-                    className="pointer-events-none absolute left-[26.85%] top-[31.81%] h-[5.77%] w-[41.98%] rounded-[12px] border border-solid border-[#35a3bf]"
-                    data-node-id="450:19195"
-                    aria-hidden
                   />
                 </div>
                 <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-[200px]" data-node-id="450:19171">
@@ -1127,26 +1097,6 @@ export default function PersonalWebsiteDesignPortfolio() {
                     alt=""
                     className="pointer-events-none absolute inset-0 size-full max-w-none object-cover"
                     src={imgMacBookPro162611}
-                  />
-                  <div
-                    className="pointer-events-none absolute left-[7.87%] top-[22.26%] h-[12.4%] w-[17.9%] rounded-[12px] border border-solid border-[#35a3bf]"
-                    data-node-id="450:19228"
-                    aria-hidden
-                  />
-                  <div
-                    className="pointer-events-none absolute left-[34.88%] top-[37.44%] h-[4.06%] w-[55.4%] rounded-[18px] border border-solid border-[#35a3bf]"
-                    data-node-id="450:19229"
-                    aria-hidden
-                  />
-                  <div
-                    className="pointer-events-none absolute left-[26.7%] top-[12.65%] h-[14.33%] w-[70.22%] rounded-[12px] border border-solid border-[#35a3bf]"
-                    data-node-id="450:19230"
-                    aria-hidden
-                  />
-                  <div
-                    className="pointer-events-none absolute left-[28.7%] top-[42.38%] h-[57.52%] w-[68.21%] rounded-[18px] border border-solid border-[#35a3bf]"
-                    data-node-id="450:19231"
-                    aria-hidden
                   />
                 </div>
               </div>

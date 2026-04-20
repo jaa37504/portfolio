@@ -1,9 +1,9 @@
-const imgContainer = "https://www.figma.com/api/mcp/asset/c7eaa931-d10b-4b31-af9f-43b8df65910c";
-const imgContainer1 = "https://www.figma.com/api/mcp/asset/397fac47-b677-403a-95cd-67fcbb25e9e9";
-const imgContainer2 = "https://www.figma.com/api/mcp/asset/dbb4d179-52fe-4949-b914-644fc7cb088d";
-const imgContainer3 = "https://www.figma.com/api/mcp/asset/53b6057d-ea54-44f7-a4d9-06fa45b3b925";
-const imgContainer4 = "https://www.figma.com/api/mcp/asset/b2ebdbaf-b356-4b9b-81f1-1373963749f3";
-const imgContainer5 = "https://www.figma.com/api/mcp/asset/64bb085a-ca0a-45a8-937e-38b7904abed7";
+const imgContainer = '/images/capitaloneimage.png';
+const imgContainer1 = '/images/CMSXimage.png';
+const imgContainer2 = '/images/ReThinkBanner.png';
+const imgContainer3 = '/images/ACTBanner.png';
+const imgContainer4 = '/images/info2300mobile.png';
+const imgContainer5 = '/images/kenvueimage.png';
 export default function PersonalWebsiteDesignPortfolio() {
   return (
     <div className="relative size-full" data-node-id="450:17726" data-name="Personal Website Design Portfolio">

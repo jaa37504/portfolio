@@ -11,11 +11,11 @@ import {
 import { CmsxLaptopVideoFrame, type CmsxLaptopVariant } from '../components/CmsxLaptopVideoFrame';
 import { HOME_PROJECTS, WORK_FILTER_CHIPS, type HomeProject, type WorkFilterId } from '../data/homePortfolio';
 
-const imgHero = 'https://www.figma.com/api/mcp/asset/ab639713-069b-486f-b958-e44a950dd3b1';
-const imgC1Logo1 = 'https://www.figma.com/api/mcp/asset/458b6e1f-5830-4f07-aee5-1b738be400e7';
+const imgHero = '/images/headshot%20(1).jpg';
+const imgC1Logo1 = '/images/c1logo.png';
 const imgKenvueLogoBlackRgbSvg1 =
-  'https://www.figma.com/api/mcp/asset/a3ec4aaa-3f4b-41ab-a2e2-2e2aeb39237f';
-const imgAmericanNationalLogo = '/AN-Awareness-Logo-Stacked-2-Color-CMYK-01.webp';
+  '/images/Kenvue_Logo_Black_RGB.svg.png';
+const imgAmericanNationalLogo = '/images/AN_Logo_Stacked_2color%201.png';
 const RESUME_URL =
   'https://docs.google.com/document/d/1SLLJ9tK3dty8gCpP_CIbc9i40GogWsIow8KUDYBeG1k/edit?usp=sharing';
 
@@ -52,11 +52,11 @@ function RemoteLogo({
 }
 
 /** Figma Development filter (450:18303) — phone still; laptop arm uses video (522:21734). */
-const imgDevPhone = 'https://www.figma.com/api/mcp/asset/b51cc678-ad6d-4bc4-a91b-c231b2760d03';
+const imgDevPhone = '/images/info2300mobile.png';
 
 /** Figma 450:17047 — INFO 2300 L-shape card (home “All” bento): phone + web mockups */
-const imgInfoLShapePhone = 'https://www.figma.com/api/mcp/asset/6f8dbd88-5626-4cd0-9b2a-6e95d9d1afdb';
-const imgInfoLShapeWeb = 'https://www.figma.com/api/mcp/asset/3e563ce1-9f35-4ebb-8243-c7b97bea7e8f';
+const imgInfoLShapePhone = '/images/info2300mobile.png';
+const imgInfoLShapeWeb = '/images/2300ConsumerLanding/ViewAll.png';
 
 /**
  * Tailwind v4 implements `translate-y-*` with the CSS `translate` property (not `transform`),
@@ -904,11 +904,11 @@ export default function PersonalWebsiteDesignPortfolio() {
                     />
                   </div>
                 </div>
-                <div className="relative flex w-full min-w-0 flex-col items-center overflow-clip" data-node-id="450:16976">
-                  <div className="relative mx-auto aspect-[234/40.304] w-full max-w-[335px] shrink-0 sm:max-w-[250px] md:max-w-[280px] lg:max-w-[315px]" data-node-id="450:16977">
+                <div className="relative flex w-full min-w-0 flex-col items-center" data-node-id="450:16976">
+                  <div className="relative mx-auto aspect-[234/40.304] w-full max-w-[min(335px,84vw)] shrink-0 sm:max-w-[min(300px,38vw)] md:max-w-[min(315px,34vw)]" data-node-id="450:16977">
                     <img
                       alt="American National logo"
-                      className="absolute inset-0 block size-full max-w-none object-contain"
+                      className="absolute inset-0 block size-full max-w-none object-contain object-center"
                       src={imgAmericanNationalLogo}
                     />
                   </div>

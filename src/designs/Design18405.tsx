@@ -18,14 +18,12 @@ import {
   SoftAppearOnce,
 } from '../components/SoftAppear';
 
-const imgContainer = "https://www.figma.com/api/mcp/asset/9f2c133f-50d5-4ff5-b75c-5e182e50a34c";
-const imgImage24 = "https://www.figma.com/api/mcp/asset/19dfef76-c47b-44ff-9772-9b35e9d8ed0a";
-const imgImage18 = "https://www.figma.com/api/mcp/asset/9983536a-e72a-472d-96f4-938d6c66a73c";
+const imgContainer = '/images/biggerC1.png';
+const imgImage24 = '/images/CurrentEx.png';
+const imgImage18 = '/images/C1AvailUpgrades.png';
 /** Figma 450:18641 — Benchmark “version decisions” card: main panel + badge */
 const imgBenchmarkVersionDecisionsMain =
-  "https://www.figma.com/api/mcp/asset/b75c66a9-22bc-46b0-83f6-3f0b24e84199";
-const imgBenchmarkVersionDecisionsBadge =
-  "https://www.figma.com/api/mcp/asset/71870925-0d54-4eba-af1a-5d69e536ee05";
+  '/images/C1VersionDec.png';
 
 /** Figma 450:18627 / 450:18641 — benchmark split rows: 266px text + flex image, 200px height */
 const benchmarkSplitRowClass =
@@ -34,10 +32,10 @@ const benchmarkSplitTextPanelClass =
   "bg-white border-[#ddd8d0] border-r border-solid content-stretch flex flex-col gap-[8px] h-full items-start p-[24px] relative shrink-0 w-[266px] rounded-bl-[18px] rounded-tl-[18px]";
 const benchmarkSplitImageClass =
   "flex-[1_0_0] h-full min-h-px min-w-px relative rounded-br-[18px] rounded-tr-[18px]";
-const imgImage23 = "https://www.figma.com/api/mcp/asset/a2a4d524-d426-436d-ab9b-38446473e2e7";
-const imgImage20 = "https://www.figma.com/api/mcp/asset/672846a4-b111-4550-bb63-22d2edd4f72f";
-const imgImage21 = "https://www.figma.com/api/mcp/asset/9270a6d6-e5a3-47f8-95aa-124ea3f72d7a";
-const imgImage22 = "https://www.figma.com/api/mcp/asset/90966909-e7a1-48cb-b847-b02ab9536ffb";
+const imgImage23 = '/images/c1logo.png';
+const imgImage20 = '/images/C1V1.png';
+const imgImage21 = '/images/C1V2.png';
+const imgImage22 = '/images/C1V3.png';
 export default function PersonalWebsiteDesignPortfolio() {
   const docUrl = CASE_STUDY_DOC_URL['capital-one'];
   const nextProject = nextCaseStudyAfter('capital-one');
@@ -165,7 +163,11 @@ export default function PersonalWebsiteDesignPortfolio() {
                 <div className="h-[417px] relative rounded-[24px] shrink-0 w-full" data-node-id="450:18458" data-name="Container">
                   <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[24px]">
                     <div className="absolute bg-[#7a9fb0] inset-0 rounded-[24px]" />
-                    <img alt="" className="absolute max-w-none object-contain rounded-[24px] size-full" src={imgContainer} />
+                    <img
+                      alt=""
+                      className="absolute inset-0 size-full max-w-none object-contain object-center rounded-[24px]"
+                      src={imgContainer}
+                    />
                   </div>
                 </div>
               </div>
@@ -573,7 +575,11 @@ export default function PersonalWebsiteDesignPortfolio() {
                     <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-br-[18px] rounded-tr-[18px]">
                       <div className="absolute bg-white inset-0 rounded-br-[18px] rounded-tr-[18px]" />
                       <div className="absolute inset-0 overflow-hidden rounded-br-[18px] rounded-tr-[18px]">
-                        <img alt="" className="absolute h-[140.32%] left-[-0.03%] max-w-none top-0 w-full" src={imgImage18} />
+                        <img
+                          alt=""
+                          className="absolute inset-0 size-full max-w-none object-cover object-center"
+                          src={imgImage18}
+                        />
                       </div>
                     </div>
                   </div>
@@ -618,21 +624,10 @@ export default function PersonalWebsiteDesignPortfolio() {
                       <div className="absolute inset-0 overflow-hidden rounded-br-[18px] rounded-tr-[18px]">
                         <img
                           alt=""
-                          className="absolute left-0 top-[-27.46%] h-[154.7%] w-[97.24%] max-w-none"
+                          className="absolute inset-0 size-full max-w-none object-cover object-center"
                           src={imgBenchmarkVersionDecisionsMain}
                         />
                       </div>
-                    </div>
-                    <div
-                      className="pointer-events-none absolute right-[47px] top-[136.23px] h-[54px] w-[64px]"
-                      data-node-id="450:18659"
-                      data-name="image 19"
-                    >
-                      <img
-                        alt=""
-                        className="pointer-events-none absolute inset-0 size-full max-w-none object-cover"
-                        src={imgBenchmarkVersionDecisionsBadge}
-                      />
                     </div>
                   </div>
                 </div>

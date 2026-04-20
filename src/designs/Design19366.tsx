@@ -32,18 +32,18 @@ const INFO_SCHEMA_CARD_STAGGER_ITEM =
   'min-h-0 min-w-0 flex-[1_0_0] basis-0 w-full [&>*]:min-h-0';
 
 /** Figma 450:19417 — case study hero (laptop / admin portal) + video poster */
-const imgImage31 = "https://www.figma.com/api/mcp/asset/1b5dfe7c-5cc5-49ba-a9d0-172ccc96feaf";
+const imgImage31 = '/images/info2300mobile.png';
 /** Figma 450:19473 — Consumer flow sketch (wireframe image) */
 const imgConsumerPersonaWireframe =
-  'https://www.figma.com/api/mcp/asset/9ae4b85c-4248-4e77-a6ab-1b2d0567aa9d';
+  '/images/2300consumersketch.png';
 /** Figma 450:19475 — Admin flow sketch (wireframe image) */
 const imgAdminPersonaWireframe =
-  'https://www.figma.com/api/mcp/asset/aa8bc8e1-2b9d-4953-8f15-07e8566e9cd8';
-const imgImage41 = "https://www.figma.com/api/mcp/asset/4fd67fc0-891b-4682-9fb5-2919a0c46b1f";
-const imgImage42 = "https://www.figma.com/api/mcp/asset/42459bbf-f541-4b61-a41c-cd0c4c1b25ce";
-const imgImage35 = "https://www.figma.com/api/mcp/asset/add8c7b9-c6d5-446d-8398-6b49bf563362";
-const imgImage36 = "https://www.figma.com/api/mcp/asset/8082fffc-e4e1-42bf-a771-6dd8b6db6744";
-const imgImage37 = "https://www.figma.com/api/mcp/asset/b7a363e1-818e-48f6-8e39-2c3f90d5c5e0";
+  '/images/2300adminsketch.png';
+const imgImage41 = '/images/2300ConsumerLanding/ViewAll.png';
+const imgImage42 = '/images/2300ConsumerDetail.png';
+const imgImage35 = '/images/2300AdminLanding.png';
+const imgImage36 = '/images/2300AdminEdit.png';
+const imgImage37 = '/images/AdminInsert.png';
 export default function PersonalWebsiteDesignPortfolio() {
   const docUrl = CASE_STUDY_DOC_URL['info-2300'];
   const nextProject = nextCaseStudyAfter('info-2300');
@@ -185,7 +185,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                   <div className="absolute inset-0 rounded-[24px] bg-[#e3dfd6]" />
                   <img
                     alt=""
-                    className="absolute size-full max-w-none rounded-[24px] object-contain"
+                    className="absolute inset-0 size-full max-w-none rounded-[24px] object-contain object-center"
                     src={imgImage31}
                   />
                 </div>
