@@ -260,7 +260,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                   <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="450:19443">
                     {/* Figma 450:19444 — row layout; no stagger wrappers (they collapsed wireframe image columns) */}
                     <div
-                      className="content-stretch flex w-full shrink-0 flex-row gap-[16px] items-start justify-center lg:gap-[24px] lg:items-center"
+                      className="content-stretch flex w-full shrink-0 flex-row gap-[24px] items-start justify-center lg:items-center"
                       data-node-id="450:19444"
                     >
                       <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex min-h-0 min-w-0 w-full flex-[1_0_0] flex-col gap-[8px] items-start self-stretch pb-[33px] pt-[49px] px-[33px] relative rounded-[18px]" data-node-id="450:19445" data-name="Background+Border">
@@ -947,7 +947,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                       </div>
                       <div className="h-[399px] relative rounded-[4px] shrink-0 w-[260px]" data-node-id="450:19670" data-name="image 42">
                         <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[4px]">
-                          <img alt="" className="absolute h-[100.25%] left-[-0.06%] max-w-none top-[-0.29%] w-[100.12%]" src={imgImage42} />
+                          <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none rounded-[4px] size-full" src={imgImage42} />
                         </div>
                       </div>
                     </div>
@@ -987,7 +987,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                     </div>
                     <div className="aspect-[1720/915] relative rounded-[8px] shrink-0 w-full" data-node-id="450:19683" data-name="image 35">
                       <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[8px]">
-                        <img alt="" className="absolute h-[100.89%] left-0 max-w-none top-[-0.87%] w-full" src={imgImage35} />
+                        <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none rounded-[8px] size-full" src={imgImage35} />
                       </div>
                     </div>
                   </div>

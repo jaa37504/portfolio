@@ -47,7 +47,7 @@ export function SiteFooter({ tone = 'default' }: SiteFooterProps) {
               href={LINKEDIN_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex size-10 shrink-0 items-center justify-center rounded-[12px] border border-solid border-[#fdfcfb] bg-[#6b6b6b] px-[11px] py-px transition-opacity hover:opacity-90"
+              className="flex size-10 shrink-0 items-center justify-center rounded-[12px] border border-solid border-[#fdfcfb] bg-[#6b6b6b] px-[11px] py-px text-white transition-opacity hover:opacity-90"
               aria-label="LinkedIn profile"
             >
               <svg aria-hidden="true" className="size-5" viewBox="0 0 24 24" fill="currentColor">
