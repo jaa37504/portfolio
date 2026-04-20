@@ -1,6 +1,6 @@
 const imgContainer = '/images/capitaloneimage.png';
 const imgContainer1 = '/images/CMSXimage.png';
-const imgContainer2 = '/images/ReThinkBanner.png';
+const imgContainer2 = '/images/ReThinkBigger.png';
 const imgContainer3 = '/images/ACTBanner.png';
 const imgContainer4 = '/images/info2300mobile.png';
 const imgContainer5 = '/images/kenvueimage.png';

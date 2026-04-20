@@ -79,7 +79,7 @@ export const HOME_PROJECTS: HomeProject[] = [
     tag: 'Data Visualization',
     to: '/case-studies/rethink-food',
     categories: ['product-design', 'data-science'],
-    image: '/images/ReThinkBanner.png',
+    image: '/images/ReThinkBigger.png',
     imageClassName: 'absolute max-w-none object-contain rounded-[24px] size-full',
     homeHeroMedia: 'compact-laptop-video',
     homeHeroVideoSrc: '/videos/filter-bar-flow.mp4',

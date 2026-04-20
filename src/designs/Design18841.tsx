@@ -699,11 +699,11 @@ export default function PersonalWebsiteDesignPortfolio() {
                   <div className="content-stretch relative flex min-h-0 min-w-0 flex-[1_0_0] flex-col gap-[16px] items-stretch rounded-[18px] md:self-stretch" data-node-id="450:19077" data-name="Border">
                     <div className="h-[275px] relative shrink-0 w-full" data-node-id="450:19078" data-name="Background">
                       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center p-[12px] relative size-full">
-                        <div className="aspect-[250/159] flex-[1_0_0] min-h-px min-w-px relative rounded-[18px]" data-node-id="450:19079" data-name="image 29">
+                        <div className="aspect-[252/257] flex-[1_0_0] min-h-px min-w-px relative rounded-[18px]" data-node-id="450:19079" data-name="image 29">
                           <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[18px]">
                             <img
                               alt=""
-                              className="absolute inset-0 size-full max-w-none object-contain object-center"
+                              className="absolute inset-0 size-full max-w-none object-cover object-center"
                               src={imgImage29}
                             />
                           </div>

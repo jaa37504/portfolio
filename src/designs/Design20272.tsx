@@ -377,7 +377,7 @@ export default function Frame() {
                               </div>
                             </div>
                           </div>
-                          <div className="aspect-[938/322] border-2 border-solid border-white relative rounded-[4px] shrink-0 w-full" data-node-id="450:20413" data-name="image 44">
+                          <div className="aspect-[938/322] border border-solid border-white relative rounded-[4px] shrink-0 w-full" data-node-id="450:20413" data-name="image 44">
                             <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[4px] size-full" src={imgImage44} />
                           </div>
                         </div>

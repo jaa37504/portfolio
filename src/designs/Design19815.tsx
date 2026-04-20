@@ -26,7 +26,7 @@ const imgFilterSidebar11 = '/images/Filter Sidebar (1) 1.png';
 const imgFilterModalPopup21 = '/images/Filter Modal Popup (2) 1.png';
 const imgFilterBar121 = '/images/Filter Bar (1) (2) 1.png';
 /** Figma 450:19869 — case study hero banner (map + filter bar) */
-const imgHeroBanner19869 = '/images/ReThinkBanner.png';
+const imgHeroBanner19869 = '/images/ReThinkBigger.png';
 const imgProperty1Variant211 = '/images/Property 1=Variant2 (1) 1.png';
 const imgFrame239211 = '/images/Frame 239 (2) (1) 1.png';
 const imgFrame5411 = '/images/Frame 54 (1) 1.png';

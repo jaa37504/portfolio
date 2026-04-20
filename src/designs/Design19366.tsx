@@ -32,7 +32,7 @@ const INFO_SCHEMA_CARD_STAGGER_ITEM =
   'min-h-0 min-w-0 flex-[1_0_0] basis-0 w-full [&>*]:min-h-0';
 
 /** Figma 450:19417 — case study hero (laptop / admin portal) + video poster */
-const imgImage31 = '/images/info2300mobile.png';
+const imgImage31 = '/images/2300bigger.png';
 /** Figma 450:19473 — Consumer flow sketch (wireframe image) */
 const imgConsumerPersonaWireframe =
   '/images/2300consumersketch.png';
@@ -337,7 +337,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                         </div>
                       </div>
                       <div
-                        className="relative min-h-[180px] w-[42%] min-w-[120px] max-w-[220px] self-stretch overflow-hidden rounded-[16px] border border-solid border-[#ddd8d0] sm:min-h-[200px] sm:min-w-[140px] sm:max-w-[260px] lg:min-h-[220px] lg:w-full lg:min-w-0 lg:max-w-none lg:flex-[1_0_0]"
+                        className="relative min-h-[180px] w-[42%] min-w-[120px] max-w-[220px] self-stretch overflow-hidden rounded-[16px] sm:min-h-[200px] sm:min-w-[140px] sm:max-w-[260px] lg:min-h-[220px] lg:w-full lg:min-w-0 lg:max-w-none lg:flex-[1_0_0]"
                         data-node-id="450:19473"
                         data-name="image 31"
                       >
@@ -357,7 +357,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                       className="content-stretch flex w-full shrink-0 flex-row gap-[24px] h-auto items-center justify-center"
                       data-node-id="450:19474"
                     >
-                      <div className="relative min-h-[220px] w-full min-w-0 flex-[1_0_0] self-stretch overflow-hidden rounded-[18px] border border-solid border-[#ddd8d0]" data-node-id="450:19475" data-name="image 31">
+                      <div className="relative min-h-[220px] w-full min-w-0 flex-[1_0_0] self-stretch overflow-hidden rounded-[18px]" data-node-id="450:19475" data-name="image 31">
                         <div aria-hidden="true" className="pointer-events-none absolute inset-0 rounded-[18px]">
                           <div className="absolute inset-0 rounded-[18px] bg-white" />
                           <img
@@ -936,7 +936,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                     <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] min-w-full relative shrink-0 text-[#555] text-[16px] text-center w-[min-content]" data-node-id="450:19666" style={{ fontVariationSettings: "'opsz' 14" }}>
                       <p className="leading-[19.5px]">Landing/View All Page</p>
                     </div>
-                    <div className="border border-[#ddd8d0] border-solid h-[400px] relative rounded-[4px] shrink-0 w-[252px]" data-node-id="450:19667" data-name="image 41">
+                    <div className="h-[400px] relative rounded-[4px] shrink-0 w-[252px]" data-node-id="450:19667" data-name="image 41">
                       <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[4px] size-full" src={imgImage41} />
                     </div>
                   </div>
@@ -945,7 +945,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                       <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] min-w-full relative shrink-0 text-[#555] text-[16px] text-center w-[min-content]" data-node-id="450:19669" style={{ fontVariationSettings: "'opsz' 14" }}>
                         <p className="leading-[19.5px]">Review Detail Page</p>
                       </div>
-                      <div className="border border-[#ddd8d0] border-solid h-[399px] relative rounded-[4px] shrink-0 w-[260px]" data-node-id="450:19670" data-name="image 42">
+                      <div className="h-[399px] relative rounded-[4px] shrink-0 w-[260px]" data-node-id="450:19670" data-name="image 42">
                         <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[4px]">
                           <img alt="" className="absolute h-[100.25%] left-[-0.06%] max-w-none top-[-0.29%] w-[100.12%]" src={imgImage42} />
                         </div>
@@ -985,7 +985,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                     <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#555] text-[16px] text-center w-full" data-node-id="450:19682" style={{ fontVariationSettings: "'opsz' 14" }}>
                       <p className="leading-[19.5px]">Landing Admin Home</p>
                     </div>
-                    <div className="aspect-[1720/915] border border-[#ddd8d0] border-solid relative rounded-[8px] shrink-0 w-full" data-node-id="450:19683" data-name="image 35">
+                    <div className="aspect-[1720/915] relative rounded-[8px] shrink-0 w-full" data-node-id="450:19683" data-name="image 35">
                       <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[8px]">
                         <img alt="" className="absolute h-[100.89%] left-0 max-w-none top-[-0.87%] w-full" src={imgImage35} />
                       </div>
@@ -996,10 +996,10 @@ export default function PersonalWebsiteDesignPortfolio() {
                       <p className="leading-[19.5px]">Edit + Insert Entry</p>
                     </div>
                     <div className="content-stretch flex gap-[16px] items-start relative shrink-0 w-full" data-node-id="450:19686">
-                      <div className="aspect-[762/616] border border-[#ddd8d0] border-solid flex-[1_0_0] min-h-px min-w-px relative rounded-[4px]" data-node-id="450:19687" data-name="image 35">
+                      <div className="aspect-[762/616] flex-[1_0_0] min-h-px min-w-px relative rounded-[4px]" data-node-id="450:19687" data-name="image 35">
                         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[4px] size-full" src={imgImage36} />
                       </div>
-                      <div className="aspect-[738/612] border border-[#ddd8d0] border-solid flex-[1_0_0] min-h-px min-w-px relative rounded-[4px]" data-node-id="450:19688" data-name="image 36">
+                      <div className="aspect-[738/612] flex-[1_0_0] min-h-px min-w-px relative rounded-[4px]" data-node-id="450:19688" data-name="image 36">
                         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[4px] size-full" src={imgImage37} />
                       </div>
                     </div>

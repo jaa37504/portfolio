@@ -32,7 +32,7 @@ const benchmarkSplitTextPanelClass =
   "bg-white border-[#ddd8d0] border-r border-solid content-stretch flex flex-col gap-[8px] h-full items-start p-[24px] relative shrink-0 w-[266px] rounded-bl-[18px] rounded-tl-[18px]";
 const benchmarkSplitImageClass =
   "flex-[1_0_0] h-full min-h-px min-w-px relative rounded-br-[18px] rounded-tr-[18px]";
-const imgImage23 = '/images/c1logo.png';
+const imgImage23 = '/images/C1googlesuiteanalogy.png';
 const imgImage20 = '/images/C1V1.png';
 const imgImage21 = '/images/C1V2.png';
 const imgImage22 = '/images/C1V3.png';

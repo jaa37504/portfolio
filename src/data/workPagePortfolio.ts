@@ -99,7 +99,7 @@ export const WORK_PAGE_PROJECTS: WorkPageProject[] = [
     tools: 'Figma',
     skills: 'Data visualization, prototyping, nonprofit',
     timeline: '8 Weeks',
-    imageSrc: '/images/ReThinkBanner.png',
+    imageSrc: '/images/ReThinkBigger.png',
     imageBgClass: 'bg-[#c9ac75]',
     compactImageMode: 'fill',
     tags: [
@@ -126,11 +126,7 @@ export const WORK_PAGE_PROJECTS: WorkPageProject[] = [
     timeline: '10 Weeks',
     imageSrc: '/images/ACTBanner.png',
     imageBgClass: 'bg-[#7a9fb0]',
-    compactImageMode: 'act-crop',
-    compactImgClassName:
-      'absolute h-[128.83%] left-[-18.63%] max-w-none top-[-14.28%] w-[142.55%]',
-    expandedImgClassName:
-      'absolute h-full left-[-15.14%] max-w-none top-[-0.1%] w-[138.77%]',
+    compactImageMode: 'fill',
     tags: [
       pill('Social Good', 'bg-[#d3e3e9]', 'text-[#3a7992]'),
       pill('Mobile', 'bg-[#efede8]', 'text-[#999181]'),
