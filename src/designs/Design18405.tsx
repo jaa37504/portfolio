@@ -1032,9 +1032,9 @@ export default function PersonalWebsiteDesignPortfolio() {
                   data-node-id="450:18775"
                   data-name="Container"
                 >
-                  <div className="mx-auto flex w-full max-w-[640px] justify-center">
+                  <div className="mx-auto flex w-full justify-center">
                     <CmsxLaptopVideoFrame
-                      variant="dataScienceHero"
+                      variant="caseStudyPrototype"
                       posterSrc={imgContainer}
                       videoSrc="/videos/C1PrototypePublic.mov"
                       className="pointer-events-none w-full shrink-0"

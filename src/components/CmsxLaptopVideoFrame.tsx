@@ -4,6 +4,8 @@ export type CmsxLaptopVariant =
   | 'default'
   | 'productBentoWide'
   | 'dataScienceHero'
+  /** Case-study prototype sections — scaled to feel closer to hero banner presence. */
+  | 'caseStudyPrototype'
   /** INFO 2300 case study — Live Site / Deployed locally (Figma 522:21904) */
   | 'caseStudyLiveSite';
 
@@ -49,12 +51,19 @@ const VARIANT_STYLES: Record<CmsxLaptopVariant, VariantStyle> = {
     base: 'h-[12px] w-[600px] max-w-[min(100vw-2rem,600px)]',
     nodeLid: '522:21708',
   },
+  caseStudyPrototype: {
+    lid: 'h-[332px] w-[552px] max-w-[min(100vw-2rem,552px)]',
+    videoWrap: 'absolute top-2 left-2',
+    videoBox: 'h-[316px] w-[536px] max-w-[min(calc(100vw-4rem),536px)]',
+    base: 'h-[12px] w-[640px] max-w-[min(100vw-1rem,640px)]',
+    nodeLid: '522:21709',
+  },
   caseStudyLiveSite: {
-    lid: 'h-[297px] w-[516px] max-w-[min(100vw-4rem,516px)]',
+    lid: 'h-[332px] w-[552px] max-w-[min(100vw-2rem,552px)]',
     videoWrap: 'absolute top-2 left-2',
     videoBox:
-      'aspect-[1280/720] w-[500px] max-w-[min(calc(100vw-8rem),500px)] shrink-0',
-    base: 'h-[12px] w-[600px] max-w-[min(100vw-2rem,600px)]',
+      'aspect-[1280/720] w-[536px] max-w-[min(calc(100vw-4rem),536px)] shrink-0',
+    base: 'h-[12px] w-[640px] max-w-[min(100vw-1rem,640px)]',
     nodeLid: '522:21906',
     videoObjectClass: 'object-cover object-center',
   },

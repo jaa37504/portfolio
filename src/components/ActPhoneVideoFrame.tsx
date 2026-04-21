@@ -47,7 +47,7 @@ export function ActPhoneVideoFrame({
         expanded
           ? 'top-[calc(50%+0.5px)] left-[calc(50%+0.5px)] w-[147px] max-w-[min(147px,calc(100%-32px))]'
           : caseStudy
-            ? 'top-[calc(50%+0.27px)] left-[calc(50%+0.5px)] w-[165px] max-w-[min(165px,calc(100%-32px))]'
+            ? 'top-[calc(50%+0.27px)] left-[calc(50%+0.5px)] w-[200px] max-w-[min(200px,calc(100%-32px))]'
             : 'top-[calc(50%+0.19px)] left-[calc(50%+0.5px)] w-[225px] max-w-[min(225px,calc(100%-32px))]'
       }`}
       data-node-id={expanded ? '522:21978' : caseStudy ? '522:21890' : '522:21490'}

@@ -305,7 +305,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                 </div>
               </div>
               <div className="content-stretch flex min-h-0 flex-col gap-[16px] h-auto items-start py-[12px] relative rounded-[18px] shrink-0 w-full lg:flex-row" data-node-id="450:18940">
-                <div className="border border-solid border-white h-[285px] relative shrink-0 w-full max-w-[552px] lg:w-[552px]" data-node-id="450:18941" data-name="image 25">
+                <div className="border border-[#ddd8d0] border-solid h-[285px] relative shrink-0 w-full max-w-[552px] rounded-none lg:w-[552px]" data-node-id="450:18941" data-name="image 25">
                   <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     <img alt="" className="absolute h-full left-[-0.02%] max-w-none top-0 w-[100.04%]" src={imgImage25} />
                   </div>
@@ -800,11 +800,11 @@ export default function PersonalWebsiteDesignPortfolio() {
                 <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:19111">
                   {/* Images already include annotation boxes; no extra overlay rectangles needed. */}
                   <div
-                    className="relative flex w-full shrink-0 items-stretch gap-[12px] rounded-[4px] p-[12px]"
+                    className="relative flex w-full shrink-0 items-stretch gap-[16px]"
                     data-node-id="450:19112"
                   >
                     <div
-                      className="relative min-h-0 min-w-0 flex-[1_0_0] self-stretch"
+                      className="relative aspect-[3135/2058] min-h-0 min-w-0 flex-[1_0_0] self-stretch overflow-hidden rounded-[4px] border border-[#ddd8d0] bg-white"
                       data-node-id="450:19113"
                       data-name="Done (8) (1) 1"
                     >
@@ -817,7 +817,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                         </div>
                       </div>
                     <div
-                      className="relative aspect-[3135/2058] min-h-px min-w-px flex-[1_0_0]"
+                      className="relative aspect-[3135/2058] min-h-px min-w-px flex-[1_0_0] overflow-hidden rounded-[4px] border border-[#ddd8d0] bg-white"
                       data-node-id="450:19114"
                       data-name="Done (6) (1) 2"
                     >
@@ -942,7 +942,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                   data-node-id="450:19165"
                 >
                   <div
-                    className="relative aspect-[1728/1247] w-full shrink-0"
+                    className="relative aspect-[1728/1247] w-full shrink-0 overflow-hidden rounded-[4px] border border-[#ddd8d0] bg-white"
                     data-node-id="450:19166"
                     data-name="MacBook Pro 16_ - 21 (3) 1"
                   >
@@ -959,7 +959,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                 data-node-id="450:19169"
               >
                 <div
-                  className="relative aspect-[1728/1247] min-h-0 min-w-0 flex-[1_0_0]"
+                  className="relative aspect-[1728/1247] min-h-0 min-w-0 flex-[1_0_0] overflow-hidden rounded-[4px] border border-[#ddd8d0] bg-white"
                   data-node-id="450:19170"
                   data-name="MacBook Pro 16_ - 25 (3) 1"
                 >
@@ -1089,7 +1089,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                   Callouts relative to MacBook raster (648×467.625); x was previously offset from full row → misaligned past the 200px card column.
                 */}
                 <div
-                  className="relative aspect-[1728/1247] min-h-0 min-w-0 flex-[1_0_0]"
+                  className="relative aspect-[1728/1247] min-h-0 min-w-0 flex-[1_0_0] overflow-hidden rounded-[4px] border border-[#ddd8d0] bg-white"
                   data-node-id="450:19227"
                   data-name="MacBook Pro 16_ - 26 (1) 1"
                 >
@@ -1129,10 +1129,11 @@ export default function PersonalWebsiteDesignPortfolio() {
                 data-node-id="450:19241"
                 data-name="Container"
               >
-                <div className="mx-auto flex w-full max-w-[920px] justify-center">
+                <div className="mx-auto flex w-full justify-center">
                   <CmsxLaptopVideoFrame
+                    variant="caseStudyPrototype"
                     videoSrc="/videos/cmsx-laptop.mp4"
-                    className="pointer-events-none w-full max-w-[880px]"
+                    className="pointer-events-none w-full"
                   />
                 </div>
                   </div>

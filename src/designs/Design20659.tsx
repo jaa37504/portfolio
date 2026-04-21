@@ -1103,7 +1103,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                 </div>
               </div>
               <div
-                className="relative flex min-h-[260px] w-full shrink-0 items-center justify-center overflow-hidden rounded-[24px] bg-[#7a9fb0] px-3 py-8 sm:min-h-[380px] sm:px-8 sm:py-10"
+                className="relative flex min-h-[260px] w-full shrink-0 items-center justify-center overflow-hidden rounded-[24px] bg-[#7a9fb0] px-3 py-8 sm:min-h-[417px] sm:px-8 sm:py-10"
                 data-node-id="450:21041"
                 data-name="Container"
               >

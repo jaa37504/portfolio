@@ -250,7 +250,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                       </div>
                     </div>
                     <div className="content-stretch flex flex-col items-start pt-[8px] relative shrink-0 w-full" data-node-id="450:19440" data-name="Container">
-                      <div className="flex flex-col font-['DM_Sans:Light',sans-serif] font-light justify-center leading-[0] relative shrink-0 text-[#7a7060] text-[16px] w-full" data-node-id="450:19441" style={{ fontVariationSettings: "'opsz' 14" }}>
+                      <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#7a7060] text-[16px] w-full" data-node-id="450:19441" style={{ fontVariationSettings: "'opsz' 14" }}>
                         <p className="leading-[26.25px]">The site had two distinct user types with different needs and permissions.</p>
                       </div>
                     </div>
@@ -260,10 +260,10 @@ export default function PersonalWebsiteDesignPortfolio() {
                   <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="450:19443">
                     {/* Figma 450:19444 — row layout; no stagger wrappers (they collapsed wireframe image columns) */}
                     <div
-                      className="content-stretch flex w-full shrink-0 flex-row gap-[24px] items-start justify-center lg:items-center"
+                      className="content-stretch flex w-full shrink-0 flex-row gap-[24px] items-stretch justify-center"
                       data-node-id="450:19444"
                     >
-                      <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex min-h-0 min-w-0 w-full flex-[1_0_0] flex-col gap-[8px] items-start self-stretch pb-[33px] pt-[49px] px-[33px] relative rounded-[18px]" data-node-id="450:19445" data-name="Background+Border">
+                      <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex min-h-0 min-w-0 flex-[0_1_40%] flex-col gap-[8px] items-start self-stretch pb-[33px] pt-[49px] px-[33px] relative rounded-[18px]" data-node-id="450:19445" data-name="Background+Border">
                         <div className="relative shrink-0 w-full" data-node-id="450:19446" data-name="Container">
                           <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start pb-[0.8px] relative size-full">
                             <div className="flex flex-col font-['DM_Sans:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[1.4px] uppercase w-full" data-node-id="450:19447" style={{ fontVariationSettings: "'opsz' 14" }}>
@@ -337,13 +337,13 @@ export default function PersonalWebsiteDesignPortfolio() {
                         </div>
                       </div>
                       <div
-                        className="relative min-h-[180px] w-[42%] min-w-[120px] max-w-[220px] self-stretch overflow-hidden rounded-[16px] sm:min-h-[200px] sm:min-w-[140px] sm:max-w-[260px] lg:min-h-[220px] lg:w-full lg:min-w-0 lg:max-w-none lg:flex-[1_0_0]"
+                        className="relative min-h-[180px] min-w-0 flex-[0_1_60%] self-stretch overflow-hidden rounded-[18px] border border-[#ddd8d0] sm:min-h-[200px] lg:min-h-[220px]"
                         data-node-id="450:19473"
                         data-name="image 31"
                       >
-                        <div aria-hidden="true" className="pointer-events-none absolute inset-0 rounded-[16px]">
-                          <div className="absolute inset-0 rounded-[16px] bg-white" />
-                          <div className="absolute inset-0 overflow-hidden rounded-[16px]">
+                        <div aria-hidden="true" className="pointer-events-none absolute inset-0 rounded-[18px]">
+                          <div className="absolute inset-0 rounded-[18px] bg-white" />
+                          <div className="absolute inset-0 overflow-hidden rounded-[18px]">
                             <img
                               alt="Consumer user flow wireframe sketch"
                               className="absolute size-full max-w-none object-contain object-left object-top"
@@ -354,10 +354,10 @@ export default function PersonalWebsiteDesignPortfolio() {
                       </div>
                     </div>
                     <div
-                      className="content-stretch flex w-full shrink-0 flex-row gap-[24px] h-auto items-center justify-center"
+                      className="content-stretch flex w-full shrink-0 flex-row gap-[24px] h-auto items-stretch justify-center"
                       data-node-id="450:19474"
                     >
-                      <div className="relative min-h-[220px] w-full min-w-0 flex-[1_0_0] self-stretch overflow-hidden rounded-[18px]" data-node-id="450:19475" data-name="image 31">
+                      <div className="relative min-h-[220px] w-full min-w-0 flex-[1_0_0] self-stretch overflow-hidden rounded-[18px] border border-[#ddd8d0]" data-node-id="450:19475" data-name="image 31">
                         <div aria-hidden="true" className="pointer-events-none absolute inset-0 rounded-[18px]">
                           <div className="absolute inset-0 rounded-[18px] bg-white" />
                           <img
