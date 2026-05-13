@@ -2,6 +2,14 @@
 @import "tailwindcss" source("..");
 
 /*
+  Tailwind v4 wraps all hover: and group-hover: utilities in @media (hover: hover) by default.
+  This suppresses every hover effect on devices/browsers that do not advertise hover support
+  (touch-enabled machines, some OS/browser combos, Chrome DevTools device emulation, etc.).
+  Override the variant to use plain :hover so animations always fire on cursor hover.
+*/
+@custom-variant hover (&:hover);
+
+/*
   Figma MCP exports use internal family names (e.g. DM_Sans:Medium) that do not match
   real font-family names from Google Fonts. Map those strings to the same gstatic
   files so Tailwind arbitrary font-[...] classes resolve correctly on every page.
