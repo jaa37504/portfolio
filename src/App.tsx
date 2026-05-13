@@ -1,5 +1,6 @@
 import { useLayoutEffect, useRef } from 'react';
 import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { DesignFrame } from './DesignFrame';
 import Design16955 from './designs/Design16955';
 import Design17537 from './designs/Design17537';
@@ -119,6 +120,7 @@ export default function App() {
         />
         <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>
+      <Analytics />
     </BrowserRouter>
   );
 }
