@@ -95,12 +95,15 @@ export function SoftAppearOnce({
   /** Tweak when the observer fires (per-card scroll lists often use a slightly inset bottom). */
   intersectionRootMargin = '0px 0px -24px 0px',
   intersectionThreshold = 0.08,
+  /** `media` — lighter lift + scale for prototypes / hero devices. */
+  reveal = 'fade',
   ...rest
 }: {
   children: ReactNode;
   className?: string;
   intersectionRootMargin?: string;
   intersectionThreshold?: number | number[];
+  reveal?: 'fade' | 'media';
 } & HTMLAttributes<HTMLDivElement>) {
   const ref = useRef<HTMLDivElement>(null);
   const [on, setOn] = useState(false);
@@ -115,10 +118,19 @@ export function SoftAppearOnce({
     return () => io.disconnect();
   }, [intersectionRootMargin, intersectionThreshold]);
 
+  const hidden =
+    reveal === 'media'
+      ? 'translate-y-[6px] scale-[0.985] opacity-0'
+      : 'translate-y-[10px] opacity-0';
+  const shown =
+    reveal === 'media'
+      ? 'translate-y-0 scale-100 opacity-100'
+      : 'translate-y-0 opacity-100';
+
   return (
     <div
       ref={ref}
-      className={`motion-safe:transition-all motion-safe:duration-[980ms] motion-safe:ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:translate-y-0 motion-reduce:opacity-100 ${on ? 'translate-y-0 opacity-100' : 'translate-y-[10px] opacity-0'} ${className}`}
+      className={`motion-safe:transition-all motion-safe:duration-[980ms] motion-safe:ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:translate-y-0 motion-reduce:scale-100 motion-reduce:opacity-100 ${on ? shown : hidden} ${className}`}
       {...rest}
     >
       {children}

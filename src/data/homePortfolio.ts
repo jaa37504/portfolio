@@ -8,6 +8,14 @@ export const WORK_FILTER_CHIPS: { id: WorkFilterId; label: string }[] = [
   { id: 'development', label: 'Development' },
 ];
 
+/** Active filter chip — project-aligned accent wash (home bento pass). */
+export const FILTER_CHIP_ACTIVE_CLASS: Record<WorkFilterId, string> = {
+  all: 'bg-[#845482] shadow-[0_2px_14px_rgba(132,84,130,0.28)]',
+  'product-design': 'bg-[#816451] shadow-[0_2px_14px_rgba(129,100,81,0.26)]',
+  'data-science': 'bg-[#3a7992] shadow-[0_2px_14px_rgba(58,121,146,0.26)]',
+  development: 'bg-[#432060] shadow-[0_2px_14px_rgba(67,32,96,0.22)]',
+};
+
 export type HomeProject = {
   id: string;
   title: string;

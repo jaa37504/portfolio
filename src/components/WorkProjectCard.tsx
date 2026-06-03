@@ -1,4 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
+import { elevationRaised } from '../elevation';
 import { ActPhoneVideoFrame } from './ActPhoneVideoFrame';
 import { CompactLaptopVideoFrame } from './CompactLaptopVideoFrame';
 import type { WorkPageProject } from '../data/workPagePortfolio';
@@ -60,14 +61,24 @@ function FeatureRows({ tools, skills, timeline }: { tools: string; skills: strin
   );
 }
 
+function ThumbAccentWash({ wash }: { wash: string }) {
+  return (
+    <div
+      aria-hidden
+      className={`pointer-events-none absolute inset-0 z-[1] rounded-[24px] bg-gradient-to-br opacity-75 mix-blend-multiply motion-safe:transition-opacity motion-safe:duration-300 group-hover:opacity-100 ${wash}`}
+    />
+  );
+}
+
 function CompactImage({ project }: { project: WorkPageProject }) {
-  const { imageSrc, imageBgClass, compactImageMode, compactImgClassName } = project;
+  const { imageSrc, imageBgClass, compactImageMode, compactImgClassName, thumbAccentWash } = project;
 
   if (compactImageMode === 'centered-info') {
     return (
       <div
-        className={`relative mx-0 h-[222px] w-[240px] shrink-0 rounded-[24px] bg-[#e3dfd6]`}
+        className={`relative mx-0 h-[222px] w-[240px] shrink-0 overflow-hidden rounded-[24px] bg-[#e3dfd6]`}
       >
+        <ThumbAccentWash wash={thumbAccentWash} />
         <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[196px] left-1/2 rounded-[24px] top-1/2 w-[212px]">
           <img
             alt=""
@@ -82,8 +93,9 @@ function CompactImage({ project }: { project: WorkPageProject }) {
   if (compactImageMode === 'centered-kenvue') {
     return (
       <div
-        className={`relative mx-0 h-[222px] w-[240px] shrink-0 rounded-[24px] bg-[#c9ac75]`}
+        className={`relative mx-0 h-[222px] w-[240px] shrink-0 overflow-hidden rounded-[24px] bg-[#c9ac75]`}
       >
+        <ThumbAccentWash wash={thumbAccentWash} />
         <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[182px] left-[calc(50%+0.5px)] rounded-[24px] top-1/2 w-[197px]">
           <img
             alt=""
@@ -115,10 +127,11 @@ function CompactImage({ project }: { project: WorkPageProject }) {
 
   return (
     <div
-      className={`relative mx-0 w-[240px] shrink-0 rounded-[24px] ${fillHeight}`}
+      className={`relative mx-0 w-[240px] shrink-0 overflow-hidden rounded-[24px] ${fillHeight}`}
     >
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[24px]">
         <div className={`absolute ${imageBgClass} inset-0 rounded-[24px]`} />
+        <ThumbAccentWash wash={thumbAccentWash} />
         <img alt="" className="absolute max-w-none object-contain rounded-[24px] size-full" src={imageSrc} />
       </div>
     </div>
@@ -245,9 +258,9 @@ export function WorkProjectCard({ project }: { project: WorkPageProject }) {
           className={`opacity-100 ${workCardOpacity} group-hover:pointer-events-none group-hover:opacity-0 group-focus-within:pointer-events-none group-focus-within:opacity-0`}
         >
           <div
-            className={`relative flex h-[280px] w-full shrink-0 flex-row items-center justify-start gap-5 rounded-[24px] border border-solid border-[#e8dfd0] bg-[#fdfcfb] p-[24px] shadow-[0_1px_3px_rgba(44,37,32,0.05),0_6px_20px_rgba(67,32,96,0.04)] md:gap-6 lg:gap-8 ${workCardShadow} group-hover:shadow-none group-focus-within:shadow-none`}
+            className={`relative flex h-[280px] w-full shrink-0 flex-row items-center justify-start gap-5 rounded-[24px] bg-[#fdfcfb] p-[24px] md:gap-6 lg:gap-8 ${elevationRaised} ${workCardShadow} group-hover:shadow-none group-focus-within:shadow-none`}
           >
-            <div className="shrink-0 self-center">
+            <div className="shrink-0 self-center motion-safe:transition-transform motion-safe:duration-300 motion-safe:ease-out motion-reduce:transform-none group-hover:scale-[1.02] group-focus-within:scale-[1.02]">
               <CompactImage project={project} />
             </div>
             <div className="relative flex h-full min-h-0 w-full min-w-0 flex-1 flex-col items-start justify-between overflow-clip pb-[8px] pt-[16px] pr-4 md:pr-8 lg:pr-12 xl:pr-[96px]">

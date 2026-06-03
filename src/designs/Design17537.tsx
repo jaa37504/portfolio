@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
-import { CASE_STUDY_VERTICAL_STAGGER_ITEM, CaseStudyStagger } from '../components/SoftAppear';
+import { CASE_STUDY_VERTICAL_STAGGER_ITEM, CaseStudyStagger, SoftAppearOnce } from '../components/SoftAppear';
+import { navShellDefault } from '../elevation';
 import { WorkProjectCard } from '../components/WorkProjectCard';
 import { WORK_PAGE_PROJECTS } from '../data/workPagePortfolio';
 import { isHomeNavActive, isWorkNavActive, mainNavInlineClass } from '../mainNav';
@@ -45,7 +46,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                     <WorkProjectCard key={project.id} project={project} />
                   ))}
                 </CaseStudyStagger>
-                <div className="relative flex w-full min-w-0 shrink-0 items-center justify-center">
+                <SoftAppearOnce className="relative flex w-full min-w-0 shrink-0 items-center justify-center" intersectionThreshold={0.2}>
                   <a
                     href={ALL_CASE_STUDIES_URL}
                     target="_blank"
@@ -59,14 +60,14 @@ export default function PersonalWebsiteDesignPortfolio() {
                       View all case studies
                     </p>
                   </a>
-                </div>
+                </SoftAppearOnce>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        className="absolute top-0 left-1/2 z-10 flex h-[81px] w-screen max-w-none -translate-x-1/2 flex-col items-stretch border-b border-solid border-[#e8dfd0] bg-[#f5f2eb] pb-px"
+        className={`absolute top-0 left-1/2 z-10 flex h-[81px] w-screen max-w-none -translate-x-1/2 flex-col items-stretch ${navShellDefault}`}
         data-node-id="450:17711"
         data-name="Navigation"
       >

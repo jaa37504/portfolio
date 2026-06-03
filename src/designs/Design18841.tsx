@@ -10,7 +10,10 @@ import {
   caseStudyHeroStackGapClass,
   caseStudyHeroTopPaddingClass,
 } from '../caseStudyLayout';
+import { CaseStudyPrototypeMedia } from '../components/CaseStudyPrototypeMedia';
+import { CaseStudySeparator } from '../components/CaseStudySeparator';
 import { CaseStudyTripletCards } from '../components/CaseStudyTripletCards';
+import { caseStudyTripletBodyClass } from '../data/caseStudyTripletTheme';
 import {
   CASE_STUDY_CARD_STAGGER_ITEM_XL,
   CaseStudySection,
@@ -179,7 +182,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                     src={imgCmsxHeroBanner}
                   />
                 </div>
-                  </div>
+              </div>
             </SoftAppearOnce>
             <CaseStudySection
               className="content-stretch flex flex-col gap-[16px] items-start py-5 sm:py-6 lg:py-8 relative shrink-0 w-full"
@@ -187,22 +190,10 @@ export default function PersonalWebsiteDesignPortfolio() {
               data-name="Section - OVERVIEW"
             >
               <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="450:18900">
-                <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="450:18901">
-                  <div className="content-stretch flex flex-col items-start w-full max-w-[680px] min-w-0 relative shrink-0" data-node-id="450:18902" data-name="Container">
-                    <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[1.8px] uppercase whitespace-nowrap" data-node-id="450:18903" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      <p className="leading-[25.5px]">Overview</p>
-                    </div>
-                  </div>
-                  <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="450:18904" data-name="Container">
-                    <div className="flex-[1_0_0] min-h-px min-w-px relative" data-node-id="450:18905" data-name="Heading 1">
-                      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center relative size-full">
-                        <p className="flex-[1_0_0] font-['Libre_Baskerville:Italic',sans-serif] italic leading-[40px] min-h-px min-w-px relative text-[#845482] text-[32px]" data-node-id="450:18906">
-                          Redesigning high-stakes grading workflows for course staff
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div className="flex w-full min-w-0 flex-col gap-4 items-start">
+                <p className="case-study-eyebrow font-['DM_Sans:SemiBold',sans-serif] font-semibold uppercase text-[#6b6b6b]" style={{ fontVariationSettings: "'opsz' 14" }}>Overview</p>
+                <p className="case-study-headline font-['Libre_Baskerville:Italic',sans-serif] italic relative block w-full min-w-0">Redesigning high-stakes grading workflows for course staff</p>
+              </div>
                 <div className="content-stretch flex flex-col items-start pt-[3.01px] relative shrink-0 w-full" data-node-id="450:18907" data-name="Container">
                   <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[16px] w-full whitespace-pre-wrap" data-node-id="450:18908" style={{ fontVariationSettings: "'opsz' 14" }}>
                     <p className="leading-[25.5px] mb-0">{`CMSX's Groups & Grading page supports critical grading workflows for 1,000+ faculty and TA’S, but its complexity made bulk actions error-prone, confusing, and slow. `}</p>
@@ -225,7 +216,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                 </button>
                 </div>
             </CaseStudySection>
-            <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:18912" data-name="Separator" />
+            <CaseStudySeparator data-node-id="450:18912" />
             <CaseStudySection
               animated={false}
               className="content-stretch flex flex-col gap-[48px] items-start py-5 sm:py-6 lg:py-8 relative shrink-0 w-full"
@@ -233,19 +224,13 @@ export default function PersonalWebsiteDesignPortfolio() {
               data-name="Section - MY SCOPE"
             >
               <SoftAppearOnce className="w-full shrink-0">
-              <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="450:18914">
-                  <div className="content-stretch flex flex-col items-start w-full max-w-[680px] min-w-0 relative shrink-0" data-node-id="450:18915" data-name="Container">
-                  <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[1.8px] uppercase whitespace-nowrap" data-node-id="450:18916" style={{ fontVariationSettings: "'opsz' 14" }}>
-                    <p className="leading-[25.5px]">Projected Impact</p>
-                  </div>
-                </div>
-                <p className="font-['Libre_Baskerville:Italic',sans-serif] italic leading-[40px] min-w-full relative shrink-0 text-[#845482] text-[32px] w-[min-content]" data-node-id="450:18917">
-                  Why this matters
-                </p>
+              <div className="flex w-full min-w-0 flex-col gap-4 items-start">
+                <p className="case-study-eyebrow font-['DM_Sans:SemiBold',sans-serif] font-semibold uppercase text-[#6b6b6b]" style={{ fontVariationSettings: "'opsz' 14" }}>Projected Impact</p>
+                <p className="case-study-headline font-['Libre_Baskerville:Italic',sans-serif] italic relative block w-full min-w-0 shrink-0">Why this matters</p>
               </div>
               </SoftAppearOnce>
               <CaseStudyTripletCards
-                bodyTextClassName="text-[#816451] text-[18px]"
+                bodyTextClassName={caseStudyTripletBodyClass('cmsx', 'text-[#816451] text-[18px]')}
                 data-node-id="450:18918"
                 items={[
                   'Instructors manage hundreds of students under tight timelines',
@@ -254,23 +239,17 @@ export default function PersonalWebsiteDesignPortfolio() {
                 ]}
               />
             </CaseStudySection>
-            <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:18931" data-name="Separator" />
+            <CaseStudySeparator data-node-id="450:18931" />
             <CaseStudySection
               className="content-stretch flex flex-col gap-[16px] items-start py-5 sm:py-6 lg:py-8 relative shrink-0 w-full"
               data-node-id="450:18932"
               data-name="Section - MY SCOPE"
             >
               <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="450:18933">
-                <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="450:18934">
-                  <div className="content-stretch flex flex-col items-start w-full max-w-[680px] min-w-0 relative shrink-0" data-node-id="450:18935" data-name="Container">
-                    <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[1.8px] uppercase whitespace-nowrap" data-node-id="450:18936" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      <p className="leading-[25.5px]">Current State - Product Audit</p>
-                    </div>
-                  </div>
-                  <p className="font-['Libre_Baskerville:Italic',sans-serif] italic leading-[40px] min-w-full relative shrink-0 text-[#845482] text-[32px] w-[min-content]" data-node-id="450:18937">
-                    The original interface crammed every possible action into one view.
-                  </p>
-                </div>
+                <div className="flex w-full min-w-0 flex-col gap-4 items-start">
+                <p className="case-study-eyebrow font-['DM_Sans:SemiBold',sans-serif] font-semibold uppercase text-[#6b6b6b]" style={{ fontVariationSettings: "'opsz' 14" }}>Current State - Product Audit</p>
+                <p className="case-study-headline font-['Libre_Baskerville:Italic',sans-serif] italic relative block w-full min-w-0 shrink-0">The original interface crammed every possible action into one view.</p>
+              </div>
                 <div className="content-stretch flex flex-col items-start pt-[3.01px] relative shrink-0 w-full" data-node-id="450:18938" data-name="Container">
                   <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[16px] w-full" data-node-id="450:18939" style={{ fontVariationSettings: "'opsz' 14" }}>
                     <p className="leading-[25.5px]">This is a central page for managing student grouping, grading, extensions, and grader assignments.</p>
@@ -321,7 +300,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                 </div>
               </div>
             </CaseStudySection>
-            <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:18958" data-name="Separator" />
+            <CaseStudySeparator data-node-id="450:18958" />
             <CaseStudySection
               className="content-stretch flex flex-col gap-[24px] items-start py-5 sm:py-6 lg:py-8 relative shrink-0 w-full"
               data-node-id="450:18959"
@@ -329,22 +308,10 @@ export default function PersonalWebsiteDesignPortfolio() {
             >
               <div className="content-stretch flex flex-col gap-[32px] items-start pb-[24px] relative shrink-0 w-full" data-node-id="450:18960">
                 <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="450:18961">
-                  <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="450:18962">
-                    <div className="content-stretch flex flex-col items-start w-full max-w-[680px] min-w-0 relative shrink-0" data-node-id="450:18963" data-name="Container">
-                      <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[1.8px] uppercase whitespace-nowrap" data-node-id="450:18964" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        <p className="leading-[25.5px]">Understanding the User</p>
-                      </div>
-                    </div>
-                    <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="450:18965" data-name="Container">
-                      <div className="flex-[1_0_0] min-h-px min-w-px relative" data-node-id="450:18966" data-name="Heading 1">
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center relative size-full">
-                          <p className="flex-[1_0_0] font-['Libre_Baskerville:Italic',sans-serif] italic leading-[40px] min-h-px min-w-px relative text-[#845482] text-[32px]" data-node-id="450:18967">
-                            One page, two completely different users
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <div className="flex w-full min-w-0 flex-col gap-4 items-start">
+                <p className="case-study-eyebrow font-['DM_Sans:SemiBold',sans-serif] font-semibold uppercase text-[#6b6b6b]" style={{ fontVariationSettings: "'opsz' 14" }}>Understanding the User</p>
+                <p className="case-study-headline font-['Libre_Baskerville:Italic',sans-serif] italic relative block w-full min-w-0">One page, two completely different users</p>
+              </div>
                   <div className="content-stretch flex flex-col items-start pt-[8px] relative shrink-0 w-full" data-node-id="450:18968" data-name="Container">
                     <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#7a7060] text-[16px] w-full" data-node-id="450:18969" style={{ fontVariationSettings: "'opsz' 14" }}>
                       <p className="leading-[26.25px]">{`After discussing with 1 professor and a few TA’S I discovered that the hardest constraint wasn't technical. It was designing for two users with opposite interface preferences on the same page at the same time, without making either feel like the platform wasn't built for them. `}</p>
@@ -440,13 +407,13 @@ export default function PersonalWebsiteDesignPortfolio() {
                   </div>
                 </CaseStudyStagger>
               </div>
-              <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:19005" data-name="Separator" />
+              <CaseStudySeparator data-node-id="450:19005" />
               <div className="content-stretch flex flex-col gap-[48px] items-start pt-5 sm:pt-6 lg:pt-8 relative shrink-0 w-full" data-node-id="450:19006">
-                <p className="font-['Libre_Baskerville:Italic',sans-serif] italic leading-[40px] relative shrink-0 text-[#816451] text-[24px] w-full" data-node-id="450:19007">
+                <p className="case-study-subhead font-['Libre_Baskerville:Italic',sans-serif] italic relative shrink-0 w-full" data-node-id="450:19007">
                   Key Pain Points
                 </p>
                 <CaseStudyTripletCards
-                  bodyTextClassName="text-[#432060] text-[18px]"
+                  bodyTextClassName={caseStudyTripletBodyClass('cmsx')}
                   data-node-id="450:19008"
                   items={[
                     'Selection system is unclear, making bulk actions feel risky',
@@ -456,7 +423,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                 />
                 </div>
             </CaseStudySection>
-            <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:19018" data-name="Separator" />
+            <CaseStudySeparator data-node-id="450:19018" />
             <CaseStudySection
               animated={false}
               className="content-stretch flex flex-col gap-[32px] items-start py-5 sm:py-6 lg:py-8 relative shrink-0 w-full"
@@ -465,22 +432,10 @@ export default function PersonalWebsiteDesignPortfolio() {
             >
               <SoftAppearOnce className="w-full shrink-0">
               <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="450:19020">
-                <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="450:19021">
-                    <div className="content-stretch flex flex-col items-start w-full max-w-[680px] min-w-0 relative shrink-0" data-node-id="450:19022" data-name="Container">
-                    <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[1.8px] uppercase whitespace-nowrap" data-node-id="450:19023" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      <p className="leading-[25.5px]">Insights → Direction</p>
-                    </div>
-                  </div>
-                  <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="450:19024" data-name="Container">
-                    <div className="flex-[1_0_0] min-h-px min-w-px relative" data-node-id="450:19025" data-name="Heading 1">
-                      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center relative size-full">
-                        <p className="flex-[1_0_0] font-['Libre_Baskerville:Italic',sans-serif] italic leading-[40px] min-h-px min-w-px relative text-[#845482] text-[32px]" data-node-id="450:19026">
-                          How might we simplify complex workflows without removing the flexibility power users depend on?
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div className="flex w-full min-w-0 flex-col gap-4 items-start">
+                <p className="case-study-eyebrow font-['DM_Sans:SemiBold',sans-serif] font-semibold uppercase text-[#6b6b6b]" style={{ fontVariationSettings: "'opsz' 14" }}>Insights → Direction</p>
+                <p className="case-study-headline font-['Libre_Baskerville:Italic',sans-serif] italic relative block w-full min-w-0">How might we simplify complex workflows without removing the flexibility power users depend on?</p>
+              </div>
                 <div className="content-stretch flex flex-col items-start pt-[8px] relative shrink-0 w-full" data-node-id="450:19027" data-name="Container">
                   <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#7a7060] text-[16px] w-full" data-node-id="450:19028" style={{ fontVariationSettings: "'opsz' 14" }}>
                     <p className="leading-[26.25px]">After the IA audit, user research, and competitive analysis of Gradescope and Canvas, the problems crystallized into three opportunity areas.</p>
@@ -549,7 +504,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                 </div>
               </CaseStudyStagger>
             </CaseStudySection>
-            <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:19048" data-name="Separator" />
+            <CaseStudySeparator data-node-id="450:19048" />
             <CaseStudySection
               animated={false}
               className="content-stretch flex flex-col gap-[24px] items-start py-5 sm:py-6 lg:py-8 relative shrink-0 w-full"
@@ -562,13 +517,13 @@ export default function PersonalWebsiteDesignPortfolio() {
                   <div className="content-stretch flex items-start relative shrink-0 w-full" data-node-id="450:19052" data-name="Container">
                     <div className="flex-[1_0_0] min-h-px min-w-px relative" data-node-id="450:19053">
                       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[14px] items-start relative size-full">
-                          <div className="content-stretch flex flex-col items-start w-full max-w-[680px] min-w-0 relative shrink-0" data-node-id="450:19054" data-name="Container">
-                          <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[1.8px] uppercase whitespace-nowrap" data-node-id="450:19055" style={{ fontVariationSettings: "'opsz' 14" }}>
+                          <div className="content-stretch flex flex-col items-start w-full min-w-0 relative shrink-0" data-node-id="450:19054" data-name="Container">
+                          <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 case-study-eyebrow text-[#6b6b6b] uppercase whitespace-nowrap" data-node-id="450:19055" style={{ fontVariationSettings: "'opsz' 14" }}>
                             <p className="leading-[25.5px]">Design process</p>
                           </div>
                         </div>
                         <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="450:19056" data-name="Heading 1">
-                          <p className="flex-[1_0_0] font-['Libre_Baskerville:Italic',sans-serif] italic leading-[40px] min-h-px min-w-px relative text-[#845482] text-[32px]" data-node-id="450:19057">
+                          <p className="case-study-headline font-['Libre_Baskerville:Italic',sans-serif] italic relative block" data-node-id="450:19057">
                             Lo-Fi Ideation
                           </p>
                         </div>
@@ -680,15 +635,15 @@ export default function PersonalWebsiteDesignPortfolio() {
                   </div>
                 </CaseStudyStagger>
               </div>
-              <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:19086" data-name="Separator" />
+              <CaseStudySeparator data-node-id="450:19086" />
               <SoftAppearOnce
                 className={`content-stretch flex flex-col items-start relative shrink-0 w-full ${caseStudyHeroStackGapClass} pt-6 sm:pt-8 lg:pt-10`}
               >
-                <p className="font-['Libre_Baskerville:Italic',sans-serif] italic leading-[40px] relative shrink-0 text-[#816451] text-[24px] w-full" data-node-id="450:19088">
+                <p className="case-study-subhead font-['Libre_Baskerville:Italic',sans-serif] italic relative shrink-0 w-full" data-node-id="450:19088">
                   Key Design Decisions
                 </p>
                 <CaseStudyTripletCards
-                  bodyTextClassName="text-[#432060] text-[18px]"
+                  bodyTextClassName={caseStudyTripletBodyClass('cmsx')}
                   data-node-id="450:19089"
                   items={[
                     'Unified selection logic to reduce confusion across workflows',
@@ -699,7 +654,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                 />
               </SoftAppearOnce>
             </CaseStudySection>
-            <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:19099" data-name="Separator" />
+            <CaseStudySeparator data-node-id="450:19099" />
             <CaseStudySection
               className="content-stretch flex flex-col gap-[14px] items-start py-5 sm:py-6 lg:py-8 relative shrink-0 w-full"
               data-node-id="450:19100"
@@ -707,22 +662,10 @@ export default function PersonalWebsiteDesignPortfolio() {
             >
               <div className="content-stretch flex flex-col gap-[24px] items-start pb-[24px] relative shrink-0 w-full" data-node-id="450:19101">
                 <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="450:19102">
-                  <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="450:19103">
-                    <div className="content-stretch flex flex-col items-start w-full max-w-[680px] min-w-0 relative shrink-0" data-node-id="450:19104" data-name="Container">
-                      <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[1.8px] uppercase whitespace-nowrap" data-node-id="450:19105" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        <p className="leading-[25.5px]">Design process</p>
-                      </div>
-                    </div>
-                    <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="450:19106" data-name="Container">
-                      <div className="flex-[1_0_0] min-h-px min-w-px relative" data-node-id="450:19107" data-name="Heading 1">
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center relative size-full">
-                          <p className="flex-[1_0_0] font-['Libre_Baskerville:Italic',sans-serif] italic leading-[40px] min-h-px min-w-px relative text-[#845482] text-[32px]" data-node-id="450:19108">
-                            Medium Fidelity Iteration
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <div className="flex w-full min-w-0 flex-col gap-4 items-start">
+                <p className="case-study-eyebrow font-['DM_Sans:SemiBold',sans-serif] font-semibold uppercase text-[#6b6b6b]" style={{ fontVariationSettings: "'opsz' 14" }}>Design process</p>
+                <p className="case-study-headline font-['Libre_Baskerville:Italic',sans-serif] italic relative block w-full min-w-0">Medium Fidelity Iteration</p>
+              </div>
                   <div className="content-stretch flex flex-col items-start pt-[8px] relative shrink-0 w-full" data-node-id="450:19109" data-name="Container">
                     <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#7a7060] text-[16px] w-full" data-node-id="450:19110" style={{ fontVariationSettings: "'opsz' 14" }}>
                       <p className="leading-[26.25px]">In mid-fidelity, I validated and refined the chosen interaction model by iterating on the end-to-end filtering, selection, and batch-action flow, and discussing feasibility and use cases with developers.</p>
@@ -762,13 +705,13 @@ export default function PersonalWebsiteDesignPortfolio() {
                   </div>
                 </div>
               </div>
-              <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:19118" data-name="Separator" />
+              <CaseStudySeparator data-node-id="450:19118" />
               <div className="content-stretch flex flex-col gap-[48px] items-start pt-[40px] relative shrink-0 w-full" data-node-id="450:19119">
-                <p className="font-['Libre_Baskerville:Italic',sans-serif] italic leading-[40px] relative shrink-0 text-[#816451] text-[24px] w-full" data-node-id="450:19120">
+                <p className="case-study-subhead font-['Libre_Baskerville:Italic',sans-serif] italic relative shrink-0 w-full" data-node-id="450:19120">
                   Key Design Decisions
                 </p>
                 <CaseStudyTripletCards
-                  bodyTextClassName="text-[#432060] text-[18px]"
+                  bodyTextClassName={caseStudyTripletBodyClass('cmsx')}
                   data-node-id="450:19121"
                   items={[
                     'Disabled state group actions to improve intuition of use',
@@ -778,26 +721,20 @@ export default function PersonalWebsiteDesignPortfolio() {
                 />
               </div>
             </CaseStudySection>
-            <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:19131" data-name="Separator" />
+            <CaseStudySeparator data-node-id="450:19131" />
             <CaseStudySection className="content-stretch flex flex-col gap-[32px] items-start py-5 sm:py-6 lg:py-8 relative shrink-0 w-full" data-node-id="450:19132">
               <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="450:19133">
-                <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="450:19134">
-                  <div className="content-stretch flex flex-col items-start w-full max-w-[680px] min-w-0 relative shrink-0" data-node-id="450:19135" data-name="Container">
-                    <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[1.8px] uppercase whitespace-nowrap" data-node-id="450:19136" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      <p className="leading-[25.5px]">Design process</p>
-                    </div>
-                  </div>
-                  <p className="font-['Libre_Baskerville:Italic',sans-serif] italic leading-[40px] min-w-full relative shrink-0 text-[#845482] text-[32px] w-[min-content]" data-node-id="450:19137">
-                    High Fidelity
-                  </p>
-                </div>
+                <div className="flex w-full min-w-0 flex-col gap-4 items-start">
+                <p className="case-study-eyebrow font-['DM_Sans:SemiBold',sans-serif] font-semibold uppercase text-[#6b6b6b]" style={{ fontVariationSettings: "'opsz' 14" }}>Design process</p>
+                <p className="case-study-headline font-['Libre_Baskerville:Italic',sans-serif] italic relative block w-full min-w-0 shrink-0">High Fidelity</p>
+              </div>
                 <div className="content-stretch flex flex-col items-start pt-[8px] relative shrink-0 w-full" data-node-id="450:19138" data-name="Container">
                   <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#7a7060] text-[16px] w-full" data-node-id="450:19139" style={{ fontVariationSettings: "'opsz' 14" }}>
                     <p className="leading-[26.25px]">{`In high-fidelity, I finalized the visual hierarchy and interaction details to ensure clarity, safety, and consistency across the core filtering and batch-action workflow, and aligned design with MUI design system. `}</p>
                   </div>
                 </div>
               </div>
-              <p className="font-['Libre_Baskerville:Italic',sans-serif] italic leading-[40px] relative shrink-0 text-[#816451] text-[24px] w-full" data-node-id="450:19140">
+              <p className="case-study-subhead font-['Libre_Baskerville:Italic',sans-serif] italic relative shrink-0 w-full" data-node-id="450:19140">
                 Putting it all together: How does this solution address our problem space?
               </p>
               <div className="content-stretch flex gap-[16px] items-stretch relative shrink-0 w-full" data-node-id="450:19141">
@@ -1016,33 +953,26 @@ export default function PersonalWebsiteDesignPortfolio() {
                 </div>
               </div>
             </CaseStudySection>
-            <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:19232" data-name="Separator" />
+            <CaseStudySeparator data-node-id="450:19232" />
             <CaseStudySection
               id="case-study-prototype"
               className="content-stretch flex scroll-mt-8 flex-col gap-[32px] items-start py-5 sm:py-6 lg:py-8 relative shrink-0 w-full"
               data-node-id="450:19233"
             >
               <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="450:19234">
-                <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="450:19235">
-                  <div className="content-stretch flex flex-col items-start w-full max-w-[680px] min-w-0 relative shrink-0" data-node-id="450:19236" data-name="Container">
-                    <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[1.8px] uppercase whitespace-nowrap" data-node-id="450:19237" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      <p className="leading-[25.5px]">Design process</p>
-                    </div>
-                  </div>
-                  <p className="font-['Libre_Baskerville:Italic',sans-serif] italic leading-[40px] min-w-full relative shrink-0 text-[#845482] text-[32px] w-[min-content]" data-node-id="450:19238">
-                    Prototype
-                  </p>
-                </div>
+                <div className="flex w-full min-w-0 flex-col gap-4 items-start">
+                <p className="case-study-eyebrow font-['DM_Sans:SemiBold',sans-serif] font-semibold uppercase text-[#6b6b6b]" style={{ fontVariationSettings: "'opsz' 14" }}>Design process</p>
+                <p className="case-study-headline font-['Libre_Baskerville:Italic',sans-serif] italic relative block w-full min-w-0 shrink-0">Prototype</p>
+              </div>
                 <div className="content-stretch flex flex-col items-start pt-[8px] relative shrink-0 w-full" data-node-id="450:19239" data-name="Container">
                   <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#7a7060] text-[16px] w-full" data-node-id="450:19240" style={{ fontVariationSettings: "'opsz' 14" }}>
                     <p className="leading-[26.25px]">{`In high-fidelity, I finalized the visual hierarchy and interaction details to ensure clarity, safety, and consistency across the core filtering and batch-action workflow, and aligned design with MUI design system. `}</p>
                   </div>
                 </div>
               </div>
-              <div
+              <CaseStudyPrototypeMedia
                 className="relative flex min-h-[280px] w-full shrink-0 items-center justify-center overflow-hidden rounded-[24px] bg-[#e3dfd6] px-3 py-8 sm:min-h-[417px] sm:px-8"
                 data-node-id="450:19241"
-                data-name="Container"
               >
                 <div className="mx-auto flex w-full justify-center">
                   <CmsxLaptopVideoFrame
@@ -1051,21 +981,15 @@ export default function PersonalWebsiteDesignPortfolio() {
                     className="pointer-events-none w-full"
                   />
                 </div>
-                  </div>
+              </CaseStudyPrototypeMedia>
             </CaseStudySection>
-            <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:19245" data-name="Separator" />
+            <CaseStudySeparator data-node-id="450:19245" />
             <CaseStudySection className="content-stretch flex flex-col gap-[48px] items-start py-5 sm:py-6 lg:py-8 relative shrink-0 w-full" data-node-id="450:19246">
               <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="450:19247" data-name="Section - RECOMMENDATION">
-                <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="450:19248">
-                  <div className="content-stretch flex flex-col items-start w-full max-w-[680px] min-w-0 relative shrink-0" data-node-id="450:19249" data-name="Container">
-                    <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[1.8px] uppercase whitespace-nowrap" data-node-id="450:19250" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      <p className="leading-[25.5px]">My Impact</p>
-                    </div>
-                  </div>
-                  <p className="font-['Libre_Baskerville:Italic',sans-serif] italic leading-[40px] min-w-full relative shrink-0 text-[#845482] text-[32px] w-[min-content]" data-node-id="450:19251">
-                    Outcomes
-                  </p>
-                </div>
+                <div className="flex w-full min-w-0 flex-col gap-4 items-start">
+                <p className="case-study-eyebrow font-['DM_Sans:SemiBold',sans-serif] font-semibold uppercase text-[#6b6b6b]" style={{ fontVariationSettings: "'opsz' 14" }}>My Impact</p>
+                <p className="case-study-headline font-['Libre_Baskerville:Italic',sans-serif] italic relative block w-full min-w-0 shrink-0">Outcomes</p>
+              </div>
               </div>
               <div className="content-stretch relative flex h-auto w-full shrink-0 flex-row items-stretch gap-[32px] font-['DM_Sans:SemiBold',sans-serif] font-semibold" data-node-id="450:19252" data-name="Container">
                 <div className="bg-white border border-[#ddd8d0] border-solid content-stretch relative flex min-h-px min-w-0 flex-[1_1_0] flex-col items-start gap-[12px] rounded-[18px] p-[24px] self-stretch" data-node-id="450:19253" data-name="Background+Border">
@@ -1086,27 +1010,15 @@ export default function PersonalWebsiteDesignPortfolio() {
                 </div>
               </div>
             </CaseStudySection>
-            <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:19259" data-name="Separator" />
+            <CaseStudySeparator data-node-id="450:19259" />
             <CaseStudySection
               className="content-stretch flex flex-col gap-[32px] items-start max-w-[1100px] py-5 sm:py-6 lg:py-8 relative shrink-0 w-full"
               data-node-id="450:19260"
               data-name="Section - REFLECTIONS"
             >
-              <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="450:19261">
-                <div className="content-stretch flex flex-col items-start w-full max-w-[680px] min-w-0 relative shrink-0" data-node-id="450:19262" data-name="Container">
-                  <div className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[1.8px] uppercase whitespace-nowrap" data-node-id="450:19263" style={{ fontVariationSettings: "'opsz' 14" }}>
-                    <p className="leading-[25.5px]">Reflections</p>
-                  </div>
-                </div>
-                <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="450:19264" data-name="Container">
-                  <div className="flex-[1_0_0] min-h-px min-w-px relative" data-node-id="450:19265" data-name="Heading 1">
-                    <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center relative size-full">
-                      <p className="flex-[1_0_0] font-['Libre_Baskerville:Italic',sans-serif] italic leading-[40px] min-h-px min-w-px relative text-[#845482] text-[32px]" data-node-id="450:19266">
-                        What I took from this
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              <div className="flex w-full min-w-0 flex-col gap-4 items-start">
+                <p className="case-study-eyebrow font-['DM_Sans:SemiBold',sans-serif] font-semibold uppercase text-[#6b6b6b]" style={{ fontVariationSettings: "'opsz' 14" }}>Reflections</p>
+                <p className="case-study-headline font-['Libre_Baskerville:Italic',sans-serif] italic relative block w-full min-w-0">What I took from this</p>
               </div>
               <div className="content-stretch flex flex-col gap-4 items-start relative shrink-0 w-full" data-node-id="450:19267" data-name="Container">
                 <div className="content-stretch flex flex-row gap-4 h-auto items-center relative shrink-0 w-full" data-node-id="450:19268">
@@ -1199,7 +1111,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                 </p>
               </div>
             </CaseStudySection>
-            <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-[900px]" data-node-id="450:19299" data-name="Separator" />
+            <CaseStudySeparator className="max-w-[900px]" data-node-id="450:19299" />
             <div className="content-stretch flex flex-col items-center pt-[40px] relative shrink-0 w-full" data-node-id="450:19300">
               <a
                 href={docUrl}
@@ -1214,7 +1126,7 @@ export default function PersonalWebsiteDesignPortfolio() {
                 </p>
               </a>
               </div>
-            <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="818:567" />
+            <CaseStudySeparator data-node-id="818:567" />
             <CmsxPhase2Section docUrl={docUrl} nextProject={nextProject} />
           </div>
         </div>

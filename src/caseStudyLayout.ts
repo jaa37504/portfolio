@@ -22,11 +22,15 @@ export const caseStudyHeroTopPaddingClass = 'pt-8 sm:pt-10 lg:pt-12';
 /** Main vertical gap in the hero / first column stack (replaces fixed `gap-[48px]`). */
 export const caseStudyHeroStackGapClass = 'gap-8 sm:gap-10 lg:gap-12';
 
-/** Section blocks: vertical padding (replaces ubiquitous `py-[24px]`). */
+/** Section blocks: vertical padding inside a chapter. */
 export const caseStudySectionPaddingYClass = 'py-5 sm:py-6 lg:py-8';
 
-/** Replaces fixed Figma widths so copy and labels shrink on narrow viewports. */
-export const caseStudyTextColumnClass = 'w-full max-w-[680px] min-w-0';
+/** Section body copy — same width as titles and full-bleed blocks (not a narrow 680px column). */
+export const caseStudyTextColumnClass = 'w-full min-w-0';
 
-/** Wide body / diagram column (e.g. 864px artboards). */
-export const caseStudyWideColumnClass = 'w-full max-w-[864px] min-w-0';
+/** Eyebrow + chapter title — full section width (do not cap at 680px). */
+export const caseStudySectionIntroColumnClass = 'w-full min-w-0';
+
+/** Full-width rule between major case study sections. */
+export const caseStudySeparatorClass =
+  'border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full';

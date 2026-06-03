@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { caseStudyColumnClass, caseStudyNavPaddingXClass } from '../caseStudyLayout';
+import { navShellPaper } from '../elevation';
 import { isHomeNavActive, isWorkNavActive, mainNavInlineClass } from '../mainNav';
 
 /**
@@ -13,7 +14,7 @@ export function CaseStudyMainNav() {
 
   return (
     <div
-      className="relative box-border flex w-screen shrink-0 flex-col items-stretch border-b border-solid border-[#e8dfd0] bg-[#fdfcfb] pb-px ml-[calc(50%-50vw)]"
+      className={`relative box-border ml-[calc(50%-50vw)] flex w-screen shrink-0 flex-col items-stretch ${navShellPaper}`}
       data-name="Navigation"
     >
       <div

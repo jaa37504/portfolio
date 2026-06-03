@@ -1,7 +1,9 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { CmsxLaptopVideoFrame, type CmsxLaptopVariant } from '../components/CmsxLaptopVideoFrame';
+import { CaseStudySeparator } from '../components/CaseStudySeparator';
 import { CaseStudyTripletCards } from '../components/CaseStudyTripletCards';
+import { caseStudyTripletBodyClass } from '../data/caseStudyTripletTheme';
 import {
   CASE_STUDY_VERTICAL_STAGGER_ITEM,
   CaseStudySection,
@@ -98,39 +100,11 @@ type Props = {
   nextProject: { to: string; label: string };
 };
 
-/** Phase II only — horizontal rule draws in on scroll. */
-function Phase2Separator({ 'data-node-id': nodeId }: { 'data-node-id'?: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [on, setOn] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const io = new IntersectionObserver(
-      ([e]) => {
-        if (e.isIntersecting) setOn(true);
-      },
-      { threshold: 0.5, rootMargin: '0px 0px -8% 0px' },
-    );
-    io.observe(el);
-    return () => io.disconnect();
-  }, []);
-
-  return (
-    <div ref={ref} className="h-px w-full shrink-0" data-node-id={nodeId}>
-      <div
-        className={`h-px w-full origin-left bg-[#ddd8d0] motion-reduce:scale-x-100 ${on ? 'motion-safe:scale-x-100' : 'motion-safe:scale-x-0'} motion-safe:transition-transform motion-safe:duration-[900ms] motion-safe:ease-out`}
-        aria-hidden
-      />
-    </div>
-  );
-}
-
 function SectionLabel({ children }: { children: ReactNode }) {
   return (
     <div className={`content-stretch flex flex-col items-start ${caseStudyTextColumnClass} relative shrink-0`}>
       <div
-        className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] tracking-[1.8px] uppercase whitespace-nowrap"
+        className="flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 case-study-eyebrow text-[#6b6b6b] uppercase whitespace-nowrap"
         style={{ fontVariationSettings: "'opsz' 14" }}
       >
         <p className="leading-[25.5px]">{children}</p>
@@ -141,7 +115,7 @@ function SectionLabel({ children }: { children: ReactNode }) {
 
 function SectionTitle({ children }: { children: ReactNode }) {
   return (
-    <p className="font-['Libre_Baskerville:Italic',sans-serif] italic leading-[40px] min-w-full relative shrink-0 text-[#845482] text-[32px] w-[min-content]">
+    <p className="case-study-headline font-['Libre_Baskerville:Italic',sans-serif] italic relative block w-full min-w-0 shrink-0">
       {children}
     </p>
   );
@@ -149,7 +123,7 @@ function SectionTitle({ children }: { children: ReactNode }) {
 
 function SubsectionTitle({ children }: { children: ReactNode }) {
   return (
-    <p className="font-['Libre_Baskerville:Italic',sans-serif] italic leading-[40px] relative shrink-0 text-[#816451] text-[24px] w-full">
+    <p className="case-study-subhead font-['Libre_Baskerville:Italic',sans-serif] italic relative shrink-0 w-full">
       {children}
     </p>
   );
@@ -292,7 +266,7 @@ export function CmsxPhase2Section({ docUrl, nextProject }: Props) {
         </SoftAppearStagger>
       </CaseStudySection>
 
-      <Phase2Separator data-node-id="818:569" />
+      <CaseStudySeparator data-node-id="818:569" />
 
       <CaseStudySection
         className={`content-stretch flex flex-col gap-8 items-start ${caseStudySectionPaddingYClass} relative shrink-0 w-full`}
@@ -329,7 +303,7 @@ export function CmsxPhase2Section({ docUrl, nextProject }: Props) {
         </button>
       </CaseStudySection>
 
-      <Phase2Separator data-node-id="818:389" />
+      <CaseStudySeparator data-node-id="818:389" />
 
       <CaseStudySection
         className={`content-stretch flex flex-col gap-8 items-start ${caseStudySectionPaddingYClass} relative shrink-0 w-full`}
@@ -389,14 +363,14 @@ export function CmsxPhase2Section({ docUrl, nextProject }: Props) {
         <SubsectionTitle>Iteration 1: Separate Grouping Subtab</SubsectionTitle>
         <InlinePrototypeVideo posterSrc={imgPhase2Iteration1} videoSrc={videoPhase2Iteration1} />
         <CaseStudyTripletCards
-          bodyTextClassName="text-[#432060] text-[18px]"
+          bodyTextClassName={caseStudyTripletBodyClass('cmsx')}
           data-node-id="818:423"
           items={ITERATION_DECISIONS}
           staggerMs={75}
         />
       </CaseStudySection>
 
-      <Phase2Separator data-node-id="818:433" />
+      <CaseStudySeparator data-node-id="818:433" />
 
       <CaseStudySection
         className={`content-stretch flex flex-col gap-8 items-start ${caseStudySectionPaddingYClass} relative shrink-0 w-full`}
@@ -426,7 +400,7 @@ export function CmsxPhase2Section({ docUrl, nextProject }: Props) {
         </CaseStudyStagger>
       </CaseStudySection>
 
-      <Phase2Separator data-node-id="818:495" />
+      <CaseStudySeparator data-node-id="818:495" />
 
       <CaseStudySection
         id="case-study-prototype-phase2"
@@ -456,7 +430,7 @@ export function CmsxPhase2Section({ docUrl, nextProject }: Props) {
         <LaptopShowcase posterSrc={imgPhase2FinalPrototype} videoSrc={videoPhase2FinalPrototype} />
       </CaseStudySection>
 
-      <Phase2Separator data-node-id="818:517" />
+      <CaseStudySeparator data-node-id="818:517" />
 
       <CaseStudySection
         className={`content-stretch flex flex-col gap-8 items-start max-w-[1100px] ${caseStudySectionPaddingYClass} relative shrink-0 w-full`}
@@ -503,7 +477,7 @@ export function CmsxPhase2Section({ docUrl, nextProject }: Props) {
         </CaseStudyStagger>
       </CaseStudySection>
 
-      <Phase2Separator data-node-id="818:549" />
+      <CaseStudySeparator data-node-id="818:549" />
 
       <SoftAppearOnce className="content-stretch flex flex-col items-center pt-10 relative shrink-0 w-full" data-node-id="818:550">
         <a

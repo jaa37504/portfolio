@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import { isHomeNavActive, isWorkNavActive, mainNavInlineClass } from '../mainNav';
 import { ActPhoneVideoFrame } from '../components/ActPhoneVideoFrame';
@@ -9,7 +9,15 @@ import {
   SoftAppearStagger,
 } from '../components/SoftAppear';
 import { CmsxLaptopVideoFrame, type CmsxLaptopVariant } from '../components/CmsxLaptopVideoFrame';
-import { HOME_PROJECTS, WORK_FILTER_CHIPS, type HomeProject, type WorkFilterId } from '../data/homePortfolio';
+import { HomeBentoCrossfade } from '../components/HomeBentoCrossfade';
+import {
+  FILTER_CHIP_ACTIVE_CLASS,
+  HOME_PROJECTS,
+  WORK_FILTER_CHIPS,
+  type HomeProject,
+  type WorkFilterId,
+} from '../data/homePortfolio';
+import { navShellDefault, portfolioTileChrome } from '../elevation';
 
 const imgHero = '/images/headshot%20(1).jpg';
 const imgC1Logo1 = '/images/c1logo.png';
@@ -18,6 +26,12 @@ const imgKenvueLogoBlackRgbSvg1 =
 const imgAmericanNationalLogo = '/images/AN_Logo_Stacked_2color%201.png';
 const RESUME_URL =
   'https://docs.google.com/document/d/1SLLJ9tK3dty8gCpP_CIbc9i40GogWsIow8KUDYBeG1k/edit?usp=sharing';
+
+function filterFromSearchParams(searchParams: URLSearchParams): WorkFilterId {
+  const q = searchParams.get('filter') as WorkFilterId | null;
+  if (q && WORK_FILTER_CHIPS.some((c) => c.id === q)) return q;
+  return 'all';
+}
 
 function projectById(id: string): HomeProject {
   const p = HOME_PROJECTS.find((x) => x.id === id);
@@ -65,12 +79,9 @@ const imgInfoLShapeWeb = '/images/2300ConsumerLanding/ViewAll.png';
 const portfolioFooterSlideMotion =
   '[backface-visibility:hidden] transition-[translate,border-color] duration-550 ease-in-out motion-reduce:duration-150';
 
-/**
- * Grid tiles + Development unified card: same border, soft diffused shadow, hover, focus ring.
- * Wide blur + low opacity (vs. sharp shadow-sm / shadow-lg).
- */
-const portfolioTileChrome =
-  'border border-solid border-[#e8dfd0] bg-[#ffffff] shadow-[0_1px_2px_rgba(44,37,32,0.04),0_4px_22px_rgba(67,32,96,0.045)] outline-none transition-[border-color,box-shadow] duration-300 ease-out hover:z-10 hover:border-[#cfc3b0] hover:shadow-[0_2px_6px_rgba(44,37,32,0.05),0_10px_36px_rgba(67,32,96,0.07)] focus-visible:z-10 focus-visible:ring-2 focus-visible:ring-[#845482] focus-visible:ring-offset-2';
+/** Static tile art — gentle zoom on hover (video tiles skip this). */
+const portfolioImageHoverMotion =
+  'motion-safe:transition-transform motion-safe:duration-500 motion-safe:ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transform-none group-hover:scale-[1.03] group-focus-within:scale-[1.03]';
 
 function PortfolioCardLink({
   project,
@@ -81,7 +92,7 @@ function PortfolioCardLink({
   arrowClassName = 'bottom-6 right-6',
   /** When set, positions the expanded footer arrow to match the tile arrow (e.g. `left-[397px] bottom-[25px]`). */
   footerArrowClassName,
-  pillOuterClassName,
+  pillSurfaceClassName,
   arrowCircleOuterClassName,
   paddedAspectImage,
   heroCmsxClassName,
@@ -97,8 +108,8 @@ function PortfolioCardLink({
   roundedClassName?: string;
   arrowClassName?: string;
   footerArrowClassName?: string;
-  /** When set, replaces default pill wrapper classes (Figma variant tones). */
-  pillOuterClassName?: string;
+  /** When set, replaces `project.pillBg` on the pill surface only (Figma variant tones). */
+  pillSurfaceClassName?: string;
   /** When set, replaces default arrow circle background classes. */
   arrowCircleOuterClassName?: string;
   /** Figma 450:17057 / 450:17448 — padded frame, aspect 1518:832, centered object-cover. */
@@ -112,9 +123,7 @@ function PortfolioCardLink({
   cmsxVariant?: CmsxLaptopVariant;
   compactSizePreset?: 'default' | 'dataScienceTile';
 }) {
-  const pillWrap =
-    pillOuterClassName ??
-    `absolute left-[23px] top-[23px] z-[3] flex h-[24px] items-start rounded-full px-3 py-1 ${project.pillBg}`;
+  const pillSurface = pillSurfaceClassName ?? project.pillBg;
   const arrowCircle =
     arrowCircleOuterClassName ??
     `absolute z-[3] flex size-[40px] shrink-0 items-center justify-center rounded-full ${project.arrowSmallBg}`;
@@ -172,7 +181,9 @@ function PortfolioCardLink({
       ) : paddedAspectImage ? (
         <div className={`absolute inset-0 overflow-hidden ${roundedClassName}`}>
           <div className="flex h-full min-h-0 w-full flex-col items-center justify-center p-6">
-            <div className="relative aspect-[1518/832] w-full min-w-0 shrink-0 overflow-hidden rounded-[1px]">
+            <div
+              className={`relative aspect-[1518/832] w-full min-w-0 shrink-0 overflow-hidden rounded-[1px] ${portfolioImageHoverMotion}`}
+            >
               <img
                 alt=""
                 src={imageSrc ?? project.image}
@@ -182,17 +193,21 @@ function PortfolioCardLink({
           </div>
         </div>
       ) : (
-        <div className={`absolute inset-0 overflow-hidden ${roundedClassName}`}>
+        <div className={`absolute inset-0 overflow-hidden ${roundedClassName} ${portfolioImageHoverMotion}`}>
           <img alt="" src={imageSrc ?? project.image} className={imageClassName ?? project.imageClassName} />
         </div>
       )}
-      <div className={pillWrap}>
-        <p
-          className={`font-['DM_Sans:Medium',sans-serif] text-[12px] font-medium leading-[16px] ${project.pillText}`}
-          style={{ fontVariationSettings: "'opsz' 14" }}
+      <div className="absolute left-[23px] top-[23px] z-[3]">
+        <span
+          className={`inline-flex h-[24px] items-center rounded-full px-3 py-1 ${pillSurface}`}
         >
-          {project.tag}
-        </p>
+          <span
+            className={`font-['DM_Sans:Medium',sans-serif] text-[12px] font-medium leading-[16px] ${project.pillText}`}
+            style={{ fontVariationSettings: "'opsz' 14" }}
+          >
+            {project.tag}
+          </span>
+        </span>
       </div>
       <div
         className={`${arrowCircle} ${arrowClassName} transition-opacity duration-550 ease-in-out motion-reduce:transition-none group-hover:opacity-0 group-focus-within:opacity-0`}
@@ -583,7 +598,7 @@ function BentoDataScience() {
         <PortfolioCardLink
           project={rethink}
           className="!relative left-0 top-0 h-[318px] w-full"
-          pillOuterClassName="absolute left-[23px] top-[23px] flex h-[24px] items-start rounded-full bg-[#ffefca] px-3 py-1"
+          pillSurfaceClassName="bg-[#ffefca]"
           arrowCircleOuterClassName="absolute flex size-[40px] shrink-0 items-center justify-center rounded-full bg-[#ffefca]"
           arrowClassName="bottom-6 right-6"
           footerArrowClassName="bottom-6 right-6"
@@ -613,7 +628,7 @@ function BentoDataScience() {
         <PortfolioCardLink
           project={rethink}
           className="!relative left-0 top-0 h-full w-full"
-          pillOuterClassName="absolute left-[23px] top-[23px] flex h-[24px] items-start rounded-full bg-[#ffefca] px-3 py-1"
+          pillSurfaceClassName="bg-[#ffefca]"
           arrowCircleOuterClassName="absolute flex size-[40px] shrink-0 items-center justify-center rounded-full bg-[#ffefca]"
           arrowClassName="left-[401px] top-[249px]"
           footerArrowClassName="left-[401px] bottom-[29px]"
@@ -749,21 +764,9 @@ export default function PersonalWebsiteDesignPortfolio() {
   const homeNav = isHomeNavActive(pathname);
   const workNav = isWorkNavActive(pathname);
   const [searchParams, setSearchParams] = useSearchParams();
-  const initial = searchParams.get('filter') as WorkFilterId | null;
-  const validInitial =
-    initial && WORK_FILTER_CHIPS.some((c) => c.id === initial) ? initial : 'all';
-
-  const [filter, setFilter] = useState<WorkFilterId>(validInitial);
-
-  useEffect(() => {
-    const q = searchParams.get('filter') as WorkFilterId | null;
-    if (q && WORK_FILTER_CHIPS.some((c) => c.id === q)) {
-      setFilter(q);
-    }
-  }, [searchParams]);
+  const filter = filterFromSearchParams(searchParams);
 
   const setFilterAndUrl = (next: WorkFilterId) => {
-    setFilter(next);
     if (next === 'all') {
       setSearchParams({}, { replace: true });
     } else {
@@ -954,8 +957,10 @@ export default function PersonalWebsiteDesignPortfolio() {
                     role="tab"
                     aria-selected={active}
                     onClick={() => setFilterAndUrl(id)}
-                    className={`relative shrink-0 cursor-pointer rounded-full px-[15px] py-2 shadow-[0_1px_2px_rgba(44,37,32,0.05),0_2px_10px_rgba(44,37,32,0.05)] transition-[color,background-color,box-shadow] ${
-                      active ? 'bg-[#845482]' : 'bg-[#ffffff]'
+                    className={`relative shrink-0 cursor-pointer rounded-full px-[15px] py-2 transition-[color,background-color,box-shadow] duration-300 ease-out ${
+                      active
+                        ? FILTER_CHIP_ACTIVE_CLASS[id]
+                        : 'bg-[var(--color-surface-card)] shadow-[0_1px_2px_rgba(44,37,32,0.05),0_2px_10px_rgba(44,37,32,0.05)] hover:shadow-[0_2px_12px_rgba(44,37,32,0.07)]'
                     }`}
                   >
                     <span
@@ -982,21 +987,23 @@ export default function PersonalWebsiteDesignPortfolio() {
           </div>
         </div>
 
-        <SoftAppearOnce className="relative w-full shrink-0 flex-col items-start" data-node-id="450:17020">
-          {filter === 'all' ? (
-            <BentoAll />
-          ) : filter === 'product-design' ? (
-            <BentoProductDesign />
-          ) : filter === 'data-science' ? (
-            <BentoDataScience />
-          ) : (
-            <BentoDevelopment />
-          )}
-        </SoftAppearOnce>
+        <HomeBentoCrossfade filter={filter}>
+          {(activeFilter) =>
+            activeFilter === 'all' ? (
+              <BentoAll />
+            ) : activeFilter === 'product-design' ? (
+              <BentoProductDesign />
+            ) : activeFilter === 'data-science' ? (
+              <BentoDataScience />
+            ) : (
+              <BentoDevelopment />
+            )
+          }
+        </HomeBentoCrossfade>
       </div>
 
       <div
-        className="absolute top-0 left-1/2 z-10 flex h-[81px] w-screen max-w-none -translate-x-1/2 flex-col items-stretch border-b border-solid border-[#e8dfd0] bg-[#f5f2eb] pb-px"
+        className={`absolute top-0 left-1/2 z-10 flex h-[81px] w-screen max-w-none -translate-x-1/2 flex-col items-stretch ${navShellDefault}`}
         data-node-id="450:17064"
         data-name="Navigation"
       >

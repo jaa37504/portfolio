@@ -27,6 +27,8 @@ export type WorkPageProject = {
   compactImgClassName?: string;
   expandedImgClassName?: string;
   tags: WorkPageTag[];
+  /** Gradient wash over thumbnail — deepens on card hover (`group`). */
+  thumbAccentWash: string;
   /** Figma 450:17726 — expanded hover panel: hero video in left column (matches home assets). */
   expandedVideo?: {
     kind: 'cmsx' | 'compact' | 'phone';
@@ -56,6 +58,7 @@ export const WORK_PAGE_PROJECTS: WorkPageProject[] = [
     timeline: '10 Weeks',
     imageSrc: '/images/capitaloneimage.png',
     imageBgClass: 'bg-[#7a9fb0]',
+    thumbAccentWash: 'from-[#3a7992]/35 via-[#3a7992]/08 to-transparent',
     compactImageMode: 'fill',
     tags: [
       pill('Enterprise', 'bg-[#e5dcd7]', 'text-[#816451]'),
@@ -76,6 +79,7 @@ export const WORK_PAGE_PROJECTS: WorkPageProject[] = [
     timeline: '4 Months',
     imageSrc: '/images/CMSXimage.png',
     imageBgClass: 'bg-[#e3dfd6]',
+    thumbAccentWash: 'from-[#845482]/30 via-[#845482]/08 to-transparent',
     compactImageMode: 'fill',
     tags: [
       pill('Internal Tool', 'bg-[#e6deda]', 'text-[#816451]'),
@@ -101,6 +105,7 @@ export const WORK_PAGE_PROJECTS: WorkPageProject[] = [
     timeline: '8 Weeks',
     imageSrc: '/images/ReThinkBigger.png',
     imageBgClass: 'bg-[#c9ac75]',
+    thumbAccentWash: 'from-[#b5923c]/35 via-[#b5923c]/08 to-transparent',
     compactImageMode: 'fill',
     tags: [
       pill('Data Visualization', 'bg-[#fbedca]', 'text-[#b5923c]'),
@@ -126,6 +131,7 @@ export const WORK_PAGE_PROJECTS: WorkPageProject[] = [
     timeline: '10 Weeks',
     imageSrc: '/images/ACTBanner.png',
     imageBgClass: 'bg-[#7a9fb0]',
+    thumbAccentWash: 'from-[#3a7992]/32 via-[#3a7992]/06 to-transparent',
     compactImageMode: 'fill',
     tags: [
       pill('Social Good', 'bg-[#d3e3e9]', 'text-[#3a7992]'),
@@ -151,6 +157,7 @@ export const WORK_PAGE_PROJECTS: WorkPageProject[] = [
     timeline: '12 Weeks',
     imageSrc: '/images/info2300mobile.png',
     imageBgClass: 'bg-[#e3dfd6]',
+    thumbAccentWash: 'from-[#816451]/28 via-[#816451]/06 to-transparent',
     compactImageMode: 'centered-info',
     tags: [
       pill('Consumer', 'bg-[#d3e3e9]', 'text-[#3a7992]'),
@@ -177,6 +184,7 @@ export const WORK_PAGE_PROJECTS: WorkPageProject[] = [
     timeline: '10 Weeks',
     imageSrc: '/images/kenvueimage.png',
     imageBgClass: 'bg-[#c9ac75]',
+    thumbAccentWash: 'from-[#3a7992]/28 via-[#816451]/08 to-transparent',
     compactImageMode: 'centered-kenvue',
     tags: [pill('Internal Tool', 'bg-[#e6deda]', 'text-[#816451]')],
   },
