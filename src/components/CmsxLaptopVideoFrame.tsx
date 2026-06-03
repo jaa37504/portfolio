@@ -6,6 +6,8 @@ export type CmsxLaptopVariant =
   | 'dataScienceHero'
   /** Case-study prototype sections — scaled to feel closer to hero banner presence. */
   | 'caseStudyPrototype'
+  /** CMSX Phase II hero / final prototype — Figma 818:366 (600×335 lid, 700px base). */
+  | 'caseStudyPhase2Hero'
   /** INFO 2300 case study — Live Site / Deployed locally (Figma 522:21904) */
   | 'caseStudyLiveSite';
 
@@ -23,6 +25,8 @@ type Props = {
   posterSrc?: string;
   videoSrc?: string;
   className?: string;
+  /** When true, show poster/image only (no video element). */
+  posterOnly?: boolean;
   /** Figma: default home tile; `productBentoWide` 522:21603; `dataScienceHero` 522:21708; `caseStudyLiveSite` 522:21904 */
   variant?: CmsxLaptopVariant;
   /** Layered inside the screen above the video (e.g. Figma 627:22126 logo cover on Capital One prototype). */
@@ -58,6 +62,14 @@ const VARIANT_STYLES: Record<CmsxLaptopVariant, VariantStyle> = {
     base: 'h-[12px] w-[640px] max-w-[min(100vw-1rem,640px)]',
     nodeLid: '522:21709',
   },
+  caseStudyPhase2Hero: {
+    lid: 'h-[335px] w-[600px] max-w-[min(100vw-2rem,600px)]',
+    videoWrap: 'absolute top-2 left-[9px]',
+    videoBox: 'h-[313px] w-[583px] max-w-[min(calc(100vw-4rem),583px)]',
+    base: 'h-[14px] w-[700px] max-w-[min(100vw-1rem,700px)]',
+    nodeLid: '818:368',
+    videoObjectClass: 'object-cover object-center',
+  },
   caseStudyLiveSite: {
     lid: 'h-[332px] w-[552px] max-w-[min(100vw-2rem,552px)]',
     videoWrap: 'absolute top-2 left-2',
@@ -78,13 +90,14 @@ export function CmsxLaptopVideoFrame({
   className = '',
   variant = 'default',
   screenOverlay,
+  posterOnly = false,
 }: Props) {
-  const [usePosterOnly, setUsePosterOnly] = useState(false);
+  const [usePosterOnly, setUsePosterOnly] = useState(posterOnly);
   const videoRef = useRef<HTMLVideoElement>(null);
   const vs = VARIANT_STYLES[variant];
 
   useEffect(() => {
-    if (usePosterOnly) return;
+    if (posterOnly || usePosterOnly) return;
     const el = videoRef.current;
     if (!el) return;
     const run = () => {
@@ -93,7 +106,7 @@ export function CmsxLaptopVideoFrame({
     run();
     el.addEventListener('loadeddata', run);
     return () => el.removeEventListener('loadeddata', run);
-  }, [usePosterOnly, videoSrc]);
+  }, [posterOnly, usePosterOnly, videoSrc]);
 
   const videoFit = vs.videoObjectClass ?? 'object-cover object-top';
 

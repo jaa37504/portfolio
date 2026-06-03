@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { CaseStudyMainNav } from '../components/CaseStudyMainNav';
 import { CmsxLaptopVideoFrame } from '../components/CmsxLaptopVideoFrame';
+import { CmsxPhase2Section } from './CmsxPhase2Section';
 import { CASE_STUDY_DOC_URL, nextCaseStudyAfter } from '../data/caseStudyNav';
 import { scrollToCaseStudyPrototype } from '../caseStudyScroll';
 import {
@@ -1299,23 +1300,8 @@ export default function PersonalWebsiteDesignPortfolio() {
                 </p>
               </a>
               </div>
-            <div className="content-stretch flex gap-[12px] items-center justify-end pt-[96px] pb-16 relative shrink-0 w-full" data-node-id="450:19303" data-name="Container">
-              <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="450:19304" data-name="Container">
-                <div className="flex flex-col font-['DM_Sans:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:19305" style={{ fontVariationSettings: "'opsz' 14" }}>
-                  <p className="leading-[22.1px]">Next Project :</p>
-                </div>
-              </div>
-              <Link
-                to={nextProject.to}
-                className="content-stretch flex flex-col items-start relative shrink-0 no-underline"
-                data-node-id="450:19306"
-                data-name="Link"
-              >
-                <div className="capitalize flex flex-col font-['DM_Sans:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#4a2472] text-[14px] tracking-[0.52px] whitespace-nowrap" data-node-id="450:19307" style={{ fontVariationSettings: "'opsz' 14" }}>
-                  <p className="leading-[22.1px]">{nextProject.label}</p>
-                </div>
-              </Link>
-            </div>
+            <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="818:567" />
+            <CmsxPhase2Section docUrl={docUrl} nextProject={nextProject} />
           </div>
         </div>
       </div>
