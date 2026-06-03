@@ -4,6 +4,9 @@ import { WorkProjectCard } from '../components/WorkProjectCard';
 import { WORK_PAGE_PROJECTS } from '../data/workPagePortfolio';
 import { isHomeNavActive, isWorkNavActive, mainNavInlineClass } from '../mainNav';
 
+const ALL_CASE_STUDIES_URL =
+  'https://dazzling-valley-f74.notion.site/Projects-28ff340bd37380a1a2c8d7538078ec86?pvs=74';
+
 export default function PersonalWebsiteDesignPortfolio() {
   const { pathname } = useLocation();
   const homeNav = isHomeNavActive(pathname);
@@ -29,18 +32,35 @@ export default function PersonalWebsiteDesignPortfolio() {
                   My Work
                 </h1>
               </div>
-              <CaseStudyStagger
-                className="content-stretch flex w-full min-w-0 flex-col gap-8 items-start sm:gap-[32px]"
-                data-node-id="450:17543"
-                itemClassName={CASE_STUDY_VERTICAL_STAGGER_ITEM}
-                initialDelayMs={120}
-                staggerMs={220}
-                variant="subtle"
-              >
-                {WORK_PAGE_PROJECTS.map((project) => (
-                  <WorkProjectCard key={project.id} project={project} />
-                ))}
-              </CaseStudyStagger>
+              <div className="relative flex w-full min-w-0 flex-col items-start gap-16 sm:gap-[72px]">
+                <CaseStudyStagger
+                  className="content-stretch flex w-full min-w-0 flex-col gap-8 items-start sm:gap-[32px]"
+                  data-node-id="450:17543"
+                  itemClassName={CASE_STUDY_VERTICAL_STAGGER_ITEM}
+                  initialDelayMs={120}
+                  staggerMs={220}
+                  variant="subtle"
+                >
+                  {WORK_PAGE_PROJECTS.map((project) => (
+                    <WorkProjectCard key={project.id} project={project} />
+                  ))}
+                </CaseStudyStagger>
+                <div className="relative flex w-full min-w-0 shrink-0 items-center justify-center">
+                  <a
+                    href={ALL_CASE_STUDIES_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative shrink-0 rounded-[16777200px] bg-[#432060] px-[40px] py-[10px]"
+                  >
+                    <p
+                      className="font-['DM_Sans:Medium',sans-serif] relative shrink-0 text-center text-[16px] font-medium leading-[24px] text-[#fdfcfb] sm:whitespace-nowrap"
+                      style={{ fontVariationSettings: "'opsz' 14" }}
+                    >
+                      View all case studies
+                    </p>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
