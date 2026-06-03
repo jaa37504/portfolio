@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { CmsxLaptopVideoFrame, type CmsxLaptopVariant } from '../components/CmsxLaptopVideoFrame';
+import { CaseStudyTripletCards } from '../components/CaseStudyTripletCards';
 import {
-  CASE_STUDY_CARD_STAGGER_ITEM,
   CASE_STUDY_VERTICAL_STAGGER_ITEM,
   CaseStudySection,
   CaseStudyStagger,
@@ -41,7 +41,7 @@ const ITERATION_DECISIONS = [
   'When no groups exist, direct users to the Group subtab first',
   'Assumes users arrive knowing what groups they want, and optimizes for bulk assignment',
   'Random group auto assignment functionality embedded directly',
-];
+] as const;
 
 const USER_TESTING_FINDINGS = [
   {
@@ -388,29 +388,12 @@ export function CmsxPhase2Section({ docUrl, nextProject }: Props) {
         </div>
         <SubsectionTitle>Iteration 1: Separate Grouping Subtab</SubsectionTitle>
         <InlinePrototypeVideo posterSrc={imgPhase2Iteration1} videoSrc={videoPhase2Iteration1} />
-        <CaseStudyStagger
-          className="content-stretch relative flex h-auto w-full shrink-0 flex-col items-stretch gap-6 font-['DM_Sans:SemiBold',sans-serif] font-semibold sm:flex-row sm:gap-8"
+        <CaseStudyTripletCards
+          bodyTextClassName="text-[#432060] text-[18px]"
           data-node-id="818:423"
+          items={ITERATION_DECISIONS}
           staggerMs={75}
-          itemClassName={CASE_STUDY_CARD_STAGGER_ITEM}
-        >
-          {ITERATION_DECISIONS.map((text, index) => (
-            <div key={text} className="content-stretch flex min-h-px min-w-0 flex-[1_1_0] flex-col items-start gap-3 self-stretch">
-              <div
-                className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap"
-                style={{ fontVariationSettings: "'opsz' 14" }}
-              >
-                <p className="leading-[21px]">{String(index + 1).padStart(2, '0')}</p>
-              </div>
-              <p
-                className="leading-[28px] min-w-0 w-full relative shrink-0 text-[#432060] text-[16px] whitespace-normal break-words"
-                style={{ fontVariationSettings: "'opsz' 14" }}
-              >
-                {text}
-              </p>
-            </div>
-          ))}
-        </CaseStudyStagger>
+        />
       </CaseStudySection>
 
       <Phase2Separator data-node-id="818:433" />

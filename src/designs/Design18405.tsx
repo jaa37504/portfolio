@@ -10,6 +10,7 @@ import {
   caseStudyHeroTopPaddingClass,
 } from '../caseStudyLayout';
 import { CapitalOneProcessTimeline } from '../components/CapitalOneProcessTimeline';
+import { CaseStudyTripletCards } from '../components/CaseStudyTripletCards';
 import {
   CASE_STUDY_CARD_STAGGER_ITEM_XL,
   CASE_STUDY_VERTICAL_STAGGER_ITEM,
@@ -230,48 +231,16 @@ export default function PersonalWebsiteDesignPortfolio() {
                   What success would look like
                 </p>
               </div>
-              <CaseStudyStagger
-                className="content-stretch flex flex-row gap-[16px] items-stretch pt-5 sm:pt-6 lg:pt-8 relative shrink-0 w-full"
+              <CaseStudyTripletCards
+                bodyTextClassName="text-[#3a7992] text-[18px]"
+                className="pt-5 sm:pt-6 lg:pt-8"
                 data-node-id="450:18478"
-                itemClassName={CASE_STUDY_CARD_STAGGER_ITEM_XL}
-              >
-                <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px pb-[41px] pt-[49px] px-[41px] relative rounded-[18px] self-stretch" data-node-id="450:18479" data-name="Background+Border">
-                  <div className="relative rounded-[18px] shrink-0 w-full" data-node-id="450:18480" data-name="Background+Border">
-                    <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold gap-[12px] items-start pb-[24px] relative size-full">
-                      <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:18481" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        <p className="leading-[21px]">01</p>
-                      </div>
-                      <p className="leading-[24px] sm:leading-[28px] min-w-full relative shrink-0 text-[#3a7992] text-[16px] sm:text-[18px] w-[min-content]" data-node-id="450:18482" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        Decreased reliance on “white glove” support and decreased operational cost
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px pb-[41px] pt-[49px] px-[41px] relative rounded-[18px] self-stretch" data-node-id="450:18483" data-name="Background+Border">
-                  <div className="relative rounded-[18px] shrink-0 w-full" data-node-id="450:18484" data-name="Background+Border">
-                    <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold gap-[12px] items-start relative size-full">
-                      <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:18485" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        <p className="leading-[21px]">02</p>
-                      </div>
-                      <p className="leading-[24px] sm:leading-[28px] min-w-full relative shrink-0 text-[#3a7992] text-[16px] sm:text-[18px] w-[min-content]" data-node-id="450:18486" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        Upgrade workflows scale across multiple products and environments encouraging product adoption
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px pb-[41px] pt-[49px] px-[41px] relative rounded-[18px] self-stretch" data-node-id="450:18487" data-name="Background+Border">
-                  <div className="relative rounded-[18px] shrink-0 w-full" data-node-id="450:18488" data-name="Background+Border">
-                    <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold gap-[12px] items-start pb-[24px] relative size-full">
-                      <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:18489" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        <p className="leading-[21px]">03</p>
-                      </div>
-                      <p className="leading-[24px] sm:leading-[28px] min-w-full relative shrink-0 text-[#3a7992] text-[16px] sm:text-[18px] w-[min-content]" data-node-id="450:18490" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        Version decisions are visible and understandable at a glance
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </CaseStudyStagger>
+                items={[
+                  'Decreased reliance on “white glove” support and decreased operational cost',
+                  'Upgrade workflows scale across multiple products and environments encouraging product adoption',
+                  'Version decisions are visible and understandable at a glance',
+                ]}
+              />
             </CaseStudySection>
             <CaseStudySection className="content-stretch flex flex-col gap-[48px] items-start pt-5 sm:pt-6 lg:pt-8 relative shrink-0 w-full" data-node-id="450:18491" data-name="Section - TIMELINE">
               <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="450:18492">
@@ -457,44 +426,15 @@ export default function PersonalWebsiteDesignPortfolio() {
                 </p>
               </div>
               <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="450:18599">
-                <div className="content-stretch flex flex-row gap-[16px] h-auto items-stretch relative shrink-0 w-full" data-node-id="450:18600">
-                  <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px pb-[41px] pt-[49px] px-[41px] relative rounded-[18px] self-stretch" data-node-id="450:18601" data-name="Background+Border">
-                    <div className="relative rounded-[18px] shrink-0 w-full" data-node-id="450:18602" data-name="Background+Border">
-                      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold gap-[12px] items-start relative size-full">
-                        <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:18603" style={{ fontVariationSettings: "'opsz' 14" }}>
-                          <p className="leading-[21px]">{` 01`}</p>
-                        </div>
-                        <p className="leading-[28px] min-w-0 w-full relative shrink-0 text-[#3a7992] text-[18px] whitespace-normal break-words" data-node-id="450:18604" style={{ fontVariationSettings: "'opsz' 14" }}>
-                          Workflows were fragmented across systems
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px pb-[41px] pt-[49px] px-[41px] relative rounded-[18px] self-stretch" data-node-id="450:18605" data-name="Background+Border">
-                    <div className="relative rounded-[18px] shrink-0 w-full" data-node-id="450:18606" data-name="Background+Border">
-                      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold gap-[12px] items-start relative size-full">
-                        <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:18607" style={{ fontVariationSettings: "'opsz' 14" }}>
-                          <p className="leading-[21px]">02</p>
-                        </div>
-                        <p className="leading-[28px] min-w-0 w-full relative shrink-0 text-[#3a7992] text-[18px] whitespace-normal break-words" data-node-id="450:18608" style={{ fontVariationSettings: "'opsz' 14" }}>
-                          Users relied heavily on support teams
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px pb-[41px] pt-[49px] px-[41px] relative rounded-[18px] self-stretch" data-node-id="450:18609" data-name="Background+Border">
-                    <div className="relative rounded-[18px] shrink-0 w-full" data-node-id="450:18610" data-name="Background+Border">
-                      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold gap-[12px] items-start relative size-full">
-                        <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:18611" style={{ fontVariationSettings: "'opsz' 14" }}>
-                          <p className="leading-[21px]">03</p>
-                        </div>
-                        <p className="leading-[28px] min-w-0 w-full relative shrink-0 text-[#3a7992] text-[18px] whitespace-normal break-words" data-node-id="450:18612" style={{ fontVariationSettings: "'opsz' 14" }}>
-                          Upgrade decisions lacked clarity and visibility
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <CaseStudyTripletCards
+                  bodyTextClassName="text-[#3a7992] text-[18px]"
+                  data-node-id="450:18600"
+                  items={[
+                    'Workflows were fragmented across systems',
+                    'Users relied heavily on support teams',
+                    'Upgrade decisions lacked clarity and visibility',
+                  ]}
+                />
                 <div className="bg-[#ede8f5] border-[#4a2472] border-l-3 border-solid content-stretch flex items-start pb-[18px] pl-[27px] pr-[24px] pt-[20.895px] relative rounded-br-[10px] rounded-tr-[10px] shrink-0 w-full" data-node-id="450:18613" data-name="Background+VerticalBorder">
                   <div className="flex-[1_0_0] min-h-px min-w-px relative" data-node-id="450:18614" data-name="Container">
                     <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[12px] items-start leading-[0] pb-[0.695px] relative size-full text-[#4a2472] text-[14px]">

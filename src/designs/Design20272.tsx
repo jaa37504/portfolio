@@ -8,6 +8,7 @@ import {
   caseStudyHeroTopPaddingClass,
   caseStudySectionPaddingYClass,
 } from '../caseStudyLayout';
+import { CaseStudyTripletCards } from '../components/CaseStudyTripletCards';
 import {
   CASE_STUDY_CARD_STAGGER_ITEM_XL,
   CASE_STUDY_VERTICAL_STAGGER_ITEM,
@@ -204,49 +205,14 @@ export default function Frame() {
                 </p>
               </div>
               {/* Figma 450:20347 — equal-height row; no fixed h-[287px] or stagger wrappers */}
-              <CaseStudyStagger
-                className="content-stretch relative flex w-full min-h-0 shrink-0 flex-row gap-[16px] items-stretch"
+              <CaseStudyTripletCards
                 data-node-id="450:20347"
-                itemClassName={CASE_STUDY_CARD_STAGGER_ITEM_XL}
-                staggerMs={65}
-              >
-                <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex min-h-0 min-w-0 flex-[1_0_0] flex-col items-start pb-[41px] pt-[49px] px-[41px] relative rounded-[18px] md:self-stretch" data-node-id="450:20348" data-name="Background+Border">
-                  <div className="relative w-full shrink-0 rounded-[18px]" data-node-id="450:20349" data-name="Background+Border">
-                    <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[12px] font-['DM_Sans:SemiBold',sans-serif] font-semibold items-start pb-5 sm:pb-6 relative size-full">
-                      <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:20350" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        <p className="leading-[21px]">01</p>
-                      </div>
-                      <p className="w-full min-w-full leading-[28px] text-[#b5923c] text-[18px]" data-node-id="450:20351" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        Backlogged and open tickets block users from completing work
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex min-h-0 min-w-0 flex-[1_0_0] flex-col items-start pb-[41px] pt-[49px] px-[41px] relative rounded-[18px] md:self-stretch" data-node-id="450:20352" data-name="Background+Border">
-                  <div className="relative w-full shrink-0 rounded-[18px]" data-node-id="450:20353" data-name="Background+Border">
-                    <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[12px] font-['DM_Sans:SemiBold',sans-serif] font-semibold items-start relative size-full">
-                      <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:20354" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        <p className="leading-[21px]">02</p>
-                      </div>
-                      <p className="w-full min-w-full leading-[28px] text-[#b5923c] text-[18px]" data-node-id="450:20355" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        High ticket volume increases IT service costs through reopens and resubmissions
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex min-h-0 min-w-0 flex-[1_0_0] flex-col items-start pb-[41px] pt-[49px] px-[41px] relative rounded-[18px] md:self-stretch" data-node-id="450:20356" data-name="Background+Border">
-                  <div className="relative w-full shrink-0 rounded-[18px]" data-node-id="450:20357" data-name="Background+Border">
-                    <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[12px] font-['DM_Sans:SemiBold',sans-serif] font-semibold items-start pb-5 sm:pb-6 relative leading-[0] size-full">
-                      <div className="flex flex-col justify-center relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:20358" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        <p className="leading-[21px]">03</p>
-                      </div>
-                      <p className="w-full min-w-full leading-[28px] text-[#b5923c] text-[18px]" data-node-id="450:20359" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        Poor IT experiences frustrate employees and reduce satisfaction
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </CaseStudyStagger>
+                items={[
+                  'Backlogged and open tickets block users from completing work',
+                  'High ticket volume increases IT service costs through reopens and resubmissions',
+                  'Poor IT experiences frustrate employees and reduce satisfaction',
+                ]}
+              />
             </CaseStudySection>
             <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:20360" data-name="Separator" />
             <CaseStudySection className="content-stretch flex flex-col gap-[32px] items-start py-5 sm:py-6 lg:py-8 relative shrink-0 w-full" data-node-id="450:20361" data-name="Section - MY SCOPE">

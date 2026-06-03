@@ -10,6 +10,7 @@ import {
   caseStudyHeroStackGapClass,
   caseStudyHeroTopPaddingClass,
 } from '../caseStudyLayout';
+import { CaseStudyTripletCards } from '../components/CaseStudyTripletCards';
 import {
   CASE_STUDY_CARD_STAGGER_ITEM_XL,
   CaseStudySection,
@@ -243,44 +244,15 @@ export default function PersonalWebsiteDesignPortfolio() {
                 </p>
               </div>
               </SoftAppearOnce>
-              <CaseStudyStagger
-                className="content-stretch relative flex w-full shrink-0 flex-row gap-[16px] items-stretch"
+              <CaseStudyTripletCards
+                bodyTextClassName="text-[#816451] text-[18px]"
                 data-node-id="450:18918"
-                itemClassName={CASE_STUDY_CARD_STAGGER_ITEM_XL}
-              >
-                <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex min-h-0 w-full min-w-0 flex-[1_0_0] flex-col items-start pb-[41px] pt-[49px] px-[41px] relative rounded-[18px] md:self-stretch" data-node-id="450:18919" data-name="Background+Border">
-                  <div className="relative rounded-[18px] shrink-0 w-full" data-node-id="450:18920" data-name="Background+Border">
-                    <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold gap-[12px] items-start pb-[24px] relative size-full">
-                      <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:18921" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        <p className="leading-[21px]">01</p>
-                      </div>
-                      <p className="leading-[28px] min-w-full relative shrink-0 text-[#816451] text-[18px] w-[min-content] whitespace-pre-wrap" data-node-id="450:18922" style={{ fontVariationSettings: "'opsz' 14" }}>{`Instructors manage hundreds of students under tight timelines  `}</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex min-h-0 w-full min-w-0 flex-[1_0_0] flex-col items-start pb-[41px] pt-[49px] px-[41px] relative rounded-[18px] md:self-stretch" data-node-id="450:18923" data-name="Background+Border">
-                  <div className="relative rounded-[18px] shrink-0 w-full" data-node-id="450:18924" data-name="Background+Border">
-                    <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold gap-[12px] items-start relative size-full">
-                      <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:18925" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        <p className="leading-[21px]">02</p>
-                      </div>
-                      <p className="leading-[28px] min-w-full relative shrink-0 text-[#816451] text-[18px] w-[min-content] whitespace-pre-wrap" data-node-id="450:18926" style={{ fontVariationSettings: "'opsz' 14" }}>{`Errors in bulk actions directly impact student outcomes  `}</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex min-h-0 w-full min-w-0 flex-[1_0_0] flex-col items-start pb-[41px] pt-[49px] px-[41px] relative rounded-[18px] md:self-stretch" data-node-id="450:18927" data-name="Background+Border">
-                  <div className="relative rounded-[18px] shrink-0 w-full" data-node-id="450:18928" data-name="Background+Border">
-                    <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold gap-[12px] items-start pb-[24px] relative size-full">
-                      <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:18929" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        <p className="leading-[21px]">03</p>
-                      </div>
-                      <p className="leading-[28px] min-w-full relative shrink-0 text-[#816451] text-[18px] w-[min-content]" data-node-id="450:18930" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        Users rely on workarounds like CSV uploads instead of the system
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </CaseStudyStagger>
+                items={[
+                  'Instructors manage hundreds of students under tight timelines',
+                  'Errors in bulk actions directly impact student outcomes',
+                  'Users rely on workarounds like CSV uploads instead of the system',
+                ]}
+              />
             </CaseStudySection>
             <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:18931" data-name="Separator" />
             <CaseStudySection
@@ -473,34 +445,15 @@ export default function PersonalWebsiteDesignPortfolio() {
                 <p className="font-['Libre_Baskerville:Italic',sans-serif] italic leading-[40px] relative shrink-0 text-[#816451] text-[24px] w-full" data-node-id="450:19007">
                   Key Pain Points
                 </p>
-                <CaseStudyStagger
-                  className="content-stretch flex font-['DM_Sans:SemiBold',sans-serif] font-semibold flex-row gap-[24px] h-auto items-stretch relative shrink-0 w-full"
+                <CaseStudyTripletCards
+                  bodyTextClassName="text-[#432060] text-[18px]"
                   data-node-id="450:19008"
-                  itemClassName={CASE_STUDY_CARD_STAGGER_ITEM_XL}
-                >
-                  <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative rounded-[18px] self-stretch" data-node-id="450:19009" data-name="Background+Border">
-                    <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:19010" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      <p className="leading-[21px]">01</p>
-                    </div>
-                    <p className="leading-[28px] min-w-0 w-full relative shrink-0 text-[#432060] text-[16px] whitespace-normal break-words" data-node-id="450:19011" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      Selection system is unclear, making bulk actions feel risky
-                    </p>
-                  </div>
-                  <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative rounded-[18px] self-stretch" data-node-id="450:19012" data-name="Background+Border">
-                    <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:19013" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      <p className="leading-[21px]">02</p>
-                    </div>
-                    <p className="leading-[28px] min-w-0 w-full relative shrink-0 text-[#432060] text-[16px] whitespace-normal break-words" data-node-id="450:19014" style={{ fontVariationSettings: "'opsz' 14" }}>{`Multiple entry points create decision fatigue  `}</p>
-                  </div>
-                  <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative rounded-[18px] self-stretch" data-node-id="450:19015" data-name="Background+Border">
-                    <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:19016" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      <p className="leading-[21px]">03</p>
-                    </div>
-                    <p className="leading-[28px] min-w-0 w-full relative shrink-0 text-[#432060] text-[16px] whitespace-normal break-words" data-node-id="450:19017" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      Dense tables hide important information needed for quick decisions
-                    </p>
-                  </div>
-                </CaseStudyStagger>
+                  items={[
+                    'Selection system is unclear, making bulk actions feel risky',
+                    'Multiple entry points create decision fatigue',
+                    'Dense tables hide important information needed for quick decisions',
+                  ]}
+                />
                 </div>
             </CaseStudySection>
             <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:19018" data-name="Separator" />
@@ -734,38 +687,16 @@ export default function PersonalWebsiteDesignPortfolio() {
                 <p className="font-['Libre_Baskerville:Italic',sans-serif] italic leading-[40px] relative shrink-0 text-[#816451] text-[24px] w-full" data-node-id="450:19088">
                   Key Design Decisions
                 </p>
-                <CaseStudyStagger
-                  className="content-stretch flex min-h-[89px] flex-row font-['DM_Sans:SemiBold',sans-serif] font-semibold gap-[24px] items-stretch relative shrink-0 w-full"
+                <CaseStudyTripletCards
+                  bodyTextClassName="text-[#432060] text-[18px]"
                   data-node-id="450:19089"
-                  data-name="Container"
-                  itemClassName={CASE_STUDY_CARD_STAGGER_ITEM_XL}
+                  items={[
+                    'Unified selection logic to reduce confusion across workflows',
+                    'Prioritized filter-based selection to minimize manual effort',
+                    'Avoided disruptive UI elements based on user feedback',
+                  ]}
                   staggerMs={55}
-                >
-                  <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative rounded-[18px] self-stretch" data-node-id="450:19090" data-name="Background+Border">
-                    <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:19091" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      <p className="leading-[21px]">01</p>
-                    </div>
-                    <p className="leading-[28px] min-w-0 w-full relative shrink-0 text-[#432060] text-[16px] whitespace-normal break-words" data-node-id="450:19092" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      Unified selection logic to reduce confusion across workflows
-                    </p>
-                  </div>
-                  <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative rounded-[18px] self-stretch" data-node-id="450:19093" data-name="Background+Border">
-                    <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:19094" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      <p className="leading-[21px]">02</p>
-                    </div>
-                    <p className="leading-[28px] min-w-0 w-full relative shrink-0 text-[#432060] text-[16px] whitespace-normal break-words" data-node-id="450:19095" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      Prioritized filter-based selection to minimize manual effort
-                    </p>
-                  </div>
-                  <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative rounded-[18px] self-stretch" data-node-id="450:19096" data-name="Background+Border">
-                    <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:19097" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      <p className="leading-[21px]">03</p>
-                    </div>
-                    <p className="leading-[28px] min-w-0 w-full relative shrink-0 text-[#432060] text-[16px] whitespace-normal break-words" data-node-id="450:19098" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      Avoided disruptive UI elements based on user feedback
-                    </p>
-                  </div>
-                </CaseStudyStagger>
+                />
               </SoftAppearOnce>
             </CaseStudySection>
             <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:19099" data-name="Separator" />
@@ -836,32 +767,15 @@ export default function PersonalWebsiteDesignPortfolio() {
                 <p className="font-['Libre_Baskerville:Italic',sans-serif] italic leading-[40px] relative shrink-0 text-[#816451] text-[24px] w-full" data-node-id="450:19120">
                   Key Design Decisions
                 </p>
-                <div className="content-stretch flex font-['DM_Sans:SemiBold',sans-serif] font-semibold flex-row gap-[24px] h-auto items-start relative shrink-0 w-full" data-node-id="450:19121" data-name="Container">
-                  <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative rounded-[18px] self-stretch" data-node-id="450:19122" data-name="Background+Border">
-                    <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:19123" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      <p className="leading-[21px]">01</p>
-                    </div>
-                    <p className="leading-[28px] min-w-0 w-full relative shrink-0 text-[#432060] text-[16px] whitespace-normal break-words" data-node-id="450:19124" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      Disabled state group actions to improve intuition of use
-                    </p>
-                  </div>
-                  <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative rounded-[18px] self-stretch" data-node-id="450:19125" data-name="Background+Border">
-                    <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:19126" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      <p className="leading-[21px]">02</p>
-                    </div>
-                    <p className="leading-[28px] min-w-0 w-full relative shrink-0 text-[#432060] text-[16px] whitespace-normal break-words" data-node-id="450:19127" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      Additional embedded table filters to support power users familiar flows
-                    </p>
-                  </div>
-                  <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative rounded-[18px] self-stretch" data-node-id="450:19128" data-name="Background+Border">
-                    <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:19129" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      <p className="leading-[21px]">03</p>
-                    </div>
-                    <p className="leading-[28px] min-w-0 w-full relative shrink-0 text-[#432060] text-[16px] whitespace-normal break-words" data-node-id="450:19130" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      Extra confirmation step to prevent error in critical tasks
-                    </p>
-                  </div>
-                </div>
+                <CaseStudyTripletCards
+                  bodyTextClassName="text-[#432060] text-[18px]"
+                  data-node-id="450:19121"
+                  items={[
+                    'Disabled state group actions to improve intuition of use',
+                    'Additional embedded table filters to support power users familiar flows',
+                    'Extra confirmation step to prevent error in critical tasks',
+                  ]}
+                />
               </div>
             </CaseStudySection>
             <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:19131" data-name="Separator" />

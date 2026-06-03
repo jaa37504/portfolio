@@ -10,8 +10,8 @@ import {
   caseStudyHeroTopPaddingClass,
   caseStudySectionPaddingYClass,
 } from '../caseStudyLayout';
+import { CaseStudyTripletCards } from '../components/CaseStudyTripletCards';
 import {
-  CASE_STUDY_CARD_STAGGER_ITEM_XL,
   CaseStudySection,
   CaseStudyStagger,
   SoftAppearOnce,
@@ -262,34 +262,15 @@ export default function PersonalWebsiteDesignPortfolio() {
                 </div>
               </div>
               <div className="content-stretch flex flex-col items-start pb-[24px] relative shrink-0 w-full" data-node-id="450:20741">
-                <CaseStudyStagger
-                  className="content-stretch flex min-h-[89px] font-['DM_Sans:SemiBold',sans-serif] font-semibold flex-row gap-[24px] items-stretch relative shrink-0 w-full"
+                <CaseStudyTripletCards
+                  bodyTextClassName="text-[#432060] text-[18px]"
                   data-node-id="450:20742"
-                  itemClassName={CASE_STUDY_CARD_STAGGER_ITEM_XL}
-                >
-                  <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative rounded-[16px] self-stretch" data-node-id="450:20743" data-name="Background+Border">
-                    <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:20744" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      <p className="leading-[21px]">01</p>
-                    </div>
-                    <p className="leading-[28px] min-w-0 w-full relative shrink-0 text-[#432060] text-[16px] whitespace-normal break-words" data-node-id="450:20745" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      The Safety Deck exists as physical cards but isn’t widely used
-                    </p>
-                  </div>
-                  <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative rounded-[16px] self-stretch" data-node-id="450:20746" data-name="Background+Border">
-                    <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:20747" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      <p className="leading-[21px]">02</p>
-                    </div>
-                    <p className="leading-[28px] min-w-0 w-full relative shrink-0 text-[#432060] text-[16px] whitespace-normal break-words" data-node-id="450:20748" style={{ fontVariationSettings: "'opsz' 14" }}>{`Distribution is costly and limited `}</p>
-                  </div>
-                  <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative rounded-[16px] self-stretch" data-node-id="450:20749" data-name="Background+Border">
-                    <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:20750" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      <p className="leading-[21px]">03</p>
-                    </div>
-                    <p className="leading-[28px] min-w-0 w-full relative shrink-0 text-[#432060] text-[16px] whitespace-normal break-words" data-node-id="450:20751" style={{ fontVariationSettings: "'opsz' 14" }}>
-                      The PDF format doesn’t easily support parent child conversations
-                    </p>
-                  </div>
-                </CaseStudyStagger>
+                  items={[
+                    'The Safety Deck exists as physical cards but isn’t widely used',
+                    'Distribution is costly and limited',
+                    'The PDF format doesn’t easily support parent child conversations',
+                  ]}
+                />
               </div>
             </CaseStudySection>
             <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:20752" data-name="Separator" />

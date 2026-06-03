@@ -10,6 +10,7 @@ import {
   caseStudyHeroTopPaddingClass,
   caseStudySectionPaddingYClass,
 } from '../caseStudyLayout';
+import { CaseStudyTripletCards } from '../components/CaseStudyTripletCards';
 import {
   CASE_STUDY_CARD_STAGGER_ITEM_XL,
   CASE_STUDY_VERTICAL_STAGGER_ITEM,
@@ -259,48 +260,14 @@ export default function PersonalWebsiteDesignPortfolio() {
                   <p className="leading-[25.5px]">This...</p>
                 </div>
               </div>
-              <CaseStudyStagger
-                className="content-stretch flex flex-row gap-[16px] h-auto items-stretch relative shrink-0 w-full"
+              <CaseStudyTripletCards
                 data-node-id="450:19897"
-                itemClassName={CASE_STUDY_CARD_STAGGER_ITEM_XL}
-              >
-                <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px pb-[41px] pt-[49px] px-[41px] relative rounded-[18px] self-stretch" data-node-id="450:19898" data-name="Background+Border">
-                  <div className="relative rounded-[18px] shrink-0 w-full" data-node-id="450:19899" data-name="Background+Border">
-                    <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold gap-[12px] items-start pb-[24px] relative size-full">
-                      <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:19900" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        <p className="leading-[21px]">01</p>
-                      </div>
-                      <p className="leading-[28px] min-w-full relative shrink-0 text-[#b5923c] text-[18px] w-[min-content]" data-node-id="450:19901" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        Obscures impact and scale of donations and organization
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px pb-[41px] pt-[49px] px-[41px] relative rounded-[18px] self-stretch" data-node-id="450:19902" data-name="Background+Border">
-                  <div className="relative rounded-[18px] shrink-0 w-full" data-node-id="450:19903" data-name="Background+Border">
-                    <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold gap-[12px] items-start relative size-full">
-                      <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:19904" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        <p className="leading-[21px]">02</p>
-                      </div>
-                      <p className="leading-[28px] min-w-full relative shrink-0 text-[#b5923c] text-[18px] w-[min-content]" data-node-id="450:19905" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        Creates distrust and lack of transparency around operations and money usage
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-white border border-[#ddd8d0] border-solid content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px pb-[41px] pt-[49px] px-[41px] relative rounded-[18px] self-stretch" data-node-id="450:19906" data-name="Background+Border">
-                  <div className="relative rounded-[18px] shrink-0 w-full" data-node-id="450:19907" data-name="Background+Border">
-                    <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col font-['DM_Sans:SemiBold',sans-serif] font-semibold gap-[12px] items-start pb-[24px] relative size-full">
-                      <div className="flex flex-col justify-center leading-[0] relative shrink-0 text-[#6b6b6b] text-[14px] whitespace-nowrap" data-node-id="450:19908" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        <p className="leading-[21px]">03</p>
-                      </div>
-                      <p className="leading-[28px] min-w-full relative shrink-0 text-[#b5923c] text-[18px] w-[min-content]" data-node-id="450:19909" style={{ fontVariationSettings: "'opsz' 14" }}>
-                        Makes it difficult for donors to make informed decisions and discourages donation
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </CaseStudyStagger>
+                items={[
+                  'Obscures impact and scale of donations and organization',
+                  'Creates distrust and lack of transparency around operations and money usage',
+                  'Makes it difficult for donors to make informed decisions and discourages donation',
+                ]}
+              />
             </CaseStudySection>
             <div className="border-[#ddd8d0] border-solid border-t h-px shrink-0 w-full" data-node-id="450:19910" data-name="Separator" />
             <CaseStudySection
